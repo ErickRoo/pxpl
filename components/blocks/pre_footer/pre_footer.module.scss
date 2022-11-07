@@ -3,3 +3,35 @@
 .root {
   position: relative;
 }
+
+.wrapper {
+  display: flex;
+  max-width: 108.4rem;
+  margin: auto;
+  justify-content: center;
+  gap: 17rem;
+}
+
+.leftSide {
+  background-color: #fff;
+  width: 100%;
+
+  h3 {
+    font-size: 48px;
+    margin-bottom: 2.4rem;
+  }
+
+  > p {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.groupButtons {
+  display: flex;
+  gap: 4rem;
+}
+
+.rightSide {
+  background-color: #fff;
+  width: 100%;
+}
