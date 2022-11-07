@@ -1,22 +1,79 @@
 // Include required file types for custom webfont rendering.
 
+@mixin font-face($family, $src, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $family;
+    src: url('#{$src}.otf') format('opentype');
+    font-style: $style;
+    font-weight: $weight;
+    font-display: swap;
+  }
+}
 
-// @mixin font-face ($family, $src, $weight: normal, $style: normal) {
-// 	@font-face {
-// 		font-family: $family;
-// 		src:
-// 			url('#{$src}.otf') format('opentype');
-// 		font-style: $style;
-// 		font-weight: $weight;
-// 		font-display: swap;
-// 	}
-// }
+@at-root {
+  @include font-face(
+      'AeonikPro-Regular',
+      '../assets/Aeonik/AeonikPro-Regular',
+      400
+  );
 
-// $avenirRegular: fontSrc('Avenir/AvenirNextLTPro-Regular');
+  @include font-face(
+      'AeonikPro-Bold',
+      '../assets/Aeonik/AeonikPro-Bold',
+      700
+  );
 
-// @at-root {
-// 	@include font-face(
-// 		'AvenirNextLTPro-Regular',
-// 		$avenirRegular,
-// 		400
-// 	);
+  @include font-face(
+      'AeonikPro-Thin',
+      '../assets/Aeonik/AeonikPro-Thin',
+      100
+  );
+
+  @include font-face(
+      'AeonikPro-Medium',
+      '../assets/Aeonik/AeonikPro-Medium',
+      500
+  );
+
+  @include font-face(
+      'AeonikPro-Light',
+      '../assets/Aeonik/AeonikPro-Light',
+      300
+  );
+
+  @include font-face(
+      'AeonikPro-Black',
+      '../assets/Aeonik/AeonikPro-Black',
+      900
+  );
+
+  @include font-face(
+      'AeonikFono-Black',
+      '../assets/Aeonik/AeonikFono-Black',
+      900
+  );
+
+  @include font-face(
+      'AeonikFono-Regular',
+      '../assets/Aeonik/AeonikFono-Regular',
+      400
+  );
+
+  @include font-face(
+      'AeonikFono-Medium',
+      '../assets/Aeonik/AeonikFono-Medium',
+      500
+  );
+
+  @include font-face(
+      'AeonikFono-Bold',
+      '../assets/Aeonik/AeonikFono-Bold',
+      700
+  );
+
+  @include font-face(
+      'AeonikPro-Thin',
+      '../assets/Aeonik/AeonikFono-Thin',
+      100
+  );
+}
