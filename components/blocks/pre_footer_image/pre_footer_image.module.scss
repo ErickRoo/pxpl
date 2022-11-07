@@ -48,8 +48,16 @@
   width: 100%;
 
   h3 {
-    font-size: 4.8rem;
-    margin-bottom: 2.4rem;
+    font-size: 4rem;
+    margin-bottom: 1.6rem;
+
+    @screen md {
+      margin-bottom: 2.4rem;
+    }
+
+    @screen xl {
+      font-size: 4.8rem;
+    }
   }
 
   > p {
