@@ -1,37 +1,79 @@
 @import '../../../styles/variables';
 
 .root {
-  position: relative;
+  background-color: #1A191C;
+  color: #fff;
+  font-family: 'AeonikPro-Regular';
+  padding: 6.2rem 2.4rem;
+
+  @screen md {
+    padding: 7.5rem 3.2rem;
+  }
+
+  @screen lg {
+    padding: 8rem 4rem;
+  }
+
+  @screen xl {
+    padding: 8.5rem 2.4rem;
+  }
 }
 
 .wrapper {
+  @apply container;
+
+  padding: 0;
   display: flex;
-  max-width: 108.4rem;
   margin: auto;
   justify-content: center;
-  gap: 17rem;
+  flex-direction: column-reverse;
+  gap: 6.87rem;
+
+  @screen md {
+    gap: 12.4rem;
+    flex-direction: row;
+  }
+  
+  @screen lg {
+    gap: 11.3rem;
+  }
+
+  @screen xl {
+    gap: 17rem;
+    max-width: 108.4rem;
+  }
 }
 
 .leftSide {
-  background-color: #fff;
   width: 100%;
 
   h3 {
-    font-size: 48px;
+    font-size: 4.8rem;
     margin-bottom: 2.4rem;
   }
 
   > p {
+    font-size: 1.8rem;
     margin-bottom: 2.4rem;
   }
 }
 
 .groupButtons {
   display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
 }
 
 .rightSide {
-  background-color: #fff;
   width: 100%;
+}
+
+.image {
+  margin: auto;
+  padding: 2.3rem;
+  max-width: 100%;
+
+  @screen md {
+    padding: 0;
+  }
 }
