@@ -1,0 +1,76 @@
+@mixin typo-h4 {
+  font-weight: 400;
+  font-size: 3.2rem;
+  line-height: 110%;
+
+  @screen md {
+    font-weight: 400;
+    font-size: 3.2rem;
+    line-height: 110%;
+  }
+
+  @screen lg {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  @screen xl {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  @screen xxl {
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+}
+
+@mixin body-text {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 130%;
+  /* or 21px */
+  letter-spacing: 0.01em;
+
+  @screen md {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    /* or 21px */
+    letter-spacing: 0.01em;
+  }
+
+  @screen lg {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    /* or 21px */
+    letter-spacing: 0.01em;
+  }
+
+  @screen xl {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    /* or 21px */
+    letter-spacing: 0.01em;
+  }
+
+  @screen xxl {
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 130%;
+    /* or 21px */
+    letter-spacing: 0.01em;
+  }
+}
+
+@mixin typo-eyebrow {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+}

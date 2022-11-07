@@ -14,6 +14,8 @@ module.exports = {
       lightBlue: '#64B5F6',
       black: '#000',
       white: '#FFF',
+      darkBlue: '#120044',
+      passionBlue: '#5951FF',
     },
     screens: {
       sm: '375px',
@@ -28,7 +30,7 @@ module.exports = {
     extend: {},
   },
   plugins: [
-    function ({ addComponents }) {
+    function({ addComponents }) {
       addComponents({
         '.container': {
           maxWidth: '100%',

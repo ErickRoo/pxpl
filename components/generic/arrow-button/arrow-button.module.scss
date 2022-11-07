@@ -1,0 +1,22 @@
+.arrowButtonContainer {
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.arrowButtonLabel {
+  margin-right: 1.6rem;
+}
+
+.arrowButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.7rem;
+  height: 4.3rem;
+  background: theme('colors.passionBlue');
+  border-radius: .4rem;
+}

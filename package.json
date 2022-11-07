@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "TAILWIND_MODE=watch next dev",
-    "build": "TAILWIND_MODE=build next build",
+    "dev": "next dev",
+    "build": "next build",
     "start": "next start",
     "export": "next build && next export",
     "lint": "eslint components/**/*.tsx components/**/*.ts pages/**/*.tsx utils/**/*.ts",
+    "lint-fix": "eslint components/**/*.tsx components/**/*.ts pages/**/*.tsx utils/**/*.ts --fix",
     "typecheck": "tsc",
     "hygen": "hygen",
     "prepare": "husky install",
@@ -20,6 +21,7 @@
     "@tailwindcss/jit": "^0.1.18",
     "autoprefixer": "^10.4.7",
     "graphql": "^16.5.0",
+    "graphql-tag": "^2.12.6",
     "install": "^0.13.0",
     "isomorphic-fetch": "^3.0.0",
     "next": "12.2.0",
@@ -28,9 +30,9 @@
     "postcss": "^8.4.14",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-responsive": "^9.0.0",
     "sass": "^1.53.0",
-    "tailwindcss": "^3.1.4",
-    "graphql-tag": "^2.12.6"
+    "tailwindcss": "^3.1.4"
   },
   "devDependencies": {
     "@svgr/webpack": "^6.2.1",
