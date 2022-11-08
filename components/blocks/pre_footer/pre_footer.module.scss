@@ -42,22 +42,43 @@
     gap: 17rem;
     max-width: 108.4rem;
   }
+}
 
-  &__variantImage {
-    gap: 6.87rem;
-    flex-direction: column-reverse;
+.wrapper__variantImage {
+  gap: 6.87rem;
+  flex-direction: column-reverse;
 
-    @screen md {
-      flex-direction: row;
+  @screen md {
+    flex-direction: row;
+  }
+
+  @screen lg {
+    gap: 11.3rem;
+
+    h3 {
+      font-size: 4rem;
     }
   }
 
-  &__variantForm {
-    flex-direction: column;
+  @screen xl {
+    gap: 17rem;
 
-    @screen lg {
-      flex-direction: row;
+    h3 {
+      font-size: 4.8rem;
     }
+  }
+}
+
+.wrapper__variantForm {
+  flex-direction: column;
+
+  @screen lg {
+    gap: 8.8rem;
+    flex-direction: row;
+  }
+
+  @screen xl {
+    gap: 17rem;
   }
 }
 
@@ -94,6 +115,10 @@
   }
 
   @screen lg {
+    max-width: 375px;
+  }
+
+  @screen xl {
     max-width: 400px;
   }
 }
