@@ -1,31 +1,12 @@
 import React, { FunctionComponent } from 'react'
+import useWindowSize from 'styles/getBreakpointQuery'
+import getCurrentBreakpoint from 'utils/breakpoints/getCurrentBreakpoint'
 import OneColumnBody from 'components/generic/one-column-body/one-column-body'
 import FormPlaceHolder from 'components/generic/form-placeholder/form-placeholder'
-import useWindowSize from 'styles/getBreakpointQuery'
-import styles from './pre_footer.module.scss'
 import PreFooterImageInterface from './pre_footer.interface'
-import tailwindConfig from '../../../tailwind.config'
+import styles from './pre_footer.module.scss'
 
 export const typename = 'Set_Replicator_BlockPreFooter'
-
-const getCurrentBreakpoint = (width: number) => {
-  const { screens } = tailwindConfig.theme
-
-  if (width <= 375) {
-    return {
-      position: 'normal',
-      width,
-    }
-  }
-
-  const findBreakpoint = Object
-    .entries(screens)
-    .map(([key, value]) => { return { position: key, width: Number(value.replace('px', '')) } })
-    .sort((a, b) => b.width - a.width)
-    .find((oneBreakpoint) => oneBreakpoint.width < width)
-
-  return findBreakpoint
-}
 
 const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> = ({ block }) => {
   const { width } = useWindowSize()
