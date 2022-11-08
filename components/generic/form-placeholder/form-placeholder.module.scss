@@ -4,7 +4,7 @@
 }
 
 .form {
-  min-height: 10rem;
+  max-width: 37.5rem;
   background-color: #fff;
   border-radius: 0.4rem;
   padding: 4rem 2.4rem;
@@ -12,6 +12,10 @@
   > p {
     font-size: 1.4rem;
     margin-bottom: 2.4rem;
+  }
+
+  @screen md {
+    max-width: 40rem;
   }
 }
 
