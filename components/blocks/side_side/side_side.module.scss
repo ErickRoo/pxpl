@@ -1,0 +1,35 @@
+@import '../../../styles/variables';
+
+.root {
+  font-family: 'AeonikPro-Regular';
+  padding: 2rem;
+}
+
+.wrapper {
+  @apply container;
+
+  padding: 0;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+
+  @screen md {
+    gap: 3.2rem;
+    flex-direction: row;
+  }
+
+  @screen xl {
+    gap: 5.6rem;
+    max-width: 144rem;
+  }
+}
+
+.leftSide {
+  width: 100%;
+}
+
+.rightSide {
+  width: 100%;
+}
