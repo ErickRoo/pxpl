@@ -62,7 +62,7 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
       return (
         <section className={`${styles.wrapper} ${styles.wrapper__variantForm}`}>
           <OneColumnBody
-            className={styles.leftSide}
+            className={`${styles.leftSide} ${styles.leftSide__buttons}`}
             topTag={block.topTag}
             headline={block.headlineLeft}
             headlineLevel={3}
