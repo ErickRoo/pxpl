@@ -74,32 +74,14 @@
   }
 }
 
-.groupButtons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4rem;
-
-  > div:first-child {
-    background-color: #5951FF;
-    border-radius: 0.4rem;
-
-    > div:first-child {
-      padding: 1.6rem;
-      padding-right: 0;
-    }
-
-    @screen lg {
-      background-color: transparent;
-
-      > div:first-child {
-        padding: 0;
-      }
-    }
-  }
-}
-
 .rightSide {
   width: 100%;
+}
+
+.tertiaryButton {
+  > section > section {
+    padding: 1.6rem;
+  }
 }
 
 .image {
