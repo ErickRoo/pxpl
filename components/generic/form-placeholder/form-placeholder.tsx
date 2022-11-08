@@ -1,10 +1,11 @@
 import React, { FC } from 'react'
-import RadioButton from '../radio-button/radio-button'
-// import ArrowButton from '../arrow-button/arrow-button'
-import UnderlinedButton from '../underlined-button/underlined-button'
 import { FormPlaceHolderInterface } from './form-placeholder.interface'
-import ArrowRight from '../../../assets/ArrowRight.svg'
+
 import styles from './form-placeholder.module.scss'
+
+import RadioButton from '../radio-button/radio-button'
+import UnderlinedButton from '../underlined-button/underlined-button'
+import TertiaryButton from '../tertiary-button/tertiary-button'
 
 const FormPlaceHolder: FC<FormPlaceHolderInterface> = ({
   className = '',
@@ -38,10 +39,7 @@ const FormPlaceHolder: FC<FormPlaceHolderInterface> = ({
             <a href="/"> the terms and conditions.</a>
           </span>
         </section>
-        <button type="submit" className={styles.button}>
-          <span>Submit</span>
-          <ArrowRight />
-        </button>
+        <TertiaryButton className={styles.button} type="submit" text="Submit" />
         <section className={styles.bottom}>
           <UnderlinedButton text="Terms of service" href="#" underlineColor="#5951FF" />
           <UnderlinedButton text="Privacy" href="#" underlineColor="#5951FF" />

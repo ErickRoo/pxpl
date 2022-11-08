@@ -11,7 +11,14 @@ const RadioButton: FC<RadioButtonInterface> = ({ className = '', id }) => {
     <div className={`${styles.root} ${className}`}>
       <label htmlFor={id}>
         <Check className={styles.icon} data-checked={selected} />
-        <input className={styles.input} id={id} type="radio" checked={selected} onClick={() => setSelected(!selected)} />
+        <input
+          className={styles.input}
+          id={id}
+          type="radio"
+          checked={selected}
+          onClick={() => setSelected(!selected)}
+          onChange={() => {}}
+        />
       </label>
     </div>
   )

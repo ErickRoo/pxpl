@@ -54,14 +54,12 @@
 }
 
 .button {
-  border-radius: 0.4rem;
-  font-size: 1.4rem;
-  background: #5951FF;
-  color: #fff;
-  padding: 1.6rem;
-  display: flex;
-  gap: 3.4rem;
   margin-bottom: 4rem;
+
+  > section {
+    padding: 1.6rem;
+    gap: 3.4rem;
+  }
 }
 
 .bottom {
