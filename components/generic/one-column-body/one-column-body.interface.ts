@@ -1,3 +1,14 @@
 export interface OneColumnBodyInterface {
-  type?: string;
+  className?: string;
+  headline: string;
+  headlineLevel: number;
+  description?: string;
+  primaryCta?: {
+    ctaText: string;
+    ctaLink: string;
+  };
+  secondaryCta?: {
+    ctaText: string;
+    ctaLink: string;
+  };
 }

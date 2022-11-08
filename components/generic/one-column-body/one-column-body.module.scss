@@ -1,3 +1,13 @@
 .root {
   position: relative;
 }
+
+.heading {
+  &h1 {
+    font-size: 4.8rem;
+
+    @screen md {
+      font-size: 9.6rem;
+    }
+  }
+}
