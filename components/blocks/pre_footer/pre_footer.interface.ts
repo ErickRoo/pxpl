@@ -2,6 +2,7 @@ import { StaticImageData } from 'next/image'
 
 export default interface PreFooterInterface {
     type: string;
+    variant: string;
     headline: string;
     description: string;
     primaryCta?: {
