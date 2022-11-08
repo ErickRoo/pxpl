@@ -1,5 +1,6 @@
 export interface OneColumnBodyInterface {
   className?: string;
+  topTag?: string;
   headline: string;
   headlineLevel: number;
   description?: string;

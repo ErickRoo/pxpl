@@ -23,7 +23,7 @@
     }
   
     h5#{&} {
-      @apply text-[2.4rem] leading-[110%] md:text-[4rem];
+      @apply text-[2.4rem] leading-[110%] md:text-[3.2rem];
     }
   
     h6#{&} {
@@ -38,24 +38,4 @@
 
 .buttonsContainer {
   @apply flex flex-wrap gap-[4rem];
-
-  /*
-  > div:first-child {
-    background-color: #5951FF;
-    border-radius: 0.4rem;
-
-    > div:first-child {
-      padding: 1.6rem;
-      padding-right: 0;
-    }
-
-    @screen lg {
-      background-color: transparent;
-
-      > div:first-child {
-        padding: 0;
-      }
-    }
-  }
-  */
 }

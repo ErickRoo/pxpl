@@ -6,12 +6,15 @@ import { OneColumnBodyInterface } from './one-column-body.interface'
 import styles from './one-column-body.module.scss'
 
 const OneColumnBody: FC<OneColumnBodyInterface> = ({
-  className = '', headline, headlineLevel, description, primaryCta, secondaryCta, showTertiaryButton,
+  className = '', topTag, headline, headlineLevel, description, primaryCta, secondaryCta, showTertiaryButton,
 }) => {
   const Heading = (headlineLevel ? `h${headlineLevel}` : 'div') as ElementType
 
   return (
     <div className={`${styles.root} ${className}`}>
+      {topTag && (
+        <p className="eyebrow mb-[2.4rem]">{topTag}</p>
+      )}
       <Heading className={styles.heading}>
         {headline}
       </Heading>
