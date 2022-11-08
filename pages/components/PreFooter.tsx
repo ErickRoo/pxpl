@@ -33,11 +33,27 @@ const placeholderPreFooterHeadlineBlock = {
   },
 } as PreFooterInterface
 
+const placeholderPreFooterFormBlock = {
+  variant: 'form',
+  headlineLeft: 'H3 headline that is titlecase.',
+  description: 'Get the latest insights from the best in the industry. Every week we provide new content to help optimize your results.',
+  primaryCta: {
+    ctaText: 'Try Outreach',
+    ctaLink: '#',
+  },
+  secondaryCta: {
+    ctaText: 'Explore pricing',
+    ctaLink: '#',
+  },
+} as PreFooterInterface
+
 const PreFooter: FC = () => (
   <div>
     <PreFooterImageBlock block={placeholderPreFooterImageBlock} />
     <div style={{ margin: '3rem' }} />
     <PreFooterImageBlock block={placeholderPreFooterHeadlineBlock} />
+    <div style={{ margin: '3rem' }} />
+    <PreFooterImageBlock block={placeholderPreFooterFormBlock} />
   </div>
 )
 

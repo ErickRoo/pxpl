@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react'
 import OneColumnBody from 'components/generic/one-column-body/one-column-body'
+import FormPlaceHolder from 'components/generic/form-placeholder/form-placeholder'
 import styles from './pre_footer.module.scss'
 import PreFooterImageInterface from './pre_footer.interface'
 
@@ -43,6 +44,24 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
             primaryCta={block.primaryCta}
             secondaryCta={block.secondaryCta}
           />
+        </section>
+      )
+    }
+
+    if (block.variant === 'form') {
+      return (
+        <section className={`${styles.wrapper}`}>
+          <OneColumnBody
+            className={styles.leftSide}
+            headline={block.headlineLeft}
+            headlineLevel={3}
+            description={block.description}
+            primaryCta={block.primaryCta}
+            secondaryCta={block.secondaryCta}
+          />
+          <div className={styles.rightSide}>
+            <FormPlaceHolder />
+          </div>
         </section>
       )
     }
