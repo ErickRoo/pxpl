@@ -35,6 +35,7 @@ const placeholderPreFooterHeadlineBlock = {
 
 const placeholderPreFooterFormBlock = {
   variant: 'form',
+  topTag: 'Eyebrow',
   headlineLeft: 'H3 headline that is titlecase.',
   description: 'Get the latest insights from the best in the industry. Every week we provide new content to help optimize your results.',
   primaryCta: {

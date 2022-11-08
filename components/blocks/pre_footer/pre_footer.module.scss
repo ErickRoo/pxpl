@@ -92,4 +92,8 @@
   @screen md {
     padding: 0;
   }
+
+  @screen lg {
+    max-width: 400px;
+  }
 }
