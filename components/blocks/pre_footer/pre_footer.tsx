@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react'
 import ArrowButton from 'components/generic/arrow-button/arrow-button'
 import UnderlinedButton from 'components/generic/underlined-button/underlined-button'
-import styles from './pre_footer_image.module.scss'
-import PreFooterImageInterface from './pre_footer_image.interface'
+import styles from './pre_footer.module.scss'
+import PreFooterImageInterface from './pre_footer.interface'
 
 export const typename = 'Set_Replicator_BlockPreFooter'
 
