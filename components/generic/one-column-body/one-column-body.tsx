@@ -12,7 +12,7 @@ const OneColumnBody: FC<OneColumnBodyInterface> = ({
   return (
     <div className={`${styles.root} ${className}`}>
       <Heading className={styles.heading}>
-        <div>{headline}</div>
+        {headline}
       </Heading>
       {description && (
         <p className={styles.description}>{description}</p>
