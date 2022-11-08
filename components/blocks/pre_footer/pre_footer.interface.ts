@@ -3,7 +3,9 @@ import { StaticImageData } from 'next/image'
 export default interface PreFooterInterface {
     type: string;
     variant: string;
-    headline: string;
+    topTag: string;
+    headlineLeft: string;
+    headlineRight?: string;
     description: string;
     primaryCta?: {
         ctaText: string;
@@ -13,5 +15,5 @@ export default interface PreFooterInterface {
         ctaText: string;
         ctaLink: string;
     };
-    right_image: StaticImageData;
+    right_image?: StaticImageData;
 }
