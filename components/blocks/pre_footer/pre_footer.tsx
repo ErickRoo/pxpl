@@ -50,7 +50,7 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
 
     if (block.variant === 'form') {
       return (
-        <section className={`${styles.wrapper}`}>
+        <section className={`${styles.wrapper} ${styles.wrapper__variantForm}`}>
           <OneColumnBody
             className={styles.leftSide}
             headline={block.headlineLeft}

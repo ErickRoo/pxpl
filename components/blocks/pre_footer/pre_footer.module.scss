@@ -51,6 +51,14 @@
       flex-direction: row;
     }
   }
+
+  &__variantForm {
+    flex-direction: column;
+
+    @screen lg {
+      flex-direction: row;
+    }
+  }
 }
 
 .leftSide {
