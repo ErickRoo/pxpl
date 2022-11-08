@@ -26,8 +26,8 @@
   display: flex;
   margin: auto;
   justify-content: center;
-  flex-direction: column-reverse;
-  gap: 6.87rem;
+  flex-direction: column;
+  gap: 5.6rem;
 
   @screen md {
     gap: 12.4rem;
@@ -42,10 +42,28 @@
     gap: 17rem;
     max-width: 108.4rem;
   }
+
+  &__variantImage {
+    gap: 6.87rem;
+    flex-direction: column-reverse;
+
+    @screen md {
+      flex-direction: row;
+    }
+  }
 }
 
 .leftSide {
   width: 100%;
+
+  h2 {
+    font-size: 4rem;
+
+    @screen md {
+      margin-bottom: 0;
+      font-size: 7.2rem;
+    }
+  }
 
   h3 {
     font-size: 4rem;
@@ -92,6 +110,20 @@
 
 .rightSide {
   width: 100%;
+
+  h4 {
+    font-size: 3.2rem;
+    margin-bottom: 5.6rem;
+
+    @screen md {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  > p {
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 .image {

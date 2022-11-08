@@ -10,7 +10,7 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
   if (block?.variant === 'image') {
     return (
       <div className={styles.root}>
-        <section className={styles.wrapper}>
+        <section className={`${styles.wrapper} ${styles.wrapper__variantImage}`}>
           <div className={styles.leftSide}>
             <h3>{block.headlineLeft}</h3>
             <p>{block.description}</p>
