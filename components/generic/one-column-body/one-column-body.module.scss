@@ -39,6 +39,7 @@
 .buttonsContainer {
   @apply flex flex-wrap gap-[4rem];
 
+  /*
   > div:first-child {
     background-color: #5951FF;
     border-radius: 0.4rem;
@@ -56,4 +57,5 @@
       }
     }
   }
+  */
 }

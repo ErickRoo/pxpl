@@ -3,6 +3,7 @@ export interface OneColumnBodyInterface {
   headline: string;
   headlineLevel: number;
   description?: string;
+  showTertiaryButton?: string;
   primaryCta?: {
     ctaText: string;
     ctaLink: string;
