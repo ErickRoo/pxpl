@@ -9,13 +9,14 @@ const SideSideBlock:FunctionComponent<{ block: SideSideInterface }> = ({ block }
   <div className={styles.root}>
     <section className={styles.wrapper}>
       <div className={styles.leftSide}>
-        some image
+        <img className={styles.image} src={block.image?.src} alt="placeholderimage" />
       </div>
       <OneColumnBody
         className={`${styles.rightSide}`}
         headline={block.heading}
         headlineLevel={3}
         description={block.description}
+        primaryCta={block.primaryCta}
       />
     </section>
   </div>
