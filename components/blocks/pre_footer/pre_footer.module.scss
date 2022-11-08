@@ -64,24 +64,6 @@
       font-size: 7.2rem;
     }
   }
-
-  h3 {
-    font-size: 4rem;
-    margin-bottom: 1.6rem;
-
-    @screen md {
-      margin-bottom: 2.4rem;
-    }
-
-    @screen xl {
-      font-size: 4.8rem;
-    }
-  }
-
-  > p {
-    font-size: 1.8rem;
-    margin-bottom: 2.4rem;
-  }
 }
 
 .groupButtons {
@@ -110,20 +92,6 @@
 
 .rightSide {
   width: 100%;
-
-  h4 {
-    font-size: 3.2rem;
-    margin-bottom: 5.6rem;
-
-    @screen md {
-      margin-bottom: 2.4rem;
-    }
-  }
-
-  > p {
-    font-size: 1.8rem;
-    margin-bottom: 2.4rem;
-  }
 }
 
 .image {
