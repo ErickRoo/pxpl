@@ -19,20 +19,22 @@ const FormPlaceHolder: FC<FormPlaceHolderInterface> = ({
       <form className={styles.form} onSubmit={handleOnSubmit}>
         <label htmlFor="firstField" className={styles.formGroup}>
           <div>
-            <span>Form label</span>
-            <span>Required*</span>
+            <span className="eyebrow">Form label</span>
+            <span className="eyebrow">Required*</span>
           </div>
-          <input id="firstField" type="text" className={styles.formInput} />
+          <input id="firstField" type="text" className={`${styles.formInput} typo-body`} />
         </label>
         <label htmlFor="secondField" className={styles.formGroup}>
           <div>
-            <span>Form label</span>
-            <span>Required*</span>
+            <span className="eyebrow">Form label</span>
+            <span className="eyebrow">Required*</span>
           </div>
-          <textarea id="secondField" className={styles.formTextarea} rows={15} />
+          <textarea id="secondField" className={`${styles.formTextarea} typo-body`} rows={7} />
         </label>
-        <p>By submitting this form, you confirm that you have read and agree to the Terms of Service and Privacy Policy.</p>
-        <section className={styles.terms}>
+        <p className="typo-body">
+          By submitting this form, you confirm that you have read and agree to the Terms of Service and Privacy Policy.
+        </p>
+        <section className={`${styles.terms} typo-body`}>
           <RadioButton id="thirdField" />
           <span>
             I agree to
@@ -41,8 +43,8 @@ const FormPlaceHolder: FC<FormPlaceHolderInterface> = ({
         </section>
         <TertiaryButton className={styles.button} type="submit" text="Submit" />
         <section className={styles.bottom}>
-          <UnderlinedButton text="Terms of service" href="#" underlineColor="#5951FF" />
-          <UnderlinedButton text="Privacy" href="#" underlineColor="#5951FF" />
+          <UnderlinedButton text="Terms of service" href="#" underlineColor="passionBlue" />
+          <UnderlinedButton text="Privacy" href="#" underlineColor="passionBlue" />
         </section>
       </form>
     </div>

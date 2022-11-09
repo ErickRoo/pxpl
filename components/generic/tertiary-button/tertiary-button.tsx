@@ -13,10 +13,10 @@ const TertiaryButton: FC<TertiaryButtonInterface> = ({
 
   const renderBody = () => (
     <section className={styles.inner}>
-      <div className={`${styles.label}`}>
+      <div className={styles.label}>
         <p className="eyebrow">{text}</p>
       </div>
-      <div className={`${styles.icon}`}>
+      <div className={styles.icon}>
         <ArrowRight />
       </div>
     </section>

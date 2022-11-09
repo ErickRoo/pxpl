@@ -16,6 +16,9 @@ module.exports = {
       white: '#FFF',
       darkBlue: '#120044',
       passionBlue: '#5951FF',
+      butterCream: '#F7F5F2',
+      secondarySlate: '#1F1F1F',
+      grayCoal: '#545159',
     },
     screens: {
       sm: '375px',

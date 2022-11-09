@@ -1,11 +1,11 @@
 .root {
   position: relative;
-  color: #120044;
+  color: theme('colors.darkBlue');
 }
 
 .form {
   max-width: 52rem;
-  background-color: #fff;
+  background-color: theme('colors.white');
   border-radius: 0.4rem;
   padding: 4rem 2.4rem;
   margin: 0 -2.4rem;
@@ -33,32 +33,32 @@
     justify-content: space-between;
     margin-bottom: 1.6rem;
     font-size: 1.4rem;
+    color: theme('colors.grayCoal');
   }
 }
 
 .formInput {
-  background-color: #F7F5F2;
-  border: 1px solid #1F1F1F;
+  background-color: theme('colors.butterCream');
+  border: 0.1rem solid theme('colors.secondarySlate');
   height: 4.8rem;
   width: 100%;
-  font-size: 1.8rem;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
 }
 
 .formTextarea {
-  background-color: #F7F5F2;
-  border: 1px solid #1F1F1F;
+  background-color: theme('colors.butterCream');
+  border: 0.1rem solid theme('colors.secondarySlate');
+  padding: 1.5rem;
   width: 100%;
 }
 
 .terms {
   display: flex;
-  font-size: 1.6rem;
   gap: 2rem;
   margin-bottom: 2.8rem;
 
   a {
-    color: #5951FF;
+    color: theme('colors.passionBlue');
   }
 }
 
