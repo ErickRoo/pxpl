@@ -15,11 +15,11 @@ const OneColumnBody: FC<OneColumnBodyInterface> = ({
       {topTag && (
         <p className="eyebrow mb-[2.4rem]">{topTag}</p>
       )}
-      <Heading className={styles.heading}>
+      <Heading className={`${styles.heading} ${headlineLevel ? `typo-h${headlineLevel}` : ''}`}>
         {headline}
       </Heading>
       {description && (
-        <p className={styles.description}>{description}</p>
+        <p className={`${styles.description} typo-body`}>{description}</p>
       )}
       <section className={styles.buttonsContainer}>
         {primaryCta && (
