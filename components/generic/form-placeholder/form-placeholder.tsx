@@ -41,8 +41,8 @@ const FormPlaceHolder: FC<FormPlaceHolderInterface> = ({
         </section>
         <TertiaryButton className={styles.button} type="submit" text="Submit" />
         <section className={styles.bottom}>
-          <UnderlinedButton text="Terms of service" href="#" underlineColor="#5951FF" />
-          <UnderlinedButton text="Privacy" href="#" underlineColor="#5951FF" />
+          <UnderlinedButton text="Terms of service" href="#" underlineColor="passionBlue" />
+          <UnderlinedButton text="Privacy" href="#" underlineColor="passionBlue" />
         </section>
       </form>
     </div>

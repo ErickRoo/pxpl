@@ -6,10 +6,10 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height:  2.4rem;
   stroke-width: 2;
-  stroke: #5951FF;
+  stroke: theme('colors.passionBlue');
   opacity: 0;
 
   &[data-checked='true'] {
@@ -18,9 +18,9 @@
 }
 
 .input {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
   appearance: none;
-  border: 2px solid #5951FF;
+  border: 0.2rem solid theme('colors.passionBlue');
   border-radius: 60%;
 }

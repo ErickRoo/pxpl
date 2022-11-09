@@ -28,7 +28,7 @@ const OneColumnBody: FC<OneColumnBodyInterface> = ({
             : <ArrowButton text={primaryCta.ctaText} href={primaryCta.ctaLink} />
         )}
         {secondaryCta && (
-          <UnderlinedButton text={secondaryCta.ctaText} href={secondaryCta.ctaLink} underlineColor="#5951FF" />
+          <UnderlinedButton text={secondaryCta.ctaText} href={secondaryCta.ctaLink} underlineColor="passionBlue" />
         )}
       </section>
     </div>
