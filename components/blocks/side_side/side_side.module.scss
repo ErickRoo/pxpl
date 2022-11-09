@@ -75,17 +75,18 @@
     border-radius: 50%;
 
     &:nth-child(1) {
-      border: 2px solid #EDEADD;
+      border: 0.2rem solid theme('colors.warmGray');
       transform: translate(-70%, 0%);
     }
 
     &:nth-child(2) {
-      background-color: #604aff1a;
+      opacity: 0.1;
+      background-color: theme('colors.suggarBlue');
       transform: translate(-35%, -100%);
     }
 
     &:nth-child(3) {
-      border: 0.2rem solid #604AFF;
+      border: 0.2rem solid theme('colors.suggarBlue');
       transform: translate(0%, -200%);
     }
   }
