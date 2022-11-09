@@ -19,17 +19,15 @@
   @screen md {
     gap: 3.2rem;
     flex-direction: row;
+
+    &__reverse {
+      flex-direction: row-reverse;
+    }
   }
 
   @screen xl {
     gap: 5.6rem;
     max-width: 144rem;
-  }
-
-  &__reverse {
-    @screen md {
-      flex-direction: row-reverse;
-    }
   }
 }
 
@@ -42,12 +40,14 @@
   @screen md {
     width: 50%;
     justify-content: end;
-  }
 
-  &__reverse {
-    @screen md {
+    &__reverse {
       justify-content: start;
     }
+  }
+
+  img {
+    z-index: 1;
   }
 }
 
@@ -109,8 +109,60 @@
 
 }
 
-.image {
-  z-index: 1;
+.bgImage {
+  width: 100%;
+
+  > div {
+    height: 32rem;
+
+    @screen sm {
+      background-size: 37rem;
+      background-position: 8rem -1rem;
+    }
+
+    @screen md {
+      background-size: 45rem;
+      background-position: top 5rem right -1rem;
+    }
+
+    @screen lg {
+      height: 45.2rem;
+      background-size: 70rem;
+      background-position: top 5rem right -1rem;
+    }
+    
+    @screen xl {
+      height: 59.2rem;
+      background-size: 100rem 60rem;
+      background-position: top 14rem right -5rem;
+    }
+  }
+  
+  @screen md {
+    margin: -2rem;
+    margin-right: 2rem;
+  }
+
+  &__reverse {
+    > div {
+      @screen md {
+        background-position: top 5rem left 0;
+      }
+
+      @screen lg {
+        background-position: top -11rem left 16rem;
+      }
+
+      @screen xl {
+        background-position: unset;
+      }
+    }
+
+    @screen md {
+      margin: -2rem;
+      margin-left: 2rem;
+    }
+  }
 }
 
 .oneColumnBody {
