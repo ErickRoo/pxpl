@@ -15,7 +15,6 @@ const placeholderFirstSideSideBlock = {
   showCircles: true,
 } as unknown as SideSideInterface
 
-/*
 const placeholderSecondSideSideBlock = {
   topTag: 'Eyebrow sentence case',
   reverse: true,
@@ -26,14 +25,15 @@ const placeholderSecondSideSideBlock = {
     ctaText: 'Learn more',
     ctaLink: '#',
   },
+  showCircles: true,
 } as unknown as SideSideInterface
-*/
 
 const SideSide: FC = () => (
   <div style={{ backgroundColor: '#eee' }}>
     <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
     <SideSideBlock block={placeholderFirstSideSideBlock} />
     <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
+    <SideSideBlock block={placeholderSecondSideSideBlock} />
     <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
   </div>
 )
