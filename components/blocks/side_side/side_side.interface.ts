@@ -2,9 +2,9 @@ import { StaticImageData } from 'next/image'
 
 export default interface SideSideInterface {
     type: string;
-    reverse?: boolean;
+    variant: string;
     topTag?: string;
-    heading: string;
+    headline: string;
     description: string;
     primaryCta?: {
         ctaText: string;

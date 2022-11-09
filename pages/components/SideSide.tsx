@@ -5,8 +5,9 @@ import PlaceholderAImage from '../../assets/Sideside/placeholder-a.png'
 import PlaceholderBImage from '../../assets/Sideside/placeholder-b.png'
 
 const placeholderFirstSideSideBlock = {
+  variant: 'image-left',
   topTag: 'Eyebrow sentence case',
-  heading: 'H2 headline that can be up to four lines or less ipsum.',
+  headline: 'H2 headline that can be up to four lines or less ipsum.',
   description: 'AI and Machine Learning are at the core of everything Outreach does for your Sales Leaders.',
   image: PlaceholderAImage,
   primaryCta: {
@@ -17,9 +18,9 @@ const placeholderFirstSideSideBlock = {
 } as unknown as SideSideInterface
 
 const placeholderSecondSideSideBlock = {
+  variant: 'image-right',
   topTag: 'Eyebrow sentence case',
-  reverse: true,
-  heading: 'H2 headline that can be up to four lines or less ipsum.',
+  headline: 'H2 headline that can be up to four lines or less ipsum.',
   description: 'AI and Machine Learning are at the core of everything Outreach does for your Sales Leaders.',
   image: PlaceholderAImage,
   primaryCta: {
@@ -30,8 +31,9 @@ const placeholderSecondSideSideBlock = {
 } as unknown as SideSideInterface
 
 const placeholderThirdSideSideBlock = {
+  variant: 'image-left',
   topTag: 'Eyebrow sentence case',
-  heading: 'H2 headline that can be up to four lines or less ipsum.',
+  headline: 'H2 headline that can be up to four lines or less ipsum.',
   description: 'AI and Machine Learning are at the core of everything Outreach does for your Sales Leaders.',
   image: PlaceholderBImage,
   primaryCta: {
@@ -41,9 +43,9 @@ const placeholderThirdSideSideBlock = {
 } as unknown as SideSideInterface
 
 const placeholderFourthSideSideBlock = {
+  variant: 'image-right',
   topTag: 'Eyebrow sentence case',
-  reverse: true,
-  heading: 'H2 headline that can be up to four lines or less ipsum.',
+  headline: 'H2 headline that can be up to four lines or less ipsum.',
   description: 'AI and Machine Learning are at the core of everything Outreach does for your Sales Leaders.',
   image: PlaceholderBImage,
   primaryCta: {
