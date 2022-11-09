@@ -1,5 +1,4 @@
 import React, { useState, FC } from 'react'
-// import Link from 'next/link'
 import { RadioButtonInterface } from './radio-button.interface'
 import styles from './radio-button.module.scss'
 import Check from '../../../assets/RadioButton/check.svg'
