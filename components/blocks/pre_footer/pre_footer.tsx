@@ -17,9 +17,9 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
     return null
   }
 
-  const renderBody = () => {
-    if (block.variant === 'image') {
-      return (
+  if (block.variant === 'image') {
+    return (
+      <div className={styles.root}>
         <section className={`${styles.wrapper} ${styles.wrapper__variantImage}`}>
           <OneColumnBody
             className={`${styles.leftSide} ${showTertiaryButton ? styles.tertiaryButton : ''}`}
@@ -35,11 +35,13 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
             <img className={styles.image} src={block.right_image?.src} alt="placeholderimage" />
           </div>
         </section>
-      )
-    }
+      </div>
+    )
+  }
 
-    if (block.variant === 'headline') {
-      return (
+  if (block.variant === 'headline') {
+    return (
+      <div className={styles.root}>
         <section className={styles.wrapper}>
           <div className={styles.leftSide}>
             <h2>{block.headlineLeft}</h2>
@@ -55,11 +57,13 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
             secondaryCta={block.secondaryCta}
           />
         </section>
-      )
-    }
+      </div>
+    )
+  }
 
-    if (block.variant === 'form') {
-      return (
+  if (block.variant === 'form') {
+    return (
+      <div className={styles.root}>
         <section className={`${styles.wrapper} ${styles.wrapper__variantForm}`}>
           <OneColumnBody
             className={`${styles.leftSide} ${styles.leftSide__buttons}`}
@@ -74,15 +78,11 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
             <FormPlaceHolder />
           </div>
         </section>
-      )
-    }
-
-    return null
+      </div>
+    )
   }
 
-  return (
-    <div className={styles.root}>{renderBody()}</div>
-  )
+  return null
 }
 
 export default PreFooterImageBlock
