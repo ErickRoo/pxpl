@@ -1,8 +1,8 @@
 @import '../../../styles/variables';
 
 .root {
-  font-family: 'AeonikPro-Regular';
   padding: 2rem;
+  overflow-x: hidden;
 }
 
 .wrapper {
@@ -13,11 +13,16 @@
   margin: auto;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
 
   @screen md {
     gap: 3.2rem;
     flex-direction: row;
+
+    &__reverse {
+      flex-direction: row-reverse;
+    }
   }
 
   @screen xl {
@@ -26,10 +31,166 @@
   }
 }
 
-.leftSide {
+.wrapperImage {
+  display: flex;
   width: 100%;
+  justify-content: center;
+  position: relative;
+
+  @screen md {
+    width: 50%;
+    justify-content: end;
+
+    &__reverse {
+      justify-content: start;
+    }
+  }
+
+  img {
+    z-index: 1;
+  }
 }
 
-.rightSide {
+.wrapperContent {
   width: 100%;
+  background-color: transparent;
+
+  @screen md {
+    width: 50%;
+  }
+
+  &__reverse > div {
+    margin-left: auto;
+  }
+}
+
+.circlesContainer {
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  height: 104%;
+  top: -2%;
+
+  > li {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    &:nth-child(1) {
+      border: 0.2rem solid theme('colors.warmGray');
+      transform: translate(-70%, 0%);
+    }
+
+    &:nth-child(2) {
+      opacity: 0.1;
+      background-color: theme('colors.suggarBlue');
+      transform: translate(-35%, -100%);
+    }
+
+    &:nth-child(3) {
+      border: 0.2rem solid theme('colors.suggarBlue');
+      transform: translate(0%, -200%);
+    }
+  }
+
+  &__reverse {
+    > li {
+      &:nth-child(1) {
+        transform: translate(70%, 0%);
+      }
+  
+      &:nth-child(2) {
+        transform: translate(35%, -100%);
+      }
+  
+      &:nth-child(3) {
+        transform: translate(0%, -200%);
+      }
+    }
+  }
+
+}
+
+.bgImage {
+  width: 100%;
+
+  > div {
+    height: 32rem;
+
+    @screen sm {
+      background-size: 37rem;
+      background-position: 8rem -1rem;
+    }
+
+    @screen md {
+      background-size: 45rem;
+      background-position: top 5rem right -1rem;
+    }
+
+    @screen lg {
+      height: 45.2rem;
+      background-size: 70rem;
+      background-position: top 5rem right -1rem;
+    }
+    
+    @screen xl {
+      height: 59.2rem;
+      background-size: 100rem 60rem;
+      background-position: top 14rem right -5rem;
+    }
+  }
+  
+  @screen md {
+    margin: -2rem;
+    margin-right: 2rem;
+  }
+
+  &__reverse {
+    > div {
+      @screen md {
+        background-position: top 5rem left 0;
+      }
+
+      @screen lg {
+        background-position: top -11rem left 16rem;
+      }
+
+      @screen xl {
+        background-position: unset;
+      }
+    }
+
+    @screen md {
+      margin: -2rem;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.oneColumnBody {
+  > p {
+    margin-bottom: 3.2rem;
+
+    &:first-child {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  > h2 {
+    margin-bottom: 1.6rem;
+  }
+
+  @screen lg {
+    max-width: 45.6rem;
+
+    > h2 {
+      font-size: 4.8rem;
+    }
+  }
+
+  @screen xl {
+    max-width: 51.4rem;
+
+    > h2 {
+      font-size: 7.2rem;
+    }
+  }
 }

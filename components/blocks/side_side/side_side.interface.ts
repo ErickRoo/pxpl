@@ -2,6 +2,7 @@ import { StaticImageData } from 'next/image'
 
 export default interface SideSideInterface {
     type: string;
+    reverse?: boolean;
     topTag?: string;
     heading: string;
     description: string;
@@ -10,4 +11,5 @@ export default interface SideSideInterface {
         ctaLink: string;
     };
     image?: StaticImageData;
+    showCircles?: boolean;
 }
