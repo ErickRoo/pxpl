@@ -1,7 +1,6 @@
 @import '../../../styles/variables';
 
 .root {
-  font-family: 'AeonikPro-Regular';
   padding: 2rem;
 }
 
@@ -13,6 +12,7 @@
   margin: auto;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   gap: 3rem;
 
   @screen md {
@@ -28,8 +28,61 @@
 
 .leftSide {
   width: 100%;
+  display: flex;
+  justify-content: end;
+
+  @screen md {
+    width: 50%;
+  }
 }
 
 .rightSide {
   width: 100%;
+
+  @screen md {
+    width: 50%;
+  }
+}
+
+.image {
+  max-width: unset;
+  max-height: 32.7rem;
+
+  @media screen and (min-width: 480px) {
+    max-height: unset;
+  }
+
+  @screen lg {
+    max-height: 42.5rem
+  }
+}
+
+.oneColumnBody {
+  > p {
+    margin-bottom: 3.2rem;
+
+    &:first-child {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  > h2 {
+    margin-bottom: 1.6rem;
+  }
+
+  @screen lg {
+    max-width: 45.6rem;
+
+    > h2 {
+      font-size: 4.8rem;
+    }
+  }
+
+  @screen xl {
+    max-width: 51.4rem;
+
+    > h2 {
+      font-size: 7.2rem;
+    }
+  }
 }
