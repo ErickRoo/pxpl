@@ -1,8 +1,16 @@
 @import '../../../styles/variables';
 
 .root {
-  padding: 2rem;
+  padding: 2.4rem;
   overflow: hidden;
+
+  @screen md {
+    padding: 3.2rem;
+  }
+
+  @screen lg {
+    padding: 4rem;
+  }
 }
 
 .wrapper {
@@ -110,19 +118,22 @@
 }
 
 .bgImage {
-  width: 100%;
+  width: calc(100% + 4.8rem);
+  margin: -2.4rem -2.4rem 0.6rem;
+  border-radius: 1rem;
+  overflow: hidden;
 
   > div {
     height: 32rem;
 
     @screen sm {
-      background-size: 37rem;
-      background-position: 8rem -1rem;
+      background-size: 39rem;
+      background-position: 9rem -3rem;
     }
 
     @screen md {
       background-size: 45rem;
-      background-position: top 5rem right -1rem;
+      background-position: top 5rem right 0rem;
     }
 
     @screen lg {
@@ -133,14 +144,14 @@
     
     @screen xl {
       height: 59.2rem;
-      background-size: 100rem 60rem;
+      background-size: 110rem 60rem;
       background-position: top 14rem right -5rem;
     }
   }
   
   @screen md {
-    margin: -2rem;
-    margin-right: 2rem;
+    width: calc(100% + 6.4rem);
+    margin: -3.2rem 0 -3.2rem -6.4rem;
   }
 
   &__reverse {
@@ -159,8 +170,8 @@
     }
 
     @screen md {
-      margin: -2rem;
-      margin-left: 2rem;
+      width: calc(100% + 6.4rem);
+      margin: -3.2rem -6.4rem -3.2rem 0;
     }
   }
 }

@@ -7,24 +7,26 @@ import { OneColumnBodyInterface } from './one-column-body.interface'
 import styles from './one-column-body.module.scss'
 
 const OneColumnBody: FC<OneColumnBodyInterface> = ({
-  className = '', topTag, headline, headlineLevel, description, primaryCta, secondaryCta, showTertiaryButton,
+  className = '', topTag, headline, headlineLevel, description, primaryCta, secondaryCta, showTertiaryButton, stackCtas,
 }) => (
   <div className={`${styles.root} ${className}`}>
     {topTag && (
-    <p className="eyebrow mb-[2.4rem]">{topTag}</p>
+      <p className="eyebrow mb-[2.4rem]">{topTag}</p>
     )}
-    <Headline as={`h${headlineLevel}`} className={styles.heading}>{headline}</Headline>
+    {headline && (
+      <Headline as={`h${headlineLevel}`} className={styles.heading}>{headline}</Headline>
+    )}
     {description && (
-    <p className={`${styles.description} typo-body`}>{description}</p>
+      <p className={`${styles.description} typo-body`}>{description}</p>
     )}
-    <section className={styles.buttonsContainer}>
+    <section className={`${styles.buttonsContainer} ${stackCtas && styles.buttonsContainer__stacks}`}>
       {primaryCta && (
         showTertiaryButton
           ? <TertiaryButton type="link" text={primaryCta.ctaText} href={primaryCta.ctaLink} />
           : <ArrowButton text={primaryCta.ctaText} href={primaryCta.ctaLink} />
       )}
       {secondaryCta && (
-      <UnderlinedButton text={secondaryCta.ctaText} href={secondaryCta.ctaLink} underlineColor="passionBlue" />
+        <UnderlinedButton text={secondaryCta.ctaText} href={secondaryCta.ctaLink} underlineColor="passionBlue" />
       )}
     </section>
   </div>
