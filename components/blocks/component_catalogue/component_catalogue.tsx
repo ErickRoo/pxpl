@@ -12,9 +12,6 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/ContentStack">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Content Stack</p>
       </Link>
-      <Link href="/components/PreFooter">
-        <p style={{ fontSize: 20, marginBottom: 20 }}>PreFooter</p>
-      </Link>
       <Link href="/components/SideSide">
         <p style={{ fontSize: 20, marginBottom: 20 }}>SideSide</p>
       </Link>
