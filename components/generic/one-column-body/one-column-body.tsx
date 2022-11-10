@@ -11,11 +11,13 @@ const OneColumnBody: FC<OneColumnBodyInterface> = ({
 }) => (
   <div className={`${styles.root} ${className}`}>
     {topTag && (
-    <p className="eyebrow mb-[2.4rem]">{topTag}</p>
+      <p className="eyebrow mb-[2.4rem]">{topTag}</p>
     )}
-    <Headline as={`h${headlineLevel}`} className={styles.heading}>{headline}</Headline>
+    {headline && (
+      <Headline as={`h${headlineLevel}`} className={styles.heading}>{headline}</Headline>
+    )}
     {description && (
-    <p className={`${styles.description} typo-body`}>{description}</p>
+      <p className={`${styles.description} typo-body`}>{description}</p>
     )}
     <section className={styles.buttonsContainer}>
       {primaryCta && (
@@ -24,7 +26,7 @@ const OneColumnBody: FC<OneColumnBodyInterface> = ({
           : <ArrowButton text={primaryCta.ctaText} href={primaryCta.ctaLink} />
       )}
       {secondaryCta && (
-      <UnderlinedButton text={secondaryCta.ctaText} href={secondaryCta.ctaLink} underlineColor="passionBlue" />
+        <UnderlinedButton text={secondaryCta.ctaText} href={secondaryCta.ctaLink} underlineColor="passionBlue" />
       )}
     </section>
   </div>
