@@ -8,6 +8,10 @@ import styles from './ttac.module.scss'
 export const typename = 'Set_Replicator_BlockTtac'
 
 const TtacBlock:FunctionComponent<{ block: TtacInterface }> = ({ block }) => {
+  if (!block) {
+    return null
+  }
+
   const { alignment, variant } = block
   const { width } = useWindowSize()
   const currentBreakpoint = getCurrentBreakpoint(width)

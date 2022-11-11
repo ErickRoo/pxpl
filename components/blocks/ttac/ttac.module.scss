@@ -2,12 +2,16 @@
 
 .root {
   padding: 2rem;
+  overflow: hidden;
 }
 
 .wrapper {
   @apply container;
-
   padding: 0;
+
+  @screen md {
+    max-width: 70.3rem;
+  }
 
   @screen lg {
     max-width: 78.2rem;
@@ -19,7 +23,7 @@
 }
 
 .oneColumnBody {
-  padding: 0 2.4rem;
+  white-space: pre-line;
 
   > p {
     margin-bottom: 3.2rem;
@@ -39,12 +43,14 @@
 
   @screen md {
     padding: 0;
-    white-space: break-spaces;
   }
 
   @screen lg {
     > h2 {
       font-size: 4.8rem;
+    }
+    > p {
+      line-height: 2.8rem;
     }
   }
 
@@ -52,11 +58,26 @@
     > h2 {
       font-size: 7.2rem;
     }
+    > p {
+      line-height: 135%;
+    }
   }
 
 }
 
+.oneColumnBody__left {
+  @screen xl {
+    > p {
+      margin-bottom: 4rem;
+      &:last-child {
+        first-bottom: 0.8rem;
+      }
+    }
+  }
+}
+
 .oneColumnBody__center {
+  padding: 0 1.7rem;
   text-align: center;
   > section {
     justify-content: center;
@@ -97,18 +118,30 @@
 }
 
 .wrapperImage {
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+
   img {
     margin: auto;
   }
 
   &__headlineTop {
-    margin: 3.2rem 0;
+    margin: 3.2rem -2rem;
+  }
 
-    @screen md {
+  @screen md {
+    width: 100%;
+    margin: 0;
+
+    &__headlineTop {
+      margin-top: 2rem;
       margin-bottom: 4rem;
     }
+  }
 
-    @screen xl {
+  @screen xl {
+    &__headlineTop {
+      margin-top: 3rem;
       margin-bottom: 4.8rem;
     }
   }
