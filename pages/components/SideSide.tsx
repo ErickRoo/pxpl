@@ -62,6 +62,12 @@ const placeholderFirstSideSideBlock = {
     showCircles: true,
     ...placeholderBodyA,
   } as SideSideInterface,
+  xxl: {
+    variant: 'image-left',
+    image: PlaceholderLeftImage,
+    showCircles: true,
+    ...placeholderBodyA,
+  } as SideSideInterface,
 }
 
 const placeholderSecondSideSideBlock = {
@@ -78,6 +84,12 @@ const placeholderSecondSideSideBlock = {
     ...placeholderBodyB,
   } as SideSideInterface,
   xl: {
+    variant: 'image-right',
+    image: PlaceholderLeftImage,
+    showCircles: true,
+    ...placeholderBodyA,
+  } as SideSideInterface,
+  xxl: {
     variant: 'image-right',
     image: PlaceholderLeftImage,
     showCircles: true,
@@ -111,6 +123,11 @@ const placeholderThirdSideSideBlock = {
     image: PlaceholderXlBgImage,
     ...placeholderBodyA,
   } as SideSideInterface,
+  xxl: {
+    variant: 'image-left',
+    image: PlaceholderXlBgImage,
+    ...placeholderBodyA,
+  } as SideSideInterface,
 }
 
 const placeholderFourthSideSideBlock = {
@@ -125,6 +142,11 @@ const placeholderFourthSideSideBlock = {
     ...placeholderBodyB,
   } as SideSideInterface,
   xl: {
+    variant: 'image-right',
+    image: PlaceholderXlBgImage,
+    ...placeholderBodyA,
+  } as SideSideInterface,
+  xxl: {
     variant: 'image-right',
     image: PlaceholderXlBgImage,
     ...placeholderBodyA,
