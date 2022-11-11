@@ -22,7 +22,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 3.5rem;
 
   @screen md {
     gap: 3.2rem;
@@ -63,20 +63,27 @@
   width: 100%;
   background-color: transparent;
 
+  &__reverse > div {
+    margin-left: auto;
+  }
+
   @screen md {
     width: 50%;
   }
 
-  &__reverse > div {
-    margin-left: auto;
+  @screen xl {
+    &__reverse > div {
+      margin-top: -2rem;
+    }
   }
+
 }
 
 .circlesContainer {
   position: absolute;
   aspect-ratio: 1 / 1;
-  height: 104%;
-  top: -2%;
+  height: 103.2%;
+  top: -1.6%;
 
   > li {
     aspect-ratio: 1 / 1;
@@ -84,13 +91,13 @@
 
     &:nth-child(1) {
       border: 0.2rem solid theme('colors.warmGray');
-      transform: translate(-70%, 0%);
+      transform: translate(-76%, 0%);
     }
 
     &:nth-child(2) {
       opacity: 0.1;
       background-color: theme('colors.suggarBlue');
-      transform: translate(-35%, -100%);
+      transform: translate(-38%, -100%);
     }
 
     &:nth-child(3) {
@@ -102,11 +109,11 @@
   &__reverse {
     > li {
       &:nth-child(1) {
-        transform: translate(70%, 0%);
+        transform: translate(76%, 0%);
       }
   
       &:nth-child(2) {
-        transform: translate(35%, -100%);
+        transform: translate(38%, -100%);
       }
   
       &:nth-child(3) {
@@ -125,27 +132,22 @@
 
   > div {
     height: 32rem;
-
-    @screen sm {
-      background-size: 39rem;
-      background-position: 9rem -3rem;
-    }
+    background-size: 37.5rem;
+    background-position: top 0 right 0rem;
 
     @screen md {
-      background-size: 45rem;
-      background-position: top 5rem right 0rem;
+      background-size: 45.5rem;
+      
     }
 
     @screen lg {
       height: 45.2rem;
-      background-size: 70rem;
-      background-position: top 5rem right -1rem;
+      background-size: 66.7rem;
     }
     
     @screen xl {
       height: 59.2rem;
-      background-size: 110rem 60rem;
-      background-position: top 14rem right -5rem;
+      background-size: 75rem 61rem;
     }
   }
   
@@ -156,17 +158,7 @@
 
   &__reverse {
     > div {
-      @screen md {
-        background-position: top 5rem left 0;
-      }
-
-      @screen lg {
-        background-position: top -11rem left 16rem;
-      }
-
-      @screen xl {
-        background-position: unset;
-      }
+      background-position: top 0 left 0rem;
     }
 
     @screen md {
@@ -178,9 +170,12 @@
 
 .oneColumnBody {
   > p {
+    font-size: 1.6rem;
     margin-bottom: 3.2rem;
+    letter-spacing: normal;
 
     &:first-child {
+      font-size: 1.4rem;
       margin-bottom: 0.8rem;
     }
   }
@@ -194,6 +189,10 @@
 
     > h2 {
       font-size: 4.8rem;
+    }
+
+    > p {
+      white-space: break-spaces;
     }
   }
 

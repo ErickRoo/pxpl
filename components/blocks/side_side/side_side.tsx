@@ -6,6 +6,10 @@ import styles from './side_side.module.scss'
 export const typename = 'Set_Replicator_BlockSideSide'
 
 const SideSideBlock:FunctionComponent<{ block: SideSideInterface }> = ({ block }) => {
+  if (!block) {
+    return null
+  }
+
   const reverse = block.variant === 'image-right'
   return (
     <div className={styles.root}>
