@@ -4,25 +4,21 @@
   background-color: theme('colors.secondarySlate');
   color: theme('colors.white');
   overflow: hidden;
-  padding: 6.2rem 2.4rem;
+  padding: 0 2.4rem;
 
   @screen md {
-    padding: 7.5rem 3.2rem;
+    padding: 0 3.2rem;
   }
 
   @screen lg {
-    padding: 8rem 4rem;
-  }
-
-  @screen xl {
-    padding: 8.5rem 2.4rem;
+    padding: 0 4rem;
   }
 }
 
 .wrapper {
   @apply container;
 
-  padding: 0;
+  padding: 13.5rem 0;
   display: flex;
   margin: auto;
   justify-content: center;
@@ -30,65 +26,73 @@
   gap: 5.6rem;
 
   @screen md {
+    padding: 8.2rem 0;
     gap: 3.2rem;
     flex-direction: row;
-
-    h3 {
-      font-size: 4rem;
-    }
   }
   
   @screen lg {
+    padding: 10.4rem 0;
     gap: 11.3rem;
   }
 
   @screen xl {
+    padding: 17.2rem 0;
     gap: 17rem;
     max-width: 108.4rem;
-
-    h3 {
-      font-size: 4.8rem;
-    }
   }
 }
 
 .wrapper__variantImage {
   gap: 2.55rem;
   flex-direction: column-reverse;
+  padding: 6.2rem 0;
 
   @screen md {
     gap: 12.4rem;
     flex-direction: row;
+    padding: 5.45rem 0 4.75rem;
 
     > div {
       &:first-child {
-        width: 43%
+        width: 42%
       }
       &:last-child {
-        width: 57%
+        width: 58%
       }
     }
   }
 
   @screen lg {
     gap: 11.3rem;
+    padding: 9.6rem 0 8rem;
 
     > div {
       &:first-child {
         width: 55%
       }
       &:last-child {
-        width: 45%
+        width: 45%;
+      }
+
+      h3 {
+        font-size: 4rem;
       }
     }
   }
 
   @screen xl {
     gap: 17rem;
+    padding: 16rem 0 8.4rem;
 
     > div {
       &:last-child {
-        width: 36%;
+        width: 37%;
+      }
+
+      
+      h3 {
+        font-size: 4.8rem;
       }
     }
   }
@@ -96,6 +100,7 @@
 
 .wrapper__variantForm {
   flex-direction: column;
+  padding: 8.6rem 0 5.6rem;
 
   > div > div > p:first-child {
     display: none;
@@ -103,6 +108,7 @@
 
   @screen md {
     max-width: 52rem;
+    padding: 11.2rem 0 5.6rem;
     gap: 5.6rem;
     > div {
       width: 100%;
@@ -112,14 +118,15 @@
   @screen lg {
     max-width: 100%;
     gap: 8.8rem;
+    padding: 7.7rem 0 5.6rem;
     flex-direction: row;
 
     > div {
       &:first-child {
-        width: 52%;
+        width: 53%;
       }
       &:last-child {
-        width: 48%;
+        width: 47%;
       }
 
       > div > p:first-child {
@@ -130,11 +137,15 @@
 
   @screen xl {
     max-width: 108.4rem;
-    gap: 16rem;
+    padding: 17.2rem 0 5.6rem;
+    gap: 17rem;
 
     > div {
       &:first-child {
-        width: 61%;
+        width: 56%;
+      }
+      &:last-child {
+        width: 44%;
       }
     }
   }
@@ -145,6 +156,7 @@
 
   h2 {
     font-size: 4rem;
+    line-height: 100%;
 
     @screen md {
       margin-bottom: 0;
@@ -159,6 +171,10 @@
   @screen lg {
     width: 55%;
   }
+
+  @screen xl {
+    width: 56%;
+  }
 }
 
 .rightSide {
@@ -167,21 +183,58 @@
 
   @screen md {
     width: 50%;
-
-    h4 {
-      font-size: 3.2rem;
-    }
   }
 
   @screen lg {
     width: 45%;
   }
 
+  @screen xl {
+    width: 44%;
+  }
 }
 
-.tertiaryButton {
+.oneColumnBody {
+  > p {
+    letter-spacing: normal;
+  }
+  
   > section > section {
     padding: 1.6rem;
+  }
+
+  @screen md {
+    h4 {
+      margin-top: 1rem;
+      font-size: 3.2rem;
+      line-height: 110%;
+    }
+
+    > p {
+      letter-spacing: 0.01em;
+    }
+  }
+
+  @screen lg {
+    > p {
+      line-height: 150%;
+      letter-spacing: normal;
+    }
+  }
+
+  @screen xl {
+    h3 {
+      font-size: 4.8rem;
+    }
+
+    h4 {
+      margin-top: 0;
+    }
+
+    > p {
+      line-height: 135%;
+      letter-spacing: normal;
+    }
   }
 }
 
@@ -192,10 +245,12 @@
 
   @screen md {
     padding: 0;
+    margin-top: -2rem;
   }
 
   @screen lg {
     max-width: 37.5rem;
+    margin-top: -1rem;
   }
 
   @screen xl {

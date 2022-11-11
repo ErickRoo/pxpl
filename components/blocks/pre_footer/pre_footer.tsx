@@ -24,7 +24,7 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
         <section className={`${styles.wrapper} ${styles.wrapper__variantImage}`}>
           <div className={styles.leftSide}>
             <OneColumnBody
-              className={showTertiaryButton ? styles.tertiaryButton : ''}
+              className={styles.oneColumnBody}
               topTag={block.topTag}
               headline={block.headlineLeft}
               headlineLevel={3}
@@ -52,7 +52,7 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
           </div>
           <div className={styles.rightSide}>
             <OneColumnBody
-              className={showTertiaryButton ? styles.tertiaryButton : ''}
+              className={styles.oneColumnBody}
               topTag={block.topTag}
               headline={block.headlineRight}
               headlineLevel={4}
@@ -74,7 +74,7 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
         <section className={`${styles.wrapper} ${styles.wrapper__variantForm}`}>
           <div className={styles.leftSide}>
             <OneColumnBody
-              className={showTertiaryButton ? styles.tertiaryButton : ''}
+              className={styles.oneColumnBody}
               topTag={block.topTag}
               headline={block.headlineLeft}
               headlineLevel={3}
