@@ -7,11 +7,7 @@ import { OneColumnBodyInterface } from './one-column-body.interface'
 import styles from './one-column-body.module.scss'
 
 const OneColumnBody: FC<OneColumnBodyInterface> = ({
-<<<<<<< HEAD
-  className = '', topTag, headline, headlineLevel, description, primaryCta, secondaryCta, showTertiaryButton,
-=======
   className = '', topTag, headline, headlineLevel, description, primaryCta, secondaryCta, showTertiaryButton, stackCtas,
->>>>>>> feature/module-side-side-2
 }) => (
   <div className={`${styles.root} ${className}`}>
     {topTag && (
@@ -23,11 +19,7 @@ const OneColumnBody: FC<OneColumnBodyInterface> = ({
     {description && (
       <p className={`${styles.description} typo-body`}>{description}</p>
     )}
-<<<<<<< HEAD
-    <section className={styles.buttonsContainer}>
-=======
     <section className={`${styles.buttonsContainer} ${stackCtas && styles.buttonsContainer__stacks}`}>
->>>>>>> feature/module-side-side-2
       {primaryCta && (
         showTertiaryButton
           ? <TertiaryButton type="link" text={primaryCta.ctaText} href={primaryCta.ctaLink} />
