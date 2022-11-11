@@ -13,5 +13,13 @@
 }
 
 .buttonsContainer {
-  @apply flex flex-wrap gap-x-[4rem] gap-y-[2.4rem];
+  @apply flex flex-wrap flex-row gap-x-[4rem] gap-y-[2.4rem];
+
+  > div:last-child {
+    @apply max-w-fit;
+  }
+
+  &__stacks {
+    @apply flex-col max-w-fit;
+  }
 }

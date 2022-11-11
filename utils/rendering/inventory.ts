@@ -12,9 +12,12 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as SideSideBlockTypename } from '../../components/blocks/side_side/side_side'
 // import SideSideBlockQuery from '../../components/blocks/side_side/side_side.graphql'
 
+<<<<<<< HEAD
 // import { typename as TtacBlockTypename } from '../../components/blocks/ttac/ttac'
 // import TtacBlockQuery from '../../components/blocks/ttac/ttac.graphql'
 
+=======
+>>>>>>> feature/module-side-side-2
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -53,6 +56,7 @@ const blocks:Block[] = [
   //   extraQueries: undefined,
   // },
 
+<<<<<<< HEAD
   // {
   //   component: dynamic(() => import('../../components/blocks/ttac/ttac')),
   //   query: TtacBlockQuery,
@@ -60,6 +64,8 @@ const blocks:Block[] = [
   //   extraQueries: undefined,
   // },
 
+=======
+>>>>>>> feature/module-side-side-2
   // ##HYGEN_START##
   // do not modify the above line since its used by hygen to generate the block list
 ]
