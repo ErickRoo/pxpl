@@ -14,24 +14,21 @@ const SideSideItem:FunctionComponent<SideSideItemInterface> = ({
   }
 
   const reverse = variant === 'image-right'
+  const stylesBgImage = `${styles.bgImage} ${reverse ? `${styles.bgImage__reverse}` : ''}`
   return (
     <div className={styles.root}>
       <section className={`${styles.wrapper} ${reverse ? `${styles.wrapper__reverse}` : ''}`}>
         <div className={`${styles.wrapperImage} ${reverse ? `${styles.wrapperImage__reverse}` : ''}`}>
-          {showCircles ? (
-            <>
-              <ul className={`${styles.circlesContainer} ${reverse ? `${styles.circlesContainer__reverse}` : ''}`}>
-                <li />
-                <li />
-                <li />
-              </ul>
-              <img src={image?.src} alt="placeholderimage" />
-            </>
-          ) : (
-            <section className={`${styles.bgImage} ${reverse ? `${styles.bgImage__reverse}` : ''}`}>
-              <div style={{ backgroundImage: `url(${image?.src})` }} />
-            </section>
+          {showCircles && (
+            <ul className={`${styles.circlesContainer} ${reverse ? `${styles.circlesContainer__reverse}` : ''}`}>
+              <li />
+              <li />
+              <li />
+            </ul>
           )}
+          <section className={`${stylesBgImage} ${showCircles ? `${styles.bgImage__circles}` : ''}`}>
+            <div style={{ backgroundImage: `url(${image?.src})` }} />
+          </section>
         </div>
         <div className={`${styles.wrapperContent} ${reverse ? `${styles.wrapperContent__reverse}` : ''}`}>
           <OneColumnBody

@@ -127,51 +127,121 @@
 }
 
 .bgImage {
-  width: calc(100% + 4rem);
-  margin: -1rem -2rem 0rem;
+  width: calc(100% + 4.8rem);
+  height: 32rem;
+  margin: -1rem -2.4rem 0rem;
   border-radius: 1rem;
   overflow: hidden;
-  
+  z-index: 1;
+
   > div {
-    height: 32rem;
-    background-position: top 0 right 0rem;
-    background-size: 37.5rem;
+    height: 100%;
+    background-position: top -20rem right 0;
+    background-size: 100%;
+  }
 
-    @screen md {
-      height: 33.4rem;
-      background-size: 45.5rem;
-    }
+  @screen md {
+    width: calc(100% + 6.4rem);
+    height: 33.4rem;
+    margin: -1rem 0 -1rem;
+    margin-left: -6.4rem;
 
-    @screen lg {
-      height: 45.2rem;
-      background-size: 66.7rem;
+    > div {
+      background-size: 46rem;
+      background-position: top -5rem right 0;
     }
+  }
 
-    @screen xl {
-      height: 59.2rem;
-      background-size: 76rem;
+  @screen lg {
+    width: calc(100% + 8rem);
+    margin-left: -8rem;
+    height: 45.2rem;
+
+    > div {
+      background-size: 68rem;
+      background-position: top -10rem right 0;
     }
+  }
+
+  @screen xl {
+    height: 59.2rem;
+
+    > div {
+      background-size: 106rem 100%;
+      background-position: top 0 right -5rem;  
+    }
+  }
+}
+
+.bgImage__reverse {
+  > div {
+    background-position: top 0 left 0;
   }
 
   @screen md {
     width: calc(100% + 6.4rem);
     margin: -1rem 0 -1rem;
-    margin-left: -6.4rem;
+    margin-right: -6.4rem;
+    
+    > div {
+      background-position: top -5rem left 0;
+    }
   }
-  
+
   @screen lg {
     width: calc(100% + 8rem);
-    margin-left: -8rem;
+    margin-right: -8rem;
+
+    div {
+      background-position: top 6rem left -17rem;
+    }
   }
 
-  &__reverse {
+  @screen xl {
     > div {
-      background-position: top 0 left 0rem;
+      background-position: top 0 left -27rem;
     }
+  }
+}
 
-    @screen md {
-      margin-left: 0;
-      margin-right: -6.4rem;
+.bgImage__circles {
+  width: 100%;
+  height: 32.5rem;
+  padding: 1rem 0;
+
+  > div {
+    background-size: 33rem;
+    background-position: 0rem -1rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+  }
+
+  @screen md {
+    width: 33.6rem;
+    height: 34.8rem;
+  
+    > div {
+      background-size: 34.2rem;
+      background-position: 0rem 0rem;
+    }
+  }
+
+  @screen lg {
+    width: 45.6rem;
+    height: 46.2rem;
+  
+    > div {
+      background-size: 46rem;
+    }
+  }
+
+  @screen xl {
+    width: 51.4rem;
+    height: 51.4rem;
+  
+    > div {
+      background-size: 53rem;
+      background-position: -14rem 0rem;
     }
   }
 }
