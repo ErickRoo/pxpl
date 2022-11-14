@@ -3,12 +3,8 @@
 .root {
   background-color: theme('colors.secondarySlate');
   color: theme('colors.white');
-<<<<<<< HEAD
-  padding: 6.2rem 2.4rem;
-=======
   overflow: hidden;
   padding: 0 2.4rem;
->>>>>>> a6f3b2872147334d1db5c38ce99ed59deb5c8308
 
   @screen md {
     padding: 0 3.2rem;
@@ -254,10 +250,7 @@
 
   @screen lg {
     max-width: 37.5rem;
-<<<<<<< HEAD
-=======
     margin-top: -1rem;
->>>>>>> a6f3b2872147334d1db5c38ce99ed59deb5c8308
   }
 
   @screen xl {
