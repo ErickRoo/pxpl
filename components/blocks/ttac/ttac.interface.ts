@@ -1,19 +1,6 @@
-import { StaticImageData } from 'next/image'
+import TtacItemInterface from 'components/generic/ttac_item/ttac_item.interface'
 
 export default interface TtacInterface {
     type: string;
-    variant: string;
-    alignment?: string;
-    topTag?: string;
-    headline: string;
-    description: string;
-    primaryCta?: {
-        ctaText: string;
-        ctaLink: string;
-    };
-    secondaryCta?: {
-        ctaText: string;
-        ctaLink: string;
-    };
-    image?: StaticImageData;
+    TextAndImageBlocks: TtacItemInterface[];
 }

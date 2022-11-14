@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import Ttac from 'components/blocks/ttac/ttac'
-import TtacInterface from 'components/blocks/ttac/ttac.interface'
+import TtacItemInterface from 'components/generic/ttac_item/ttac_item.interface'
 import useWindowSize from 'styles/getBreakpointQuery'
 import getCurrentBreakpoint from 'utils/breakpoints/getCurrentBreakpoint'
 import PlaceholderImage from '../../assets/Ttac/placeholder.png'
@@ -34,40 +34,40 @@ const placeholderTtacABlock = {
     alignment: 'center',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
   sm: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'center',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
   md: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'center',
     topTag: topTagB,
-  } as TtacInterface,
+  } as TtacItemInterface,
   lg: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'center',
     topTag: topTagB,
-  } as TtacInterface,
+  } as TtacItemInterface,
   xl: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'center',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
   xxl: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'center',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
 }
 
 const placeholderTtacBBlock = {
@@ -77,40 +77,40 @@ const placeholderTtacBBlock = {
     alignment: 'left',
     topTag: topTagA,
     headline: headlineC,
-  } as TtacInterface,
+  } as TtacItemInterface,
   sm: {
     ...placeholderElements,
     variant: 'headline-top',
     alignment: 'center',
     topTag: topTagA,
     headline: headlineC,
-  } as TtacInterface,
+  } as TtacItemInterface,
   md: {
     ...placeholderElements,
     variant: 'headline-top',
     alignment: 'center',
     topTag: topTagB,
-  } as TtacInterface,
+  } as TtacItemInterface,
   lg: {
     ...placeholderElements,
     variant: 'headline-top',
     alignment: 'center',
     topTag: topTagB,
-  } as TtacInterface,
+  } as TtacItemInterface,
   xl: {
     ...placeholderElements,
     variant: 'headline-top',
     alignment: 'center',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
   xxl: {
     ...placeholderElements,
     variant: 'headline-top',
     alignment: 'center',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
 }
 
 const placeholderTtacCBlock = {
@@ -120,40 +120,40 @@ const placeholderTtacCBlock = {
     alignment: 'center',
     topTag: topTagA,
     headline: headlineC,
-  } as TtacInterface,
+  } as TtacItemInterface,
   sm: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'left',
     topTag: topTagA,
     headline: headlineC,
-  } as TtacInterface,
+  } as TtacItemInterface,
   md: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'left',
     topTag: topTagB,
-  } as TtacInterface,
+  } as TtacItemInterface,
   lg: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'left',
     topTag: topTagB,
-  } as TtacInterface,
+  } as TtacItemInterface,
   xl: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'left',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
   xxl: {
     ...placeholderElements,
     variant: 'normal',
     alignment: 'left',
     topTag: topTagA,
     headline: headlineA,
-  } as TtacInterface,
+  } as TtacItemInterface,
 }
 
 const PreFooter: FC = () => {
@@ -161,14 +161,16 @@ const PreFooter: FC = () => {
   const { position = '' } = getCurrentBreakpoint(width) ?? {}
 
   return (
-    <div style={{ backgroundColor: '#eee' }}>
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
-      <Ttac block={placeholderTtacABlock?.[position]} />
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
-      <Ttac block={placeholderTtacBBlock?.[position]} />
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
-      <Ttac block={placeholderTtacCBlock?.[position]} />
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
+    <div style={{ backgroundColor: '#f1f1f1' }}>
+      <Ttac block={{
+        type: 'block',
+        TextAndImageBlocks: [
+          placeholderTtacABlock?.[position],
+          placeholderTtacBBlock?.[position],
+          placeholderTtacCBlock?.[position],
+        ],
+      }}
+      />
     </div>
   )
 }
