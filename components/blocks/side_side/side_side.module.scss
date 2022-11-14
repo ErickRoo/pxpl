@@ -1,0 +1,206 @@
+@import '../../../styles/variables';
+
+.root {
+  padding: 2.4rem;
+  overflow: hidden;
+
+  @screen md {
+    padding: 3.2rem;
+  }
+
+  @screen lg {
+    padding: 4rem;
+  }
+}
+
+.wrapper {
+  @apply container;
+
+  padding: 0;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+
+  @screen md {
+    gap: 3.2rem;
+    flex-direction: row;
+
+    &__reverse {
+      flex-direction: row-reverse;
+    }
+  }
+
+  @screen xl {
+    gap: 5.6rem;
+    max-width: 144rem;
+  }
+}
+
+.wrapperImage {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+
+  @screen md {
+    width: 50%;
+    justify-content: end;
+
+    &__reverse {
+      justify-content: start;
+    }
+  }
+
+  img {
+    z-index: 1;
+  }
+}
+
+.wrapperContent {
+  width: 100%;
+  background-color: transparent;
+
+  &__reverse > div {
+    margin-left: auto;
+  }
+
+  @screen md {
+    width: 50%;
+  }
+
+  @screen xl {
+    &__reverse > div {
+      margin-top: -2rem;
+    }
+  }
+
+}
+
+.circlesContainer {
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  height: 103.2%;
+  top: -1.6%;
+
+  > li {
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+
+    &:nth-child(1) {
+      border: 0.2rem solid theme('colors.warmGray');
+      transform: translate(-76%, 0%);
+    }
+
+    &:nth-child(2) {
+      opacity: 0.1;
+      background-color: theme('colors.suggarBlue');
+      transform: translate(-38%, -100%);
+    }
+
+    &:nth-child(3) {
+      border: 0.2rem solid theme('colors.suggarBlue');
+      transform: translate(0%, -200%);
+    }
+  }
+
+  &__reverse {
+    > li {
+      &:nth-child(1) {
+        transform: translate(76%, 0%);
+      }
+  
+      &:nth-child(2) {
+        transform: translate(38%, -100%);
+      }
+  
+      &:nth-child(3) {
+        transform: translate(0%, -200%);
+      }
+    }
+  }
+
+}
+
+.bgImage {
+  width: calc(100% + 4.8rem);
+  margin: -2.4rem -2.4rem 0.6rem;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  > div {
+    height: 32rem;
+    background-size: 37.5rem;
+    background-position: top 0 right 0rem;
+
+    @screen md {
+      background-size: 45.5rem;
+      
+    }
+
+    @screen lg {
+      height: 45.2rem;
+      background-size: 66.7rem;
+    }
+    
+    @screen xl {
+      height: 59.2rem;
+      background-size: 75rem 61rem;
+    }
+  }
+  
+  @screen md {
+    width: calc(100% + 6.4rem);
+    margin: -3.2rem 0 -3.2rem -6.4rem;
+  }
+
+  &__reverse {
+    > div {
+      background-position: top 0 left 0rem;
+    }
+
+    @screen md {
+      width: calc(100% + 6.4rem);
+      margin: -3.2rem -6.4rem -3.2rem 0;
+    }
+  }
+}
+
+.oneColumnBody {
+  > p {
+    font-size: 1.6rem;
+    margin-bottom: 3.2rem;
+    letter-spacing: normal;
+
+    &:first-child {
+      font-size: 1.4rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  > h2 {
+    margin-bottom: 1.6rem;
+  }
+
+  @screen lg {
+    max-width: 45.6rem;
+
+    > h2 {
+      font-size: 4.8rem;
+    }
+
+    > p {
+      white-space: break-spaces;
+    }
+  }
+
+  @screen xl {
+    max-width: 51.4rem;
+
+    > h2 {
+      font-size: 7.2rem;
+    }
+  }
+}
