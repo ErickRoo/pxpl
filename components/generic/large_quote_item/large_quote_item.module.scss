@@ -1,5 +1,96 @@
 @import '../../../styles/variables';
 
 .root {
-  // add your styles here
+/*
+  background-color: theme('colors.secondarySlate');
+  color: theme('colors.white');
+  */
+  overflow: hidden;
+  /*padding: 0 2.4rem;*/
+
+  @screen md {
+    /*padding: 0 3.2rem;*/
+  }
+
+  @screen lg {
+    /*padding: 0 4rem;*/
+  }
+}
+
+.wrapper {
+  @apply container;
+
+  /*
+  padding: 13.5rem 0;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5.6rem;
+
+  @screen md {
+    padding: 8.2rem 0;
+    gap: 3.2rem;
+    flex-direction: row;
+  }
+  
+  @screen lg {
+    padding: 10.4rem 0;
+    gap: 11.3rem;
+  }
+
+  @screen xl {
+    padding: 17.2rem 0;
+    gap: 17rem;
+    max-width: 108.4rem;
+  }
+  */
+}
+
+.leftSide {
+  width: 100%;
+
+  /*
+  h2 {
+    font-size: 4rem;
+    line-height: 100%;
+
+    @screen md {
+      margin-bottom: 0;
+      font-size: 7.2rem;
+    }
+  }
+
+  @screen md {
+    width: 50%;
+  }
+
+  @screen lg {
+    width: 55%;
+  }
+
+  @screen xl {
+    width: 56%;
+  }
+  */
+}
+
+.rightSide {
+  width: 100%;
+
+  /*
+  align-self: center;
+
+  @screen md {
+    width: 50%;
+  }
+
+  @screen lg {
+    width: 45%;
+  }
+
+  @screen xl {
+    width: 44%;
+  }
+  */
 }

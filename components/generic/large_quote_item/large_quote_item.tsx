@@ -1,16 +1,34 @@
 import React, { FunctionComponent } from 'react'
 
+import LargeQuoteItemInterface from './large_quote_item.interface'
 import styles from './large_quote_item.module.scss'
-import LargeQuoteInterface from './large_quote_item.interface'
 
-export const typename = 'Set_Replicator_BlockLargeQuote'
+const LargeQuoteItem:FunctionComponent<LargeQuoteItemInterface> = ({
+  variant, testimony, author, position,
+}) => {
+  if (variant === 'center') {
+    return (
+      <div className={styles.root}>
+        Center variant
+      </div>
+    )
+  }
 
-const LargeQuoteItem:FunctionComponent<LargeQuoteInterface> = () => (
-  <div
-    className={`${styles.root} container`}
-  >
-    Large quote Block
-  </div>
-)
+  return (
+    <div className={styles.root}>
+      <section className={styles.wrapper}>
+        <div className={styles.leftSide}>
+          <h4>{testimony}</h4>
+          <div>
+            <h4>{author}</h4>
+            <p>{position}</p>
+            <hr />
+          </div>
+        </div>
+        <div className={styles.rightSide}>aa</div>
+      </section>
+    </div>
+  )
+}
 
 export default LargeQuoteItem
