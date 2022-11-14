@@ -18,13 +18,8 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/SideSide">
         <p style={{ fontSize: 20, marginBottom: 20 }}>SideSide</p>
       </Link>
-<<<<<<< HEAD
       <Link href="/components/Ttac">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Ttac</p>
-=======
-      <Link href="/components/PreFooter">
-        <p style={{ fontSize: 20, marginBottom: 20 }}>PreFooter</p>
->>>>>>> 48694b89dfeccb2f14a6d5aeda466447cdae735c
       </Link>
     </div>
   </div>
