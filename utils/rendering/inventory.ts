@@ -6,6 +6,9 @@ import TextImageQuery from '../../components/blocks/text_image/text_image.graphq
 import { typename as ContentStackItemBlockTypename } from '../../components/blocks/content_stack_item/content_stack_item'
 import ContentStackItemBlockQuery from '../../components/blocks/content_stack_item/content_stack_item.graphql'
 
+// import { typename as PreFooterBlockTypename } from '../../components/blocks/pre_footer/pre_footer'
+// import PreFooterBlockQuery from '../../components/blocks/pre_footer/pre_footer.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -29,6 +32,13 @@ const blocks:Block[] = [
     typename: ContentStackItemBlockTypename,
     extraQueries: undefined,
   },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/pre_footer/pre_footer')),
+  //   query: PreFooterBlockQuery,
+  //   typename: PreFooterBlockTypename,
+  //   extraQueries: undefined,
+  // },
 
   // ##HYGEN_START##
   // do not modify the above line since its used by hygen to generate the block list

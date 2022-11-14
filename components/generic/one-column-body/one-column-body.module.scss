@@ -1,0 +1,25 @@
+@import '../../../styles/mixins';
+
+.root {
+  position: relative;
+}
+
+.heading {
+  @apply mb-[1.6rem] md:mb-[2.4rem];
+}
+
+.description {
+  @apply mb-[3.2rem] lg:text-[1.8rem] lg:leading-[135%] md:mb-[2.4rem];
+}
+
+.buttonsContainer {
+  @apply flex flex-wrap flex-row gap-x-[4rem] gap-y-[2.4rem];
+
+  > div:last-child {
+    @apply max-w-fit;
+  }
+
+  &__stacks {
+    @apply flex-col max-w-fit;
+  }
+}
