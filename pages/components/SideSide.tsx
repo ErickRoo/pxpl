@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import SideSideInterface from 'components/blocks/side_side/side_side.interface'
+import SideSideItemInterface from 'components/generic/side_side_item/side_side_item.interface'
 import SideSideBlock from 'components/blocks/side_side/side_side'
 import useWindowSize from 'styles/getBreakpointQuery'
 import getCurrentBreakpoint from 'utils/breakpoints/getCurrentBreakpoint'
@@ -37,37 +37,37 @@ const placeholderFirstSideSideBlock = {
     image: PlaceholderRightImage,
     showCircles: true,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   sm: {
     variant: 'image-left',
     image: PlaceholderRightImage,
     showCircles: true,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   md: {
     variant: 'image-left',
     image: PlaceholderRightImage,
     showCircles: true,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   lg: {
     variant: 'image-left',
     image: PlaceholderRightImage,
     showCircles: true,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xl: {
     variant: 'image-left',
     image: PlaceholderLeftImage,
     showCircles: true,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xxl: {
     variant: 'image-left',
     image: PlaceholderLeftImage,
     showCircles: true,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
 }
 
 const placeholderSecondSideSideBlock = {
@@ -76,25 +76,25 @@ const placeholderSecondSideSideBlock = {
     image: PlaceholderRightImage,
     showCircles: true,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   lg: {
     variant: 'image-right',
     image: PlaceholderRightImage,
     showCircles: true,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xl: {
     variant: 'image-right',
     image: PlaceholderLeftImage,
     showCircles: true,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xxl: {
     variant: 'image-right',
     image: PlaceholderLeftImage,
     showCircles: true,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
 }
 
 const placeholderThirdSideSideBlock = {
@@ -102,32 +102,32 @@ const placeholderThirdSideSideBlock = {
     variant: 'image-left',
     image: PlaceholderSmBgImage,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   sm: {
     variant: 'image-left',
     image: PlaceholderSmBgImage,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   md: {
     variant: 'image-left',
     image: PlaceholderMdBgImage,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   lg: {
     variant: 'image-left',
     image: PlaceholderLgBgImage,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xl: {
     variant: 'image-left',
     image: PlaceholderXlBgImage,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xxl: {
     variant: 'image-left',
     image: PlaceholderXlBgImage,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
 }
 
 const placeholderFourthSideSideBlock = {
@@ -135,22 +135,22 @@ const placeholderFourthSideSideBlock = {
     variant: 'image-right',
     image: PlaceholderMdBgImage,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   lg: {
     variant: 'image-right',
     image: PlaceholderLgBgImage,
     ...placeholderBodyB,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xl: {
     variant: 'image-right',
     image: PlaceholderXlBgImage,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
   xxl: {
     variant: 'image-right',
     image: PlaceholderXlBgImage,
     ...placeholderBodyA,
-  } as SideSideInterface,
+  } as SideSideItemInterface,
 }
 
 const SideSide: FC = () => {
@@ -158,16 +158,18 @@ const SideSide: FC = () => {
   const { position = '' } = getCurrentBreakpoint(width) ?? {}
 
   return (
-    <div style={{ backgroundColor: '#eee' }}>
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
-      <SideSideBlock block={placeholderFirstSideSideBlock[position]} />
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
-      <SideSideBlock block={placeholderSecondSideSideBlock[position]} />
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
-      <SideSideBlock block={placeholderThirdSideSideBlock[position]} />
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
-      <SideSideBlock block={placeholderFourthSideSideBlock[position]} />
-      <div style={{ padding: '3rem', backgroundColor: '#fff' }} />
+    <div style={{ backgroundColor: '#f1f1f1' }}>
+      <SideSideBlock
+        block={{
+          type: 'Block',
+          TextAndImageBlocks: [
+            placeholderFirstSideSideBlock[position],
+            placeholderSecondSideSideBlock[position],
+            placeholderThirdSideSideBlock[position],
+            placeholderFourthSideSideBlock[position],
+          ],
+        }}
+      />
     </div>
   )
 }

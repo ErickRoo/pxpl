@@ -1,5 +1,6 @@
+import SideSideItem from 'components/generic/side_side_item/side_side_item'
 import React, { FunctionComponent } from 'react'
-import OneColumnBody from 'components/generic/one-column-body/one-column-body'
+
 import SideSideInterface from './side_side.interface'
 import styles from './side_side.module.scss'
 
@@ -10,37 +11,23 @@ const SideSideBlock:FunctionComponent<{ block: SideSideInterface }> = ({ block }
     return null
   }
 
-  const reverse = block.variant === 'image-right'
   return (
     <div className={styles.root}>
-      <section className={`${styles.wrapper} ${reverse ? `${styles.wrapper__reverse}` : ''}`}>
-        <div className={`${styles.wrapperImage} ${reverse ? `${styles.wrapperImage__reverse}` : ''}`}>
-          {block.showCircles ? (
-            <>
-              <ul className={`${styles.circlesContainer} ${reverse ? `${styles.circlesContainer__reverse}` : ''}`}>
-                <li />
-                <li />
-                <li />
-              </ul>
-              <img src={block.image?.src} alt="placeholderimage" />
-            </>
-          ) : (
-            <section className={`${styles.bgImage} ${reverse ? `${styles.bgImage__reverse}` : ''}`}>
-              <div style={{ backgroundImage: `url(${block.image?.src})` }} />
-            </section>
-          )}
-        </div>
-        <div className={`${styles.wrapperContent} ${reverse ? `${styles.wrapperContent__reverse}` : ''}`}>
-          <OneColumnBody
-            className={`${styles.oneColumnBody}`}
-            topTag={block.topTag}
-            headline={block.headline}
-            headlineLevel={2}
-            description={block.description}
-            primaryCta={block.primaryCta}
+      {block.TextAndImageBlocks?.map((oneTextImageItem, idx) => {
+        const key = `side-side-item-${idx}`
+        return (
+          <SideSideItem
+            key={key}
+            variant={oneTextImageItem?.variant}
+            image={oneTextImageItem?.image}
+            showCircles={oneTextImageItem?.showCircles}
+            topTag={oneTextImageItem?.topTag}
+            headline={oneTextImageItem?.headline}
+            description={oneTextImageItem?.description}
+            primaryCta={oneTextImageItem?.primaryCta}
           />
-        </div>
-      </section>
+        )
+      })}
     </div>
   )
 }
