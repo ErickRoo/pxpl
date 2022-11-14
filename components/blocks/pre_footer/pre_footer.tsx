@@ -11,6 +11,7 @@ export const typename = 'Set_Replicator_BlockPreFooter'
 const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> = ({ block }) => {
   const { width } = useWindowSize()
   const currentBreakpoint = getCurrentBreakpoint(width)
+  const stackCtas = ['normal', 'sm', 'md'].includes(currentBreakpoint?.position)
   const showTertiaryButton = ['normal', 'sm', 'md'].includes(currentBreakpoint?.position)
 
   if (!block?.variant) {
@@ -21,16 +22,19 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
     return (
       <div className={styles.root}>
         <section className={`${styles.wrapper} ${styles.wrapper__variantImage}`}>
-          <OneColumnBody
-            className={`${styles.leftSide} ${showTertiaryButton ? styles.tertiaryButton : ''}`}
-            topTag={block.topTag}
-            headline={block.headlineLeft}
-            headlineLevel={3}
-            description={block.description}
-            primaryCta={block.primaryCta}
-            showTertiaryButton={showTertiaryButton}
-            secondaryCta={block.secondaryCta}
-          />
+          <div className={styles.leftSide}>
+            <OneColumnBody
+              className={styles.oneColumnBody}
+              topTag={block.topTag}
+              headline={block.headlineLeft}
+              headlineLevel={3}
+              description={block.description}
+              stackCtas={stackCtas}
+              primaryCta={block.primaryCta}
+              showTertiaryButton={showTertiaryButton}
+              secondaryCta={block.secondaryCta}
+            />
+          </div>
           <div className={styles.rightSide}>
             <img className={styles.image} src={block.right_image?.src} alt="placeholderimage" />
           </div>
@@ -46,16 +50,19 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
           <div className={styles.leftSide}>
             <h2>{block.headlineLeft}</h2>
           </div>
-          <OneColumnBody
-            className={`${styles.rightSide} ${showTertiaryButton ? styles.tertiaryButton : ''}`}
-            topTag={block.topTag}
-            headline={block.headlineRight}
-            headlineLevel={5}
-            description={block.description}
-            primaryCta={block.primaryCta}
-            showTertiaryButton={showTertiaryButton}
-            secondaryCta={block.secondaryCta}
-          />
+          <div className={styles.rightSide}>
+            <OneColumnBody
+              className={styles.oneColumnBody}
+              topTag={block.topTag}
+              headline={block.headlineRight}
+              headlineLevel={4}
+              description={block.description}
+              stackCtas={stackCtas}
+              primaryCta={block.primaryCta}
+              showTertiaryButton={showTertiaryButton}
+              secondaryCta={block.secondaryCta}
+            />
+          </div>
         </section>
       </div>
     )
@@ -65,15 +72,19 @@ const PreFooterImageBlock:FunctionComponent<{ block: PreFooterImageInterface }> 
     return (
       <div className={styles.root}>
         <section className={`${styles.wrapper} ${styles.wrapper__variantForm}`}>
-          <OneColumnBody
-            className={`${styles.leftSide} ${styles.leftSide__buttons}`}
-            topTag={block.topTag}
-            headline={block.headlineLeft}
-            headlineLevel={3}
-            description={block.description}
-            primaryCta={block.primaryCta}
-            secondaryCta={block.secondaryCta}
-          />
+          <div className={styles.leftSide}>
+            <OneColumnBody
+              className={styles.oneColumnBody}
+              topTag={block.topTag}
+              headline={block.headlineLeft}
+              headlineLevel={3}
+              description={block.description}
+              stackCtas={stackCtas}
+              primaryCta={block.primaryCta}
+              showTertiaryButton={showTertiaryButton}
+              secondaryCta={block.secondaryCta}
+            />
+          </div>
           <div className={styles.rightSide}>
             <FormPlaceHolder />
           </div>
