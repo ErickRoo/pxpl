@@ -1,5 +1,6 @@
 @import 'mixins';
 
+<<<<<<< HEAD
 .typo-h1 {
   @include typo-h1;
 }
@@ -10,6 +11,14 @@
 
 .typo-h3 {
   @include typo-h3;
+=======
+.typo-h2 {
+  @include typo-h2
+}
+
+.typo-h3 {
+  @include typo-h3
+>>>>>>> a6f3b2872147334d1db5c38ce99ed59deb5c8308
 }
 
 .typo-h4 {
@@ -26,6 +35,10 @@
 
 .typo-h7 {
   @include typo-h7;
+}
+
+.typo-h5 {
+  @include typo-h5
 }
 
 .typo-body {

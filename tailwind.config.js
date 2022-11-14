@@ -21,7 +21,10 @@ module.exports = {
       butterCream: '#F7F5F2',
       secondarySlate: '#1F1F1F',
       grayCoal: '#545159',
+<<<<<<< HEAD
       warmGray: '#EDEADD',
+=======
+>>>>>>> a6f3b2872147334d1db5c38ce99ed59deb5c8308
     },
     screens: {
       sm: '375px',
