@@ -24,7 +24,7 @@ const placeholderLargeQuoteBBlock = {
   author_name: 'Pam Kong',
   job_title: 'Manager of GMT Acceleration at Zoom',
   image: PlaceholderImage,
-  profile_image: PlaceholderProfileImage,
+  icon: PlaceholderProfileImage,
   primaryCta: {
     ctaText: 'Read all customer stories',
     ctaLink: '#',

@@ -1,8 +1,16 @@
 @import '../../../styles/variables';
 
 .root {
-  padding: 3.2rem 3.1rem 3.6rem;
+  padding: 2.4rem;
   overflow: hidden;
+
+  @screen lg {
+    padding: 3.1rem;
+  }
+
+  @screen xl {
+    padding: 3.2rem 3.1rem 3.6rem;
+  }
 }
 
 .inner {
@@ -11,102 +19,377 @@
   position: relative;
   margin: auto;
   padding: 0;
+}
 
-  &__center {
-    padding: 13.4rem 0 17rem;
+.inner__center {
+  padding: 2rem 0 3rem;
+  text-align: center;
+  margin: auto;
+
+  @screen md {
+    padding: 7rem 0;
+    max-width: 52rem;
+  }
+
+  @screen lg {
+    max-width: 78.2rem;
+  }
+
+  @screen xl {
+    padding: 13.2rem 0 16.8rem;
     max-width: 85.6rem;
-    text-align: center;
-    margin: auto;
   }
 }
 
 .arrowCorner {
   position: absolute;
-  width: 16.4rem;
-  top: -3.2rem;
-  right: -3.1rem;
+  width: 12.5rem;
+  top: -2.6rem;
+  right: -2.4rem;
+
+  @screen lg {
+    width: 16.4rem;
+    top: -3.2rem;
+    right: -3.1rem;
+  }
 }
 
 .wrapper {
   background-color: theme('colors.butterCream');
-  padding: 13.6rem 14.6rem 14.6rem;
 
   display: flex;
   margin: auto;
-  gap: 17rem;
+  padding: 13.3rem 1.9rem 5.9rem;
+  flex-direction: column-reverse;
+
+  @screen md {
+    gap: 3.2rem;
+    padding: 10rem 10rem 12rem 10rem;
+    flex-direction: row;
+  }
+
+  @screen lg {
+    gap: 11.3rem;
+    padding: 13rem 17rem 16rem 9rem;
+  }
+
+  @screen xl {
+    gap: 17rem;
+    padding: 13.6rem 14.6rem 14.6rem;
+  }
 }
 
 .leftSide {
   width: 100%;
+
+  @screen md {
+    width: 70%;
+  }
+
+  @screen lg {
+    width: 50%;
+  }
 }
 
 .testimony {
   position: relative;
-  margin-bottom: 10.4rem;
+  margin-bottom: 6.3rem;
+  font-size: 2.4rem;
+  text-align: center;
 
   &::before {
     content: '“';
-    position: absolute;
-    left: -2rem;
   }
 
   &::after {
     content: '”';
   }
 
-  &__center {
-    margin-bottom: 4.5rem;
+  @screen md {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    text-align: left;
+
     &::before {
-      position: relative;
-      left: 0;
+      position: absolute;
+      left: -2rem;
+    }
+  }
+
+  @screen lg {
+    font-size: 2.4rem;
+    line-height: 110%;
+    margin-bottom: 9.5rem;
+  }
+
+  @screen xl {
+    font-size: 4rem;
+    line-height: 100%;
+    margin-bottom: 10.4rem;
+
+    &__center {
+      margin-bottom: 4.5rem;
     }
   }
 }
 
-.leftBottonSide {
-  h4 {
-    margin-bottom: 0.8rem;
+.testimony__center {
+  margin-bottom: 6.2rem;
+  font-size: 3.2rem;
+  text-align: center;
+
+  &::before {
+    position: relative;
+    left: 0;
   }
 
-  > p {
-    font-size: 1.6rem;
+  @screen md {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
   }
+
+  @screen lg {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+
+  @screen xl {
+    font-size: 4rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
+.leftBottonSide {
+  text-align: center;
 
   hr {
-    margin: 3.2rem auto;
+    margin: 3.2rem 0;
     max-width: 40rem;
   }
 
   > div {
     justify-content: center;
   }
+
+  @screen md {
+    text-align: left;
+    max-width: 24.4rem;
+    hr {
+      margin: 2.2rem 0;
+      max-width: 40rem;
+    }
+  }
+
+  @screen lg {
+    max-width: unset;
+    hr {
+      margin: 2.2rem 0;
+    }
+  }
+
+  @screen xl {
+    hr {
+      margin: 3.2rem 0;
+    }
+  }
+}
+
+.leftBottonSide__center {
+  hr {
+    margin: 3.2rem auto;
+  }
+
+  @screen md {
+    max-width: unset;
+    text-align: center;
+
+    hr {
+      margin: 2.9rem auto;
+    }
+  }
+
+  @screen lg {
+    > p {
+      font-size: 1.6rem
+    }
+  }
+
+  @screen xl {
+    hr {
+      margin: 3.2rem auto;
+    }
+  }
+}
+
+.jobTitle {
+  text-align: center;
+
+  @screen md {
+    max-width: 24.4rem;
+    text-align: left;
+  }
+
+  @screen lg {
+    max-width: unset;
+  }
+
+  @screen xl {
+    font-size: 1.6rem;
+  }
+}
+
+.jobTitle__center {
+  text-align: center;
+  @screen md {
+    max-width: unset;
+  }
+
+  @screen lg {
+    font-size: 1.6rem
+  }
+}
+
+.author {
+  font-size: 2.4rem;
+  margin-bottom: 0.8rem;
+  line-height: 110%;
+  text-align: center;
+
+  @screen md {
+    font-size: 2rem;
+    text-align: left;
+  }
+
+  @screen lg {
+    font-size: 2.4rem;
+  }
+
+  @screen xl {
+    font-size: 4rem;
+    line-height: 100%;
+  }
+}
+
+.author__center {
+  text-align: center;
+  font-size: 3.2rem;
+
+  @screen md {
+    font-size: 2.4rem;
+  }
+
+  @screen lg {
+    font-size: 3.2rem;
+  }
+
+  @screen xl {
+    font-size: 4rem;
+  }
 }
 
 .profileImage {
-  width: 13rem;
-  height: 3.8rem;
+  margin: 2rem auto 5.3rem;
+  width: 10rem;
+  height: auto;
+
+  @screen md {
+    margin: 0;
+  }
+
+  @screen lg {
+    width: 12rem;
+  }
+
+  @screen xl {
+    width: 13rem;
+  }
 }
 
 .rightSide {
   width: 100%;
+  position: relative;
 
   > div:last-child {
-    margin-top: 4.8rem;
     justify-content: center;
+  }
+
+  @screen md {
+    width: 30%;
+
+    > div:last-child {
+      position: absolute;
+      right: -54px;
+      width: max-content;
+      bottom: -3px;
+    }
+  }
+
+  @screen lg {
+    width: 50%;
+
+    > div:last-child {
+      position: relative;
+      right: unset;
+      width: unset;
+      bottom: unset;
+    }
   }
 }
 
 .wrapperImage {
-  margin-bottom: 4.8rem;
+  margin: 0 auto;
+  margin-bottom: 6.8rem;
+  width: 15.5rem;
+  aspect-ratio: 1 / 0.94;
+  display: flex;
+  align-items: center;
 
   img {
-    margin: auto;
+    border-radius: 1.2rem;
+  }
+
+  @screen md {
+    width: 15.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  @screen lg {
     width: 17.3rem;
-    height: 16.3rem;
+  }
+
+  @screen xl {
+    margin-bottom: 4.8rem;
   }
 }
 
 .bgImage {
-  width: 51.4rem;
-  height: 48.3rem;
+  border-radius: 1.2rem;
+  width: 15.5rem;
+  height: 15.7rem;
+  margin: 0 auto 5.5rem;
+  background-size: 20.4rem;
+  background-position: 7.4rem 0rem;
+
+  @screen md {
+    margin: unset;
+    width: 15.1rem;
+    height: 15.3rem;
+    background-position: 7.5rem -0.2rem;
+  }
+
+  @screen lg {
+    width: 29.3rem;
+    height: 30.1rem;
+    background-size: 38.6rem;
+    background-position: 14.6rem -0.2rem;
+    margin-bottom: 2.2rem;
+  }
+
+  @screen xl {
+    width: 51.4rem;
+    height: 48.3rem;
+    background-size: auto;
+    background-position: center;
+    margin-bottom: 4.5rem;
+  }
 }
