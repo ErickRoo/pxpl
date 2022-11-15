@@ -5,11 +5,24 @@ import LargeQuoteItemInterface from 'components/generic/large_quote_item/large_q
 import PlaceholderImage from '../../assets/LargeQuote/placeholder_image.png'
 import PlaceholderProfileImage from '../../assets/LargeQuote/placeholder_profile_image.png'
 
-const placeholderLargeQuoteBlock = {
+const placeholderLargeQuoteABlock = {
   variant: '',
-  testimony: 'Outreach accelerates the conversations we have with customers. Then also helps convert those conversations into dollars.',
-  author: 'Pam Kong',
-  position: 'Manager of GMT Acceleration at Zoom',
+  quote_text: 'Outreach accelerates the conversations we have with customers. Then also helps convert those conversations into dollars.',
+  author_name: 'Pam Kong',
+  job_title: 'Manager of GMT Acceleration at Zoom',
+  image: PlaceholderImage,
+  icon: PlaceholderProfileImage,
+  primaryCta: {
+    ctaText: 'Read all customer stories',
+    ctaLink: '#',
+  },
+} as LargeQuoteItemInterface
+
+const placeholderLargeQuoteBBlock = {
+  variant: 'center',
+  quote_text: 'Outreach accelerates the conversations we have with customers. Then also helps convert those conversations into dollars.',
+  author_name: 'Pam Kong',
+  job_title: 'Manager of GMT Acceleration at Zoom',
   image: PlaceholderImage,
   profile_image: PlaceholderProfileImage,
   primaryCta: {
@@ -23,7 +36,8 @@ const LargeQuote: FC = () => (
     <LargeQuoteBlock block={{
       type: 'block',
       TextAndImageBlocks: [
-        placeholderLargeQuoteBlock,
+        placeholderLargeQuoteABlock,
+        placeholderLargeQuoteBBlock,
       ],
     }}
     />

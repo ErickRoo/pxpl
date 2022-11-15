@@ -1,96 +1,112 @@
 @import '../../../styles/variables';
 
 .root {
-/*
-  background-color: theme('colors.secondarySlate');
-  color: theme('colors.white');
-  */
+  padding: 3.2rem 3.1rem 3.6rem;
   overflow: hidden;
-  /*padding: 0 2.4rem;*/
+}
 
-  @screen md {
-    /*padding: 0 3.2rem;*/
-  }
+.inner {
+  @apply container;
 
-  @screen lg {
-    /*padding: 0 4rem;*/
+  position: relative;
+  margin: auto;
+  padding: 0;
+
+  &__center {
+    padding: 13.4rem 0 17rem;
+    max-width: 85.6rem;
+    text-align: center;
+    margin: auto;
   }
 }
 
-.wrapper {
-  @apply container;
+.arrowCorner {
+  position: absolute;
+  width: 16.4rem;
+  top: -3.2rem;
+  right: -3.1rem;
+}
 
-  /*
-  padding: 13.5rem 0;
+.wrapper {
+  background-color: theme('colors.butterCream');
+  padding: 13.6rem 14.6rem 14.6rem;
+
   display: flex;
   margin: auto;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5.6rem;
-
-  @screen md {
-    padding: 8.2rem 0;
-    gap: 3.2rem;
-    flex-direction: row;
-  }
-  
-  @screen lg {
-    padding: 10.4rem 0;
-    gap: 11.3rem;
-  }
-
-  @screen xl {
-    padding: 17.2rem 0;
-    gap: 17rem;
-    max-width: 108.4rem;
-  }
-  */
+  gap: 17rem;
 }
 
 .leftSide {
   width: 100%;
+}
 
-  /*
-  h2 {
-    font-size: 4rem;
-    line-height: 100%;
+.testimony {
+  position: relative;
+  margin-bottom: 10.4rem;
 
-    @screen md {
-      margin-bottom: 0;
-      font-size: 7.2rem;
+  &::before {
+    content: '“';
+    position: absolute;
+    left: -2rem;
+  }
+
+  &::after {
+    content: '”';
+  }
+
+  &__center {
+    margin-bottom: 4.5rem;
+    &::before {
+      position: relative;
+      left: 0;
     }
   }
+}
 
-  @screen md {
-    width: 50%;
+.leftBottonSide {
+  h4 {
+    margin-bottom: 0.8rem;
   }
 
-  @screen lg {
-    width: 55%;
+  > p {
+    font-size: 1.6rem;
   }
 
-  @screen xl {
-    width: 56%;
+  hr {
+    margin: 3.2rem auto;
+    max-width: 40rem;
   }
-  */
+
+  > div {
+    justify-content: center;
+  }
+}
+
+.profileImage {
+  width: 13rem;
+  height: 3.8rem;
 }
 
 .rightSide {
   width: 100%;
 
-  /*
-  align-self: center;
-
-  @screen md {
-    width: 50%;
+  > div:last-child {
+    margin-top: 4.8rem;
+    justify-content: center;
   }
+}
 
-  @screen lg {
-    width: 45%;
-  }
+.wrapperImage {
+  margin-bottom: 4.8rem;
 
-  @screen xl {
-    width: 44%;
+  img {
+    margin: auto;
+    width: 17.3rem;
+    height: 16.3rem;
   }
-  */
+}
+
+.bgImage {
+  width: 51.4rem;
+  height: 48.3rem;
 }

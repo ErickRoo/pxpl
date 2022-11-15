@@ -18,10 +18,10 @@ const LargeQuoteBlock:FunctionComponent<{ block: LargeQuoteInterface }> = ({ blo
           <LargeQuoteItem
             key={key}
             variant={oneTextImageItem?.variant}
-            testimony={oneTextImageItem?.testimony}
-            author={oneTextImageItem?.author}
-            position={oneTextImageItem?.position}
-            profile_image={oneTextImageItem?.profile_image}
+            quote_text={oneTextImageItem?.quote_text}
+            author_name={oneTextImageItem?.author_name}
+            job_title={oneTextImageItem?.job_title}
+            icon={oneTextImageItem?.icon}
             image={oneTextImageItem?.image}
             primaryCta={oneTextImageItem?.primaryCta}
           />
