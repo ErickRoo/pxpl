@@ -4,8 +4,6 @@ import OneColumnBody from 'components/generic/one-column-body/one-column-body'
 import SideSideItemInterface from './side_side_item.interface'
 import styles from './side_side_item.module.scss'
 
-export const typename = 'Set_Replicator_BlockSideSide'
-
 const SideSideItem:FunctionComponent<SideSideItemInterface> = ({
   variant, image, showCircles, topTag, headline, description, primaryCta,
 }) => {
