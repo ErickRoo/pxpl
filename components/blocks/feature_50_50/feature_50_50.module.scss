@@ -1,5 +1,45 @@
 @import '../../../styles/variables';
 
 .root {
-  // add your styles here
+  background-color: theme('colors.butterCream');
+  overflow: hidden;
+}
+
+.wrapper {
+  @apply container;
+
+  padding: 0;
+  display: flex;
+  gap: 5.6rem;
+  max-width: 108.4rem;
+}
+
+.leftSide {
+  width: 50%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.rightSide {
+  width: 50%;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.oneColumnBody {
+  order: 1;
+  background-color: theme('colors.white');
+  padding: 5.6rem 5.7rem 5.9rem;
+}
+
+.wrapperImage {
+  order: 2;
+
+  &__top {
+    order: 0;
+  }
 }
