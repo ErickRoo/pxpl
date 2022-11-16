@@ -13,18 +13,13 @@
   }
 }
 
-.inner {
+.wrapper {
   @apply container;
 
   position: relative;
   margin: auto;
-  padding: 0;
-}
-
-.inner__center {
   padding: 2rem 0 3rem;
   text-align: center;
-  margin: auto;
 
   @screen md {
     padding: 7rem 0;
@@ -38,44 +33,6 @@
   @screen xl {
     padding: 13.2rem 0 16.8rem;
     max-width: 85.6rem;
-  }
-}
-
-.arrowCorner {
-  position: absolute;
-  width: 12.5rem;
-  top: -2.6rem;
-  right: -2.4rem;
-
-  @screen lg {
-    width: 16.4rem;
-    top: -3.2rem;
-    right: -3.1rem;
-  }
-}
-
-.wrapper {
-  background-color: theme('colors.butterCream');
-
-  display: flex;
-  margin: auto;
-  padding: 13.3rem 1.9rem 5.9rem;
-  flex-direction: column-reverse;
-
-  @screen md {
-    gap: 3.2rem;
-    padding: 10rem 10rem 12rem 10rem;
-    flex-direction: row;
-  }
-
-  @screen lg {
-    gap: 11.3rem;
-    padding: 13rem 17rem 16rem 9rem;
-  }
-
-  @screen xl {
-    gap: 17rem;
-    padding: 13.6rem 14.6rem 14.6rem;
   }
 }
 
@@ -127,7 +84,7 @@
   text-align: center;
 
   hr {
-    margin: 3.2rem 0;
+    margin: 3.2rem auto;
     max-width: 40rem;
   }
 
@@ -136,43 +93,16 @@
   }
 
   @screen md {
-    text-align: left;
-    max-width: 24.4rem;
+    max-width: unset;
+
     hr {
-      margin: 2.2rem 0;
+      margin: 2.9rem auto;
       max-width: 40rem;
     }
   }
 
   @screen lg {
     max-width: unset;
-    hr {
-      margin: 2.2rem 0;
-    }
-  }
-
-  @screen xl {
-    hr {
-      margin: 3.2rem 0;
-    }
-  }
-}
-
-.leftBottonSide__center {
-  hr {
-    margin: 3.2rem auto;
-  }
-
-  @screen md {
-    max-width: unset;
-    text-align: center;
-
-    hr {
-      margin: 2.9rem auto;
-    }
-  }
-
-  @screen lg {
     > p {
       font-size: 1.6rem
     }
@@ -188,55 +118,16 @@
 .jobTitle {
   text-align: center;
 
-  @screen md {
-    max-width: 24.4rem;
-    text-align: left;
-  }
-
   @screen lg {
-    max-width: unset;
-  }
-
-  @screen xl {
     font-size: 1.6rem;
   }
 }
 
-.jobTitle__center {
-  text-align: center;
-  @screen md {
-    max-width: unset;
-  }
-
-  @screen lg {
-    font-size: 1.6rem
-  }
-}
-
 .author {
-  font-size: 2.4rem;
+  font-size: 3.2rem;
   margin-bottom: 0.8rem;
   line-height: 110%;
   text-align: center;
-
-  @screen md {
-    font-size: 2rem;
-    text-align: left;
-  }
-
-  @screen lg {
-    font-size: 2.4rem;
-  }
-
-  @screen xl {
-    font-size: 4rem;
-    line-height: 100%;
-  }
-}
-
-.author__center {
-  text-align: center;
-  font-size: 3.2rem;
 
   @screen md {
     font-size: 2.4rem;
@@ -248,6 +139,7 @@
 
   @screen xl {
     font-size: 4rem;
+    line-height: 100%;
   }
 }
 

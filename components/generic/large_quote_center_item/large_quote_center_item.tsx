@@ -15,16 +15,16 @@ const LargeQuoteCenterItem:FunctionComponent<LargeQuoteCenterItemInterface> = ({
 
   return (
     <div className={`${styles.root} bg-butterCream`}>
-      <section className={`${styles.inner} ${styles.inner__center}`}>
+      <section className={styles.wrapper}>
         <div className={styles.wrapperImage}>
           <img className={styles.image} src={isLargeDesktop ? image?.src : icon?.src} alt="placeholder profile" />
         </div>
-        <h4 className={`typo-h4 ${styles.testimony} ${styles.testimony__center}`}>
+        <h4 className={`typo-h4 ${styles.testimony}`}>
           {quote_text}
         </h4>
-        <h4 className={`typo-h4 ${styles.author} ${styles.author__center}`}>{author_name}</h4>
-        <p className={`eyebrow ${styles.jobTitle} ${styles.jobTitle__center}`}>{job_title}</p>
-        <div className={`${styles.leftBottonSide} ${styles.leftBottonSide__center}`}>
+        <h4 className={`typo-h4 ${styles.author}`}>{author_name}</h4>
+        <p className={`eyebrow ${styles.jobTitle}`}>{job_title}</p>
+        <div className={`${styles.leftBottonSide}`}>
           <hr />
           <ArrowButton text={primaryCta.ctaText} href={primaryCta.ctaLink} />
         </div>
