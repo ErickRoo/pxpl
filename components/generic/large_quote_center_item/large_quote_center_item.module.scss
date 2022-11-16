@@ -93,8 +93,8 @@
 
 .testimony {
   position: relative;
-  margin-bottom: 6.3rem;
-  font-size: 2.4rem;
+  margin-bottom: 6.2rem;
+  font-size: 3.2rem;
   text-align: center;
 
   &::before {
@@ -106,44 +106,6 @@
   }
 
   @screen md {
-    font-size: 2rem;
-    margin-bottom: 4rem;
-    text-align: left;
-
-    &::before {
-      position: absolute;
-      left: -2rem;
-    }
-  }
-
-  @screen lg {
-    font-size: 2.4rem;
-    line-height: 110%;
-    margin-bottom: 9.5rem;
-  }
-
-  @screen xl {
-    font-size: 4rem;
-    line-height: 100%;
-    margin-bottom: 10.4rem;
-
-    &__center {
-      margin-bottom: 4.5rem;
-    }
-  }
-}
-
-.testimony__center {
-  margin-bottom: 6.2rem;
-  font-size: 3.2rem;
-  text-align: center;
-
-  &::before {
-    position: relative;
-    left: 0;
-  }
-
-  @screen md {
     font-size: 2.4rem;
     margin-bottom: 3rem;
   }
@@ -151,11 +113,13 @@
   @screen lg {
     font-size: 3.2rem;
     margin-bottom: 3rem;
+    line-height: 110%;
   }
 
   @screen xl {
     font-size: 4rem;
     margin-bottom: 4.5rem;
+    line-height: 100%;
   }
 }
 
