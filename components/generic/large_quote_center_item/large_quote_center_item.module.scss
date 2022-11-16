@@ -21,6 +21,26 @@
   padding: 0;
 }
 
+.inner__center {
+  padding: 2rem 0 3rem;
+  text-align: center;
+  margin: auto;
+
+  @screen md {
+    padding: 7rem 0;
+    max-width: 52rem;
+  }
+
+  @screen lg {
+    max-width: 78.2rem;
+  }
+
+  @screen xl {
+    padding: 13.2rem 0 16.8rem;
+    max-width: 85.6rem;
+  }
+}
+
 .arrowCorner {
   position: absolute;
   width: 12.5rem;
@@ -106,6 +126,36 @@
     font-size: 4rem;
     line-height: 100%;
     margin-bottom: 10.4rem;
+
+    &__center {
+      margin-bottom: 4.5rem;
+    }
+  }
+}
+
+.testimony__center {
+  margin-bottom: 6.2rem;
+  font-size: 3.2rem;
+  text-align: center;
+
+  &::before {
+    position: relative;
+    left: 0;
+  }
+
+  @screen md {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  @screen lg {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+  }
+
+  @screen xl {
+    font-size: 4rem;
+    margin-bottom: 4.5rem;
   }
 }
 
@@ -144,6 +194,33 @@
   }
 }
 
+.leftBottonSide__center {
+  hr {
+    margin: 3.2rem auto;
+  }
+
+  @screen md {
+    max-width: unset;
+    text-align: center;
+
+    hr {
+      margin: 2.9rem auto;
+    }
+  }
+
+  @screen lg {
+    > p {
+      font-size: 1.6rem
+    }
+  }
+
+  @screen xl {
+    hr {
+      margin: 3.2rem auto;
+    }
+  }
+}
+
 .jobTitle {
   text-align: center;
 
@@ -158,6 +235,17 @@
 
   @screen xl {
     font-size: 1.6rem;
+  }
+}
+
+.jobTitle__center {
+  text-align: center;
+  @screen md {
+    max-width: unset;
+  }
+
+  @screen lg {
+    font-size: 1.6rem
   }
 }
 
@@ -179,6 +267,23 @@
   @screen xl {
     font-size: 4rem;
     line-height: 100%;
+  }
+}
+
+.author__center {
+  text-align: center;
+  font-size: 3.2rem;
+
+  @screen md {
+    font-size: 2.4rem;
+  }
+
+  @screen lg {
+    font-size: 3.2rem;
+  }
+
+  @screen xl {
+    font-size: 4rem;
   }
 }
 
@@ -228,6 +333,32 @@
       width: unset;
       bottom: unset;
     }
+  }
+}
+
+.wrapperImage {
+  margin: 0 auto;
+  margin-bottom: 6.8rem;
+  width: 15.5rem;
+  aspect-ratio: 1 / 0.94;
+  display: flex;
+  align-items: center;
+
+  img {
+    border-radius: 1.2rem;
+  }
+
+  @screen md {
+    width: 15.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  @screen lg {
+    width: 17.3rem;
+  }
+
+  @screen xl {
+    margin-bottom: 4.8rem;
   }
 }
 

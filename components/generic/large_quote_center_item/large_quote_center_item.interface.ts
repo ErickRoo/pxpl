@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 
-export default interface LargeQuoteItemInterface {
+export default interface LargeQuoteCenterItemInterface {
     variant?: string;
     quote_text: string;
     author_name: string;
