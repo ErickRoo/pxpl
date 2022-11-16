@@ -9,6 +9,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as PreFooterBlockTypename } from '../../components/blocks/pre_footer/pre_footer'
 // import PreFooterBlockQuery from '../../components/blocks/pre_footer/pre_footer.graphql'
 
+// import { typename as Feature5050BlockTypename } from '../../components/blocks/feature_50_50/feature_50_50'
+// import Feature5050BlockQuery from '../../components/blocks/feature_50_50/feature_50_50.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -37,6 +40,13 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/pre_footer/pre_footer')),
   //   query: PreFooterBlockQuery,
   //   typename: PreFooterBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/feature_50_50/feature_50_50')),
+  //   query: Feature5050BlockQuery,
+  //   typename: Feature5050BlockTypename,
   //   extraQueries: undefined,
   // },
 
