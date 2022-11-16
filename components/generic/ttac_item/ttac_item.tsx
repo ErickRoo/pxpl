@@ -8,7 +8,7 @@ import styles from './ttac_item.module.scss'
 export const typename = 'Set_Replicator_BlockTtac'
 
 const TtacItem:FunctionComponent<TtacItemInterface> = ({
-  variant, alignment, topTag, headline, description, primaryCta, secondaryCta, image,
+  variant, alignment, topTag, headline, description, primaryCta, secondaryCta, image, additionalSpace,
 }) => {
   if (!headline) {
     return null
@@ -16,7 +16,7 @@ const TtacItem:FunctionComponent<TtacItemInterface> = ({
 
   const { width } = useWindowSize()
   const currentBreakpoint = getCurrentBreakpoint(width)
-  const showTertiaryButton = ['normal', 'sm'].includes(currentBreakpoint?.position)
+  const isMobile = ['normal', 'sm'].includes(currentBreakpoint?.position)
 
   if (variant === 'headline-top') {
     const oneColumnBodyBottomStyles = `${styles.oneColumnBody} ${styles.oneColumnBody__bottom}`
@@ -36,7 +36,8 @@ const TtacItem:FunctionComponent<TtacItemInterface> = ({
             className={`${oneColumnBodyBottomStyles} ${alignment ? styles[`oneColumnBody__${alignment}`] : ''}`}
             description={description}
             primaryCta={primaryCta}
-            showTertiaryButton={showTertiaryButton}
+            showTertiaryButton={isMobile}
+            stackCtas={isMobile}
             secondaryCta={secondaryCta}
           />
         </section>
@@ -44,17 +45,19 @@ const TtacItem:FunctionComponent<TtacItemInterface> = ({
     )
   }
 
+  const oneColumnStyles = `${styles.oneColumnBody} ${styles.oneColumnBodySpaces} ${alignment ? styles[`oneColumnBody__${alignment}`] : ''}`
   return (
     <div className={styles.root}>
       <section className={styles.wrapper}>
         <OneColumnBody
-          className={`${styles.oneColumnBody} ${styles.oneColumnBodySpaces} ${alignment ? styles[`oneColumnBody__${alignment}`] : ''}`}
+          className={`${oneColumnStyles} ${additionalSpace ? '!mb-[6.8rem]' : ''}`}
           topTag={topTag}
           headline={headline}
           headlineLevel={2}
           description={description}
           primaryCta={primaryCta}
-          showTertiaryButton={showTertiaryButton}
+          showTertiaryButton={isMobile}
+          stackCtas={isMobile}
           secondaryCta={secondaryCta}
         />
         <div className={styles.wrapperImage}>

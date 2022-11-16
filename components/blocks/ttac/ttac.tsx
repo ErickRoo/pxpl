@@ -26,6 +26,7 @@ const TtacBlock:FunctionComponent<{ block: TtacInterface }> = ({ block }) => {
             primaryCta={oneTextImageItem?.primaryCta}
             secondaryCta={oneTextImageItem?.secondaryCta}
             image={oneTextImageItem?.image}
+            additionalSpace={oneTextImageItem?.additionalSpace}
           />
         )
       })}

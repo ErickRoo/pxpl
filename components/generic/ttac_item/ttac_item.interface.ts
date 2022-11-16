@@ -15,4 +15,5 @@ export default interface TtacItemInterface {
         ctaLink: string;
     };
     image?: StaticImageData;
+    additionalSpace?: boolean;
 }

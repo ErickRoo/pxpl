@@ -120,6 +120,7 @@ const placeholderTtacCBlock = {
     alignment: 'center',
     topTag: topTagA,
     headline: headlineC,
+    additionalSpace: true,
   } as TtacItemInterface,
   sm: {
     ...placeholderElements,
@@ -127,6 +128,7 @@ const placeholderTtacCBlock = {
     alignment: 'left',
     topTag: topTagA,
     headline: headlineC,
+    additionalSpace: true,
   } as TtacItemInterface,
   md: {
     ...placeholderElements,
