@@ -14,7 +14,7 @@ const SideSideItem:FunctionComponent<SideSideItemInterface> = ({
   const reverse = variant === 'image-right'
   const stylesBgImage = `${styles.bgImage} ${reverse ? `${styles.bgImage__reverse}` : ''}`
   return (
-    <div className={styles.root}>
+    <div className={`${styles.root} ${showCircles ? styles.variantCircles : ''}`}>
       <section className={`${styles.wrapper} ${reverse ? `${styles.wrapper__reverse}` : ''}`}>
         <div className={`${styles.wrapperImage} ${reverse ? `${styles.wrapperImage__reverse}` : ''}`}>
           {showCircles && (
