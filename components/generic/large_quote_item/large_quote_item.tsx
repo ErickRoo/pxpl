@@ -15,11 +15,11 @@ const LargeQuoteItem:FunctionComponent<LargeQuoteItemInterface> = ({
   const isMobile = ['normal', 'sm'].includes(currentBreakpoint?.position)
 
   return (
-    <div className={`${styles.root} bg-warmGray`}>
+    <div className={styles.root}>
       <section className={styles.inner}>
         <ArrowCorner className={styles.arrowCorner} />
         <div className={styles.wrapper}>
-          <section className={styles.leftSide}>
+          <div className={styles.leftSide}>
             <h4 className={`typo-h4 ${styles.testimony}`}>
               {quote_text}
             </h4>
@@ -35,11 +35,11 @@ const LargeQuoteItem:FunctionComponent<LargeQuoteItemInterface> = ({
                 </>
               )}
             </div>
-          </section>
-          <section className={styles.rightSide}>
+          </div>
+          <div className={styles.rightSide}>
             <div className={styles.bgImage} style={{ backgroundImage: `url(${image?.src})` }} />
             {!isMobile && <ArrowButton text={primaryCta.ctaText} href={primaryCta.ctaLink} />}
-          </section>
+          </div>
         </div>
       </section>
     </div>

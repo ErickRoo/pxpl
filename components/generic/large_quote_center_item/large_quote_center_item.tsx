@@ -14,7 +14,7 @@ const LargeQuoteCenterItem:FunctionComponent<LargeQuoteCenterItemInterface> = ({
   const isLargeDesktop = ['xl', 'xxl'].includes(currentBreakpoint?.position)
 
   return (
-    <div className={`${styles.root} bg-butterCream`}>
+    <div className={styles.root}>
       <section className={styles.wrapper}>
         <div className={styles.wrapperImage}>
           <img className={styles.image} src={isLargeDesktop ? image?.src : icon?.src} alt="placeholder profile" />
@@ -24,7 +24,7 @@ const LargeQuoteCenterItem:FunctionComponent<LargeQuoteCenterItemInterface> = ({
         </h4>
         <h4 className={`typo-h4 ${styles.author}`}>{author_name}</h4>
         <p className={`eyebrow ${styles.jobTitle}`}>{job_title}</p>
-        <div className={`${styles.leftBottonSide}`}>
+        <div className={styles.leftBottonSide}>
           <hr />
           <ArrowButton text={primaryCta.ctaText} href={primaryCta.ctaLink} />
         </div>
