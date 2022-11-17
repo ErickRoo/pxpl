@@ -10,12 +10,12 @@ const topTagB = 'The Outreach Sales Execution Platform'
 
 const headlineA = 'H2 headline single line'
 const headlineB = 'One platform to rule them all.'
-const headlineC = 'H3 headline \nmulti line'
+const headlineC = 'H3 headline multi line'
 
 const placeholderElements = {
   headline: headlineB,
-  description: `Give revenue leaders an unfair advantage through industry-leading workflows, \n${
-    'AI-generated insights, and freakishly accurate forcasting.'}`,
+  description: `Give revenue leaders an unfair advantage through industry-leading workflows,
+    AI-generated insights, and freakishly accurate forcasting.`,
   primaryCta: {
     ctaText: 'Learn more',
     ctaLink: '#',

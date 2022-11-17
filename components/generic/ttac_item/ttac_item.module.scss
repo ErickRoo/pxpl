@@ -36,6 +36,7 @@
   }
 
   > h2 {
+    max-width: 30rem;
     margin-bottom: 1.6rem;
   }
 
@@ -47,6 +48,10 @@
 
   @screen md {
     padding: 0;
+
+    > h2 {
+      max-width: unset;
+    }
   }
 
   @screen lg {
