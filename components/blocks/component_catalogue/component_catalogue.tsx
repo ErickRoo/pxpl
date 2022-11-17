@@ -15,6 +15,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/PreFooter">
         <p style={{ fontSize: 20, marginBottom: 20 }}>PreFooter</p>
       </Link>
+      <Link href="/components/Stats">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Stats</p>
+      </Link>
     </div>
   </div>
 )
