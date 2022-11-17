@@ -5,7 +5,8 @@ import useWindowSize from 'styles/getBreakpointQuery'
 import getCurrentBreakpoint from 'utils/breakpoints/getCurrentBreakpoint'
 import PlaceholderImage from '../../assets/Sideside/placeholder.png'
 
-const description = 'AI and Machine Learning are at the core of everything \nOutreach does for your Sales Leaders.'
+const descriptionA = 'AI and Machine Learning are at the core of everything \nOutreach does for your Sales Leaders.'
+const descriptionB = 'AI and machine learning are at the core of everything \nOutreach does for your sales leaders.'
 
 const primaryCta = {
   ctaText: 'Learn more',
@@ -15,7 +16,7 @@ const primaryCta = {
 const placeholderBodyA = {
   topTag: 'Eyebrow sentence case',
   headline: 'H2 headline that can be up to four lines or less ipsum.',
-  description,
+  description: descriptionA,
   primaryCta,
   image: PlaceholderImage,
 }
@@ -23,7 +24,7 @@ const placeholderBodyA = {
 const placeholderBodyB = {
   topTag: 'Machine learning #FTW',
   headline: 'Guide sellers to success with Kaia real-time intelligence.',
-  description,
+  description: descriptionA,
   primaryCta,
   image: PlaceholderImage,
 }
@@ -33,21 +34,25 @@ const placeholderFirstSideSideBlock = {
     variant: 'image-left',
     showCircles: true,
     ...placeholderBodyA,
+    description: descriptionB,
   } as SideSideItemInterface,
   sm: {
     variant: 'image-left',
     showCircles: true,
     ...placeholderBodyA,
+    description: descriptionB,
   } as SideSideItemInterface,
   md: {
     variant: 'image-left',
     showCircles: true,
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   lg: {
     variant: 'image-left',
     showCircles: true,
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   xl: {
     variant: 'image-left',
@@ -66,11 +71,13 @@ const placeholderSecondSideSideBlock = {
     variant: 'image-right',
     showCircles: true,
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   lg: {
     variant: 'image-right',
     showCircles: true,
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   xl: {
     variant: 'image-right',
@@ -88,18 +95,22 @@ const placeholderThirdSideSideBlock = {
   normal: {
     variant: 'image-left',
     ...placeholderBodyA,
+    description: descriptionB,
   } as SideSideItemInterface,
   sm: {
     variant: 'image-left',
     ...placeholderBodyA,
+    description: descriptionB,
   } as SideSideItemInterface,
   md: {
     variant: 'image-left',
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   lg: {
     variant: 'image-left',
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   xl: {
     variant: 'image-left',
@@ -115,10 +126,12 @@ const placeholderFourthSideSideBlock = {
   md: {
     variant: 'image-right',
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   lg: {
     variant: 'image-right',
     ...placeholderBodyB,
+    description: descriptionB,
   } as SideSideItemInterface,
   xl: {
     variant: 'image-right',

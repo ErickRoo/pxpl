@@ -4,8 +4,6 @@ import OneColumnBody from 'components/generic/one-column-body/one-column-body'
 import SideSideItemInterface from './side_side_item.interface'
 import styles from './side_side_item.module.scss'
 
-export const typename = 'Set_Replicator_BlockSideSide'
-
 const SideSideItem:FunctionComponent<SideSideItemInterface> = ({
   variant, image, showCircles, topTag, headline, description, primaryCta,
 }) => {
@@ -16,7 +14,7 @@ const SideSideItem:FunctionComponent<SideSideItemInterface> = ({
   const reverse = variant === 'image-right'
   const stylesBgImage = `${styles.bgImage} ${reverse ? `${styles.bgImage__reverse}` : ''}`
   return (
-    <div className={styles.root}>
+    <div className={`${styles.root} ${showCircles ? styles.variantCircles : ''}`}>
       <section className={`${styles.wrapper} ${reverse ? `${styles.wrapper__reverse}` : ''}`}>
         <div className={`${styles.wrapperImage} ${reverse ? `${styles.wrapperImage__reverse}` : ''}`}>
           {showCircles && (
