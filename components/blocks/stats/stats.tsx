@@ -1,6 +1,8 @@
 import React, { FunctionComponent } from 'react'
-import styles from './stats.module.scss'
+
+import ArrowCorner from '../../../assets/Stats/ArrowCorner.svg'
 import StatsInterface from './stats.interface'
+import styles from './stats.module.scss'
 
 export const typename = 'Set_Replicator_BlockStats'
 
@@ -16,8 +18,9 @@ const StatsBlock:FunctionComponent<{ block: StatsInterface }> = ({ block }) => {
         const key = `stat-item-${idx}`
         return (
           <div key={key} className={styles.root}>
-            <section className={styles.wrapper}>
-              <div className={styles.inner}>
+            <section className={styles.inner}>
+              <ArrowCorner className={styles.arrowCorner} />
+              <div className={styles.wrapper}>
                 <div className={styles.row}>
                   <div className={styles.leftSide}>
                     <p className="eyebrow">{top.headline}</p>

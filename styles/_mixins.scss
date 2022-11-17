@@ -138,6 +138,41 @@
   }
 }
 
+@mixin typo-h6 {
+  font-family: 'AeonikPro-Regular';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 110%;
+
+  @screen md {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 110%;
+  }
+
+  @screen lg {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 110%;
+  }
+
+  @screen xl {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 110%;
+  }
+
+  @screen xxl {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 2.4rem;
+    line-height: 110%;
+  }
+}
+
 @mixin body-text {
   font-family: 'AeonikPro-Regular';
   font-weight: 400;

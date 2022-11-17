@@ -2,6 +2,7 @@
 
 .root {
   background-color: theme('colors.warmGray');
+  color: theme('colors.darkBlue');
   overflow: hidden;
   padding: 2.4rem;
 
@@ -14,19 +15,12 @@
   }
 }
 
-.wrapper {
-  background-color: theme('colors.butterCream');
-
-  display: flex;
-  margin: auto;
-}
-
 .inner {
   @apply container;
 
   position: relative;
   margin: auto;
-  padding: 15.6rem 15rem 20.4rem;
+  padding: 0;
 }
 
 .arrowCorner {
@@ -40,6 +34,13 @@
     top: -3.2rem;
     right: -3.1rem;
   }
+}
+
+.wrapper {
+  background-color: theme('colors.butterCream');
+
+  margin: auto;
+  padding: 15.6rem 20.5rem 20.4rem 15rem;
 }
 
 .row {
@@ -59,4 +60,5 @@
 
 .rightSide {
   font-size: 24rem;
+  line-height: 100%;
 }
