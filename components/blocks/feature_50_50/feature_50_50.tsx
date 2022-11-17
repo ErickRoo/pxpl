@@ -1,6 +1,7 @@
 import React, { FunctionComponent, ReactElement } from 'react'
+import useWindowSize from 'styles/getBreakpointQuery'
+import getCurrentBreakpoint from 'utils/breakpoints/getCurrentBreakpoint'
 
-// import Feature5050Item from 'components/generic/feature_50_50_item/feature_50_50_item'
 import OneColumnBody from 'components/generic/one-column-body/one-column-body'
 import Feature5050Interface from './feature_50_50.interface'
 import styles from './feature_50_50.module.scss'
@@ -8,6 +9,10 @@ import styles from './feature_50_50.module.scss'
 export const typename = 'Set_Replicator_BlockFeature5050'
 
 const Feature5050Block:FunctionComponent<{ block: Feature5050Interface }> = ({ block }) => {
+  const { width } = useWindowSize()
+  const currentBreakpoint = getCurrentBreakpoint(width)
+  const isMobile = ['normal', 'sm'].includes(currentBreakpoint?.position)
+
   if (!block) {
     return null
   }
@@ -21,6 +26,9 @@ const Feature5050Block:FunctionComponent<{ block: Feature5050Interface }> = ({ b
         <div key={key} className={styles.root}>
           <section className={styles.wrapper}>
             <div className={styles.leftSide}>
+              <div className={`${styles.wrapperImage} ${left?.alignment === 'bottom' ? styles.wrapperImage__bottom : ''}`}>
+                <img className={styles.image} src={left.image?.src} alt="placeholderimage" />
+              </div>
               <OneColumnBody
                 className={styles.oneColumnBody}
                 topTag={left.eyebrow}
@@ -28,12 +36,13 @@ const Feature5050Block:FunctionComponent<{ block: Feature5050Interface }> = ({ b
                 headlineLevel={4}
                 description={left.description}
                 primaryCta={left.primaryCta}
+                hideTextPrimaryButton={isMobile}
               />
-              <div className={`${styles.wrapperImage} ${left?.alignment === 'top' ? styles.wrapperImage__top : ''}`}>
-                <img className={styles.image} src={left.image?.src} alt="placeholderimage" />
-              </div>
             </div>
             <div className={styles.rightSide}>
+              <div className={`${styles.wrapperImage} ${right?.alignment === 'bottom' ? styles.wrapperImage__bottom : ''}`}>
+                <img className={styles.image} src={right?.image?.src} alt="placeholderimage" />
+              </div>
               <OneColumnBody
                 className={styles.oneColumnBody}
                 topTag={right?.eyebrow}
@@ -41,10 +50,8 @@ const Feature5050Block:FunctionComponent<{ block: Feature5050Interface }> = ({ b
                 headlineLevel={4}
                 description={right?.description}
                 primaryCta={right?.primaryCta}
+                hideTextPrimaryButton={isMobile}
               />
-              <div className={`${styles.wrapperImage} ${right?.alignment === 'top' ? styles.wrapperImage__top : ''}`}>
-                <img className={styles.image} src={right?.image?.src} alt="placeholderimage" />
-              </div>
             </div>
           </section>
         </div>
