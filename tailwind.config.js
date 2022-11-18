@@ -22,6 +22,7 @@ module.exports = {
       secondarySlate: '#1F1F1F',
       grayCoal: '#545159',
       warmGray: '#EDEADD',
+      steel: '#575757',
     },
     screens: {
       sm: '375px',
