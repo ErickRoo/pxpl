@@ -1,3 +1,38 @@
+@mixin typo-h1 {
+  font-family: 'AeonikPro-Regular';
+  font-weight: 400;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+
+  @screen md {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 4.8rem;
+    line-height: 4.8rem;
+  }
+
+  @screen lg {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+  }
+
+  @screen xl {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 9.6rem;
+    line-height: 100%;
+  }
+
+  @screen xxl {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 9.6rem;
+    line-height: 100%;
+  }
+}
+
 @mixin typo-h2 {
   font-family: 'AeonikPro-Regular';
   font-weight: 400;

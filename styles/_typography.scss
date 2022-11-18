@@ -1,5 +1,9 @@
 @import 'mixins';
 
+.typo-h1 {
+  @include typo-h1
+}
+
 .typo-h2 {
   @include typo-h2
 }
