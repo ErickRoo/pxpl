@@ -1,6 +1,83 @@
 @import '../../../styles/variables';
 
 .root {
-  position: relative;
-  // add your styles here
+  background-color: theme('colors.butterCream');
+  color: theme('colors.darkBlue');
+  overflow: hidden;
+
+  /*
+  padding: 0 2.4rem;
+  @screen md {
+    padding: 0 3.2rem;
+  }
+  @screen lg {
+    padding: 0 4rem;
+  }
+  */
+}
+
+.wrapper {
+  @apply container;
+
+  padding: 0;
+  margin: auto;
+
+
+  @screen xl {
+    max-width: 108.4rem;
+  }
+
+  /*
+  padding: 13.5rem 0;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5.6rem;
+
+  @screen md {
+    padding: 8.2rem 0;
+    gap: 3.2rem;
+    flex-direction: row;
+  }
+  
+  @screen lg {
+    padding: 10.4rem 0;
+    gap: 11.3rem;
+  }
+
+  @screen xl {
+    padding: 17.2rem 0;
+    gap: 17rem;
+    max-width: 108.4rem;
+  }
+  */
+}
+
+.topSection {
+  margin-bottom: 8.9rem;
+  text-align: center;
+
+  > div {
+    justify-content: center;
+  }
+}
+
+.topTag {
+  margin-bottom: 1.6rem;
+}
+
+.headline {
+  margin-top: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+.description {
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  max-width: 74rem;
+}
+
+.questionsSection {
+  max-width: 62.8rem;
 }
