@@ -2,5 +2,55 @@
 
 .root {
   position: relative;
-  // add your styles here
+  border-bottom: 1px solid theme('colors.darkBlue');
+}
+
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5.6rem;
+
+  h6 {
+    max-width: 57rem;
+  }
+}
+
+.contentSection {
+  transition: all .3s ease-in-out;
+  max-height: 50rem;
+  opacity: 1;
+  padding-bottom: 5.6rem;
+
+  &[data-collapse='true'] {
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
+.contentInner {
+  padding-top: 2.2rem;
+
+  > div {
+    padding-top: 3.2rem;
+    max-width: fit-content;
+  }
+}
+
+.icon {
+  width: 3.2rem;
+  height: 3.2rem;
+
+  path {
+    stroke: theme('colors.darkBlue');
+    stroke-width: 2;
+    scale: 1;
+    transition: all .3s ease-in-out;
+    transform-origin: center;
+  }
+
+  &[data-collapse='true'] {
+    path:last-child {
+      scale: 0;
+    }
+  }
 }

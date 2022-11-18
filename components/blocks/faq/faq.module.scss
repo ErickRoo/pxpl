@@ -80,4 +80,15 @@
 
 .questionsSection {
   max-width: 62.8rem;
+  margin: auto;
+
+  > div {
+    &:first-child {
+      border-top: 1px solid theme('colors.darkBlue');
+    }
+
+    &:last-child {
+      margin-bottom: 2.8rem;
+    }
+  }
 }

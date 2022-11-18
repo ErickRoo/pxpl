@@ -15,8 +15,29 @@ const placeholderFaqBlock = {
   },
   questions: [
     {
-      headline: '',
-      content: '',
+      headline: 'Where is our data stored?',
+      content: `__Protect your data__ and systems with a **platform backed** by the highest security 
+      standards. Lorem ipsum soler imut. ~~Strikethrough option~~ also.`,
+      primaryCta: {
+        ctaText: 'Learn more',
+        ctaLink: '#',
+      },
+    },
+    {
+      headline: `What is your approach to security incidents? When 
+      and how are customers notified in the event of a 
+      confirmed incident involving their data?`,
+      content: `Protect your data and systems with a platform backed by the highest security 
+      standards. Lorem ipsum soler imut. Strikethrough option also.`,
+      primaryCta: {
+        ctaText: 'Learn more',
+        ctaLink: '#',
+      },
+    },
+    {
+      headline: 'Is our data used to sell or build advertising products?',
+      content: `Protect your data and systems with a platform backed by the highest security 
+      standards. Lorem ipsum soler imut. Strikethrough option also.`,
       primaryCta: {
         ctaText: 'Learn more',
         ctaLink: '#',
