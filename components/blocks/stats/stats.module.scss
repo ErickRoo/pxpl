@@ -47,18 +47,14 @@
   border-top: 1.5px solid theme('colors.steel');
   display: flex;
   justify-content: space-between;
+  min-height: 30rem;
 }
 
 .leftSide {
-  max-width: 40rem;
+  max-width: 39.5rem;
   padding-top: 2.2rem;
 
   > p {
     margin-bottom: 4.8rem;
   }
-}
-
-.rightSide {
-  font-size: 24rem;
-  line-height: 100%;
 }

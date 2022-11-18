@@ -26,7 +26,7 @@ const StatsBlock:FunctionComponent<{ block: StatsInterface }> = ({ block }) => {
                     <p className="eyebrow">{top.headline}</p>
                     <h6 className="typo-h6">{top.description}</h6>
                   </div>
-                  <div className={styles.rightSide}>
+                  <div className="typo-stats">
                     {top.stat}
                   </div>
                 </div>
@@ -35,7 +35,7 @@ const StatsBlock:FunctionComponent<{ block: StatsInterface }> = ({ block }) => {
                     <p className="eyebrow">{bottom.headline}</p>
                     <h6 className="typo-h6">{bottom.description}</h6>
                   </div>
-                  <div className={styles.rightSide}>
+                  <div className="typo-stats">
                     {bottom.stat}
                   </div>
                 </div>

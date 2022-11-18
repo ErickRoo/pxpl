@@ -39,3 +39,7 @@
 .eyebrow {
   @include typo-eyebrow;
 }
+
+.typo-stats {
+  @include typo-stats;
+}
