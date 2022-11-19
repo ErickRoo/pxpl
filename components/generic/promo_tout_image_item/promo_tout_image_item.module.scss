@@ -1,45 +1,64 @@
 @import '../../../styles/variables';
 
 .root {
-  position: relative;
   margin: 5.6rem 0;
 }
 
 .wrapper {
   @apply container;
 
-  padding: 0;
+  position: relative;
+  overflow: hidden;
   border-radius: 1.2rem;
   background-color: theme('colors.passionBlue');
   color: theme('colors.white');
-  padding: 4.8rem 11.4rem 5.8rem;
   display: flex;
   justify-content: space-between;
+  padding: 2.4rem 2.4rem 2.4rem 11.4rem;
 
   @screen xl {
     max-width: 131.2rem;
   }
 }
 
-.wrapper__centered {
-  flex-direction: column;
+.wrapper__left {
+  padding: 2.4rem 10.4rem 2.4rem 2.4rem;
   align-items: center;
-  text-align: center;
 
-  .wrapperForm {
-    margin-top: 3.2rem;
+  > div {
+    order: 2;
   }
 
   .wrapperButton {
-    margin-top: 4.8rem;
+    margin-top: 0;
+  }
+
+  .firstCol {
+    padding-top: 0;
+    max-width: 57rem;
+  }
+
+  .secondCol {
+    order: 1;
   }
 }
 
-.leftSide {
-  position: relative;
+.wrapper__circles {
+  background-color: theme('colors.butterCream');
+  color: theme('colors.darkBlue');
+
+  &.wrapper__left {
+    padding: 2.4rem 9.4rem 2.4rem 2.4rem;
+  }
 }
 
-.rightSide {
+.firstCol {
+  padding-top: 3rem;
+  max-width: 76.6rem;
+  z-index: 0;
+}
+
+.secondCol {
   position: relative;
 }
 
@@ -47,10 +66,62 @@
   margin-bottom: 0.8rem;
 }
 
-.wrapperForm {
-  position: relative;
+.wrapperButton {
+  margin-top: 4.8rem;
+  width: 16.8rem;
 }
 
-.wrapperButton {
-  width: 16.8rem;
+.circles {
+  order: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  li {
+    position: absolute;
+    border-radius: 50%;
+    width: 16rem;
+    height: 16rem;
+
+    &:nth-child(1) {
+      background-color: theme('colors.warmGray');
+      top: -12.6rem;
+      left: 57.6rem;
+    }
+
+    &:nth-child(2) {
+      background-color: theme('colors.paisley');
+      top: -4.2rem;
+      left: -7rem;
+    }
+
+    &:nth-child(3) {
+      border: 0.2rem dashed theme('colors.passionBlue');
+      bottom: -11rem;
+      left: 73.3rem;
+    }
+  }
+}
+
+.circles__left {
+  li {
+    &:nth-child(1) {
+      top: -11.8rem;
+      left: 57.4rem;
+    }
+
+    &:nth-child(2) {
+      top: -4rem;
+      left: unset;
+      right: -9.5rem;
+    }
+
+    &:nth-child(3) {
+      bottom: -11.2rem;
+      left: 86.5rem;
+    }
+  }
 }

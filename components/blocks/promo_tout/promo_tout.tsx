@@ -1,43 +1,42 @@
 import React, { FunctionComponent } from 'react'
 
-import FormNewsletter from 'components/generic/form-newsletter/form-newsletter'
-import TertiaryButton from 'components/generic/tertiary-button/tertiary-button'
+import PromoToutItem from 'components/generic/promo_tout_item/promo_tout_item'
+import PromoToutImageItem from 'components/generic/promo_tout_image_item/promo_tout_image_item'
 import PromoToutInterface from './promo_tout.interface'
 import styles from './promo_tout.module.scss'
 
 export const typename = 'Set_Replicator_BlockPromoTout'
 
 const PromoToutBlock:FunctionComponent<{ block: PromoToutInterface }> = ({ block }) => (
-  <div>
+  <div className={styles.root}>
     {block.TextAndImageBlocks?.map((oneTextImageItem, idx) => {
       const key = `promo-tout-item-${idx}`
 
       if (oneTextImageItem.variant === 'image') {
         return (
-          <div className={styles.root} key={key}>
-            image
-          </div>
+          <PromoToutImageItem
+            key={key}
+            variant={oneTextImageItem.variant}
+            headline={oneTextImageItem.headline}
+            description={oneTextImageItem.description}
+            image={oneTextImageItem.image}
+            imageAlignment={oneTextImageItem.imageAlignment}
+            bgImageCircles={oneTextImageItem.bgImageCircles}
+            ctaLink={oneTextImageItem.ctaLink}
+          />
         )
       }
 
-      const wrapperStyles = `${styles.wrapper} ${oneTextImageItem?.centered ? styles.wrapper__centered : ''}`
       return (
-        <div className={styles.root} key={key}>
-          <section className={wrapperStyles}>
-            <div className={styles.leftSide}>
-              <h5 className={`typo-h5 ${styles.headline}`}>{oneTextImageItem.headline}</h5>
-              <p className="typo-body">{oneTextImageItem.description}</p>
-            </div>
-            <div className={styles.rightSide}>
-              {oneTextImageItem.variant === 'signup' && <FormNewsletter className={styles.wrapperForm} />}
-              {oneTextImageItem.variant === 'cta' && (
-                <div className={styles.wrapperButton}>
-                  <TertiaryButton type="link" text="Learn more" variant="outline" href={oneTextImageItem.ctaLink} />
-                </div>
-              )}
-            </div>
-          </section>
-        </div>
+        <PromoToutItem
+          key={key}
+          variant={oneTextImageItem.variant}
+          headline={oneTextImageItem.headline}
+          description={oneTextImageItem.description}
+          centered={oneTextImageItem.centered}
+          bgImageCircles={oneTextImageItem.bgImageCircles}
+          ctaLink={oneTextImageItem.ctaLink}
+        />
       )
     })}
   </div>

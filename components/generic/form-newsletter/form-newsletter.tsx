@@ -15,7 +15,7 @@ const FormNewsletter: FC<FormNewsLetterInterface> = ({
     <form className={`${styles.root} ${className}`} onSubmit={handleOnSubmit}>
       <label htmlFor="firstField" className={styles.formGroup}>
         <div>
-          <span className="eyebrow">Form label</span>
+          <span className="eyebrow">Newsletter Sign-up</span>
           <span className="eyebrow">Required*</span>
         </div>
         <input id="firstField" type="text" className={`${styles.formInput} typo-body`} placeholder="you@email.com" />
