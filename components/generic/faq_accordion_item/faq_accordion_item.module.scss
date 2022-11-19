@@ -1,8 +1,22 @@
 @import '../../../styles/variables';
+@import '../../../styles/mixins';
 
 .root {
   position: relative;
   border-bottom: 1px solid theme('colors.darkBlue');
+  margin: auto;
+
+  @screen md {
+    max-width: 52rem;
+  }
+
+  @screen lg {
+    max-width: 61.8rem;
+  }
+
+  @screen xl {
+    max-width: 62.8rem;
+  }
 }
 
 .topSection {
@@ -26,12 +40,7 @@
   &[data-collapse='true'] {
     max-height: 0;
     opacity: 0;
-  }
-
-  @screen md {
-    &[data-collapse='true'] {
-      padding-bottom: 3.2rem;
-    }
+    padding-bottom: 3.2rem;
   }
 
   @screen xl {
@@ -44,8 +53,15 @@
 .contentInner {
   padding-top: 1.6rem;
 
-  > p ins {
-    text-decoration: line-through;
+  > p {
+    ins {
+      text-decoration: line-through;
+    }
+
+    b {
+      @include typo-body-bold;
+      font-size: 1.6rem;
+    }
   }
 
   > div {
@@ -55,6 +71,7 @@
 }
 
 .headline {
+  max-width: 26.9rem;
 
   @screen md {
     max-width: 46.2rem;

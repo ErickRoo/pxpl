@@ -12,8 +12,13 @@
   padding: 0 2.4rem 4.2rem;
   margin: auto;
 
+  @screen md {
+    padding-bottom: 0;
+  }
+
   @screen xl {
     max-width: 108.4rem;
+    padding-bottom: 2.8rem;
   }
 }
 
@@ -26,7 +31,7 @@
   }
 
   @screen lg {
-    margin-bottom: 8rem;
+    margin-bottom: 8.3rem;
   }
 
   @screen xl {
@@ -35,11 +40,15 @@
 }
 
 .topTag {
-  margin-bottom: 1.6rem;
+  margin-bottom: 0.8rem;
+
+  @screen xl {
+    margin-bottom: 1.6rem;
+  }
 }
 
 .headline {
-  margin-top: 1.6rem;
+  margin-top: 0rem;
   margin-bottom: 1.6rem;
 
   @screen lg {
@@ -85,23 +94,7 @@
 }
 
 .questionsSection {
-  margin: auto;
-
-  > div {
-    &:first-child {
-      border-top: 1px solid theme('colors.darkBlue');
-    }
-  }
-
-  @screen md {
-    max-width: 52rem;
-  }
-
-  @screen lg {
-    max-width: 61.8rem;
-  }
-
-  @screen xl {
-    max-width: 62.8rem;
+  > div:first-child {
+    border-top: 1px solid theme('colors.darkBlue');
   }
 }
