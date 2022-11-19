@@ -1,6 +1,7 @@
 import React, { FunctionComponent } from 'react'
 
 import TertiaryButton from 'components/generic/tertiary-button/tertiary-button'
+import PromoToutBgCircles from '../promo_tout_bg_circles/promo_tout_bg_circles'
 import PromoToutImageItemInterface from './promo_tout_image_item.interface'
 import styles from './promo_tout_image_item.module.scss'
 
@@ -13,13 +14,7 @@ const PromoToutImageItem:FunctionComponent<PromoToutImageItemInterface> = ({
   return (
     <div className={styles.root}>
       <section className={`${wrapperStyles} ${bgImageCircles ? styles.wrapper__circles : ''}`}>
-        {bgImageCircles && (
-          <ul className={`${styles.circles} ${imageAlignment === 'left' ? styles.circles__left : ''}`}>
-            <li />
-            <li />
-            <li />
-          </ul>
-        )}
+        <PromoToutBgCircles bgImageCircles={bgImageCircles} alignment={imageAlignment} />
         <div className={styles.firstCol}>
           <h5 className={`typo-h5 ${styles.headline}`}>{headline}</h5>
           <p className="typo-body">{description}</p>

@@ -4,6 +4,7 @@ import FormNewsletter from 'components/generic/form-newsletter/form-newsletter'
 import TertiaryButton from 'components/generic/tertiary-button/tertiary-button'
 import PromoToutItemInterface from './promo_tout_item.interface'
 import styles from './promo_tout_item.module.scss'
+import PromoToutBgCircles from '../promo_tout_bg_circles/promo_tout_bg_circles'
 
 export const typename = 'Set_Replicator_BlockPromoTout'
 
@@ -14,13 +15,7 @@ const PromoToutItem:FunctionComponent<PromoToutItemInterface> = ({
   return (
     <div className={styles.root}>
       <section className={wrapperStyles}>
-        {bgImageCircles && (
-          <ul className={`${styles.circles} ${centered ? styles.circles__centered : ''}`}>
-            <li />
-            <li />
-            <li />
-          </ul>
-        )}
+        <PromoToutBgCircles bgImageCircles={bgImageCircles} alignment={centered ? 'centered' : ''} />
         <div className={styles.leftSide}>
           <h5 className={`typo-h5 ${styles.headline}`}>{headline}</h5>
           <p className="typo-body">{description}</p>
