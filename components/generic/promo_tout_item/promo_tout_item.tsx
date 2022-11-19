@@ -14,7 +14,7 @@ const PromoToutItem:FunctionComponent<PromoToutItemInterface> = ({
   const wrapperStyles = `${styles.wrapper} ${centered ? styles.wrapper__centered : ''} ${bgImageCircles ? styles.wrapper__circles : ''}`
   return (
     <div className={styles.root}>
-      <section className={wrapperStyles}>
+      <section className={`${wrapperStyles} ${variant === 'cta' && (styles.wrapper__cta)}`}>
         <PromoToutBgCircles bgImageCircles={bgImageCircles} alignment={centered ? 'centered' : ''} />
         <div className={styles.leftSide}>
           <h5 className={`typo-h5 ${styles.headline}`}>{headline}</h5>

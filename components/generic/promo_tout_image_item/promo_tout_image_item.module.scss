@@ -14,32 +14,63 @@
   color: theme('colors.white');
   display: flex;
   justify-content: space-between;
-  padding: 2.4rem 2.4rem 2.4rem 11.4rem;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 3.2rem;
+  padding: 4rem 2.4rem;
+
+  @screen md {
+    gap: 6.8rem;
+    padding: 2.4rem 2.4rem 2.4rem 6rem;
+    max-width: 70.4rem;
+    flex-direction: row;
+    text-align: left;
+  }
+
+  @screen lg {
+    gap: 9.6rem;
+    padding: 2.4rem 2.4rem 2.4rem 8.1rem;
+    max-width: 94.4rem;
+  }
 
   @screen xl {
+    padding: 2.4rem 2.4rem 2.4rem 11.4rem;
     max-width: 131.2rem;
   }
 }
 
 .wrapper__left {
-  padding: 2.4rem 10.4rem 2.4rem 2.4rem;
-  align-items: center;
-
   > div {
     order: 2;
   }
 
-  .wrapperButton {
-    margin-top: 0;
-  }
-
   .firstCol {
     padding-top: 0;
-    max-width: 57rem;
   }
 
   .secondCol {
     order: 1;
+  }
+
+  @screen md {
+    padding: 2.4rem 6rem 2.4rem 2.4rem;
+  }
+
+  @screen lg {
+    padding: 2.4rem 8.1rem 2.4rem 2.4rem;
+  }
+
+  @screen xl {
+    padding: 2.4rem 10.4rem 2.4rem 2.4rem;
+
+    .firstCol {
+      max-width: 57rem;
+    }
+
+    .wrapperButton {
+      margin-top: 0;
+    }
   }
 }
 
@@ -47,26 +78,70 @@
   background-color: theme('colors.butterCream');
   color: theme('colors.darkBlue');
 
-  &.wrapper__left {
-    padding: 2.4rem 9.4rem 2.4rem 2.4rem;
+  @screen xl {
+    &.wrapper__left {
+      padding: 2.4rem 9.4rem 2.4rem 2.4rem;
+    }
   }
 }
 
 .firstCol {
-  padding-top: 3rem;
-  max-width: 76.6rem;
-  z-index: 0;
+  z-index: 1;
+
+  @screen md {
+    max-width: 36.8rem;
+  }
+
+  @screen lg {
+    max-width: 45.6rem;
+  }
+
+  @screen xl {
+    padding-top: 3rem;
+    max-width: 76.6rem;
+  }
 }
 
 .secondCol {
-  position: relative;
+  z-index: 1;
+  width: 100%;
 }
 
 .headline {
   margin-bottom: 0.8rem;
+  font-size: 2rem;
+
+  @screen lg {
+    font-size: 2.4rem;
+    line-height: 110%;
+  }
+
+  @screen xl {
+    font-size: 3.2rem;
+  }
 }
 
 .wrapperButton {
-  margin-top: 4.8rem;
   width: 16.8rem;
+  margin: 3.2rem auto 0;
+
+  > section {
+    padding: 1.6rem;
+  }
+
+  @screen xl {
+    margin-top: 4.8rem;
+  }
+}
+
+.image {
+  width: 100%;
+  
+  @screen md {
+    height: 18.4rem;
+  }
+
+  @screen lg {
+    height: auto;
+  }
 }

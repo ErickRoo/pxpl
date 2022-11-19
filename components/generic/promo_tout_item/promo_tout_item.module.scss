@@ -12,45 +12,107 @@
   border-radius: 1.2rem;
   background-color: theme('colors.passionBlue');
   color: theme('colors.white');
-  padding: 5.8rem 11.4rem 5.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 4rem 2.4rem;
+
+  @screen md {
+    padding: 3.7rem 9.2rem;
+    max-width: 70.4rem;
+  }
+
+  @screen lg {
+    column-gap: 5.7rem;
+    padding: 4.8rem 4.8rem 5.4rem;
+    max-width: 94.4rem;
+    flex-direction: row;
+    text-align: left;
+  }
 
   @screen xl {
+    padding: 5.8rem 11.4rem 5.8rem;
     max-width: 131.2rem;
   }
 }
 
 .wrapper__centered {
-  padding: 4rem 11.4rem 5.8rem;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  .wrapperForm {
-    margin-top: 3.6rem;
+  @screen md {
+    .wrapperForm {
+      margin-top: 3.6rem;
+    }
+
+    .wrapperButton {
+      margin-top: 3.2rem;
+    }
   }
 
-  .wrapperButton {
-    margin-top: 4.8rem;
-    margin-right: 3.6rem;
+  @screen lg {
+    padding: 3.8rem 11.4rem;
+
+    .wrapperForm {
+      margin-top: 3.2rem;
+    }
+
+    .wrapperButton {
+      margin-top: 3.5rem;
+    }
+  }
+
+  @screen xl {
+    padding: 4rem 11.4rem 5.8rem;
+
+    .wrapperForm {
+      margin-top: 3.6rem;
+    }
+
+    .wrapperButton {
+      margin-top: 4.8rem;
+      margin-right: 3.6rem;
+    }
   }
 }
 
 .wrapper__circles {
-  padding: 5.8rem 12.4rem 5.8rem 11.4rem;
+  padding: 7.6rem 2.4rem;
   background-color: theme('colors.butterCream');
   color: theme('colors.darkBlue');
 
-  &.wrapper__centered {
-    padding: 5.8rem 12.4rem 5.8rem 15.4rem;
+  @screen md {
+    padding: 5.8rem 12.4rem 5.8rem 11.4rem;
+  }
+
+  @screen xl {
+    &.wrapper__centered {
+      padding: 5.8rem 12.4rem 5.8rem 15.4rem;
+    }
+  }
+}
+
+.wrapper__cta {
+  @screen lg {
+    padding: 4.8rem 8.2rem 5.4rem;
   }
 }
 
 .leftSide {
   margin-top: 0.5rem;
   position: relative;
+
+  @screen lg {
+    max-width: 45.6rem;
+  }
+
+  @screen xl {
+    max-width: 76.6rem;
+  }
+
 }
 
 .rightSide {
@@ -59,13 +121,40 @@
 
 .headline {
   margin-bottom: 0.8rem;
-  line-height: 110%;
+  font-size: 2rem;
+
+  @screen lg {
+    font-size: 2.4rem;
+    line-height: 110%;
+  }
+
+  @screen xl {
+    font-size: 3.2rem;
+  }
 }
 
 .wrapperForm {
-  position: relative;
+  width: 32.7rem;
+  margin-top: 3.2rem;
+
+  @screen md {
+    width: 33.5rem;
+  }
+
+  @screen lg {
+    margin-top: 0;
+  }
 }
 
 .wrapperButton {
   width: 16.8rem;
+  margin-top: 3.2rem;
+
+  > section {
+    padding: 1.6rem;
+  }
+
+  @screen lg {
+    margin-top: 0;
+  }
 }
