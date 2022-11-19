@@ -1,0 +1,41 @@
+.root {
+  position: relative;
+  overflow: hidden;
+  max-width: 33rem;
+}
+
+.formGroup {
+  display: block;
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+  }
+}
+
+.formInput {
+  margin: 1.6rem 0.2rem 0.2rem;
+  height: 4.8rem;
+  width: calc(100% - 0.4rem);
+  padding: 0 2.1rem;
+  border-radius: 0.4rem;
+  color: theme('colors.darkBlue');
+}
+
+.button {
+  position: absolute;
+  right: 0;
+  bottom: 0.4rem;
+  width: 5.84rem;
+  height: 4.24rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 2.7rem;
+  height: auto;
+}
