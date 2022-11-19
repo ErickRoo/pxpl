@@ -24,6 +24,16 @@
   }
 }
 
+.inner__outline {
+  background: theme('colors.white');
+  border: 1px solid theme('colors.passionBlue');
+  color: theme('colors.passionBlue');
+
+  .icon path {
+    fill: theme('colors.passionBlue');
+  }
+}
+
 .label {
   font-size: 1.4rem;
 }

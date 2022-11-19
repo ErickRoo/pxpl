@@ -1,7 +1,10 @@
 .root {
   position: relative;
   overflow: hidden;
-  max-width: 33rem;
+  
+  @screen xl {
+    width: 33rem;
+  }
 }
 
 .formGroup {
