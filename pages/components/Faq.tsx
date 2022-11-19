@@ -13,6 +13,10 @@ const placeholderFaqBlock = {
     ctaText: 'Learn more',
     ctaLink: '#',
   },
+  secondaryCta: {
+    ctaText: 'Explore pricing',
+    ctaLink: '#',
+  },
   questions: [
     {
       headline: 'Where is our data stored?',

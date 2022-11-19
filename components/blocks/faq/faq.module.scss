@@ -4,62 +4,33 @@
   background-color: theme('colors.butterCream');
   color: theme('colors.darkBlue');
   overflow: hidden;
-
-  /*
-  padding: 0 2.4rem;
-  @screen md {
-    padding: 0 3.2rem;
-  }
-  @screen lg {
-    padding: 0 4rem;
-  }
-  */
 }
 
 .wrapper {
   @apply container;
 
-  padding: 0;
+  padding: 0 2.4rem 4.2rem;
   margin: auto;
-
 
   @screen xl {
     max-width: 108.4rem;
   }
-
-  /*
-  padding: 13.5rem 0;
-  display: flex;
-  margin: auto;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5.6rem;
-
-  @screen md {
-    padding: 8.2rem 0;
-    gap: 3.2rem;
-    flex-direction: row;
-  }
-  
-  @screen lg {
-    padding: 10.4rem 0;
-    gap: 11.3rem;
-  }
-
-  @screen xl {
-    padding: 17.2rem 0;
-    gap: 17rem;
-    max-width: 108.4rem;
-  }
-  */
 }
 
 .topSection {
-  margin-bottom: 8.9rem;
   text-align: center;
+  margin-bottom: 8.5rem;
 
-  > div {
-    justify-content: center;
+  @screen md {
+    margin-bottom: 7rem;
+  }
+
+  @screen lg {
+    margin-bottom: 8rem;
+  }
+
+  @screen xl {
+    margin-bottom: 8.9rem;
   }
 }
 
@@ -70,25 +41,67 @@
 .headline {
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
+
+  @screen lg {
+    font-size: 4.8rem;
+  }
+
+  @screen xl {
+    font-size: 7.2rem;
+  }
 }
 
 .description {
-  margin: 0 auto;
-  margin-bottom: 4rem;
-  max-width: 74rem;
+  margin: 0 auto 3.2rem;
+
+  @screen md {
+    max-width: 70.4rem;
+  }
+
+  @screen lg {
+    max-width: 82rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: normal;
+  }
+
+  @screen xl {
+    max-width: 76rem;
+    line-height: 135%;
+    margin-bottom: 4rem;
+  }
+}
+
+.buttonsContainer {
+  margin: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  > section {
+    padding: 1.6rem;
+    margin-bottom: 2.4rem;
+  }
 }
 
 .questionsSection {
-  max-width: 62.8rem;
   margin: auto;
 
   > div {
     &:first-child {
       border-top: 1px solid theme('colors.darkBlue');
     }
+  }
 
-    &:last-child {
-      margin-bottom: 2.8rem;
-    }
+  @screen md {
+    max-width: 52rem;
+  }
+
+  @screen lg {
+    max-width: 61.8rem;
+  }
+
+  @screen xl {
+    max-width: 62.8rem;
   }
 }

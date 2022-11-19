@@ -9,5 +9,9 @@ export default interface FaqInterface {
         ctaText: string;
         ctaLink: string;
     };
+    secondaryCta?: {
+        ctaText: string;
+        ctaLink: string;
+    };
     questions: FaqAccordionItemInterface[];
 }

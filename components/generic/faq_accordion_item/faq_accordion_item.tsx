@@ -23,8 +23,8 @@ const FaqAccordionItem: FunctionComponent<FaqAccordionItemInterface> = ({
 
   return (
     <div className={styles.root}>
-      <div className={styles.topSection}>
-        <h6 className="typo-h6">{headline}</h6>
+      <div className={styles.topSection} data-collapse={collapse}>
+        <h6 className={`typo-h6 ${styles.headline}`}>{headline}</h6>
         <button type="button" onClick={() => setCollapse(!collapse)}>
           <svg className={styles.icon} data-collapse={collapse} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5 16H27" strokeLinecap="round" strokeLinejoin="round" />
