@@ -18,15 +18,18 @@
   flex-direction: column;
   text-align: center;
   padding: 4rem 2.4rem;
+  row-gap: 3.2rem;
 
   @screen md {
-    padding: 3.7rem 9.2rem;
+    padding: 4.4rem 6.2rem;
     max-width: 70.4rem;
+    flex-direction: row;
+    text-align: left;
   }
 
   @screen lg {
     column-gap: 5.7rem;
-    padding: 4.8rem 4.8rem 5.4rem;
+    padding: 5.4rem 8rem;
     max-width: 94.4rem;
   }
 
@@ -40,39 +43,13 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  @screen md {
-    .wrapperForm {
-      margin-top: 3.6rem;
-    }
-
-    .wrapperButton {
-      margin-top: 3.2rem;
-    }
-  }
-
-  @screen lg {
-    padding: 3.8rem 11.4rem;
-
-    .wrapperForm {
-      margin-top: 3.2rem;
-    }
-
-    .wrapperButton {
-      margin-top: 3.5rem;
-    }
-  }
+  gap: 3.2rem;
 
   @screen xl {
     padding: 4rem 11.4rem 5.8rem;
-
-    .wrapperForm {
-      margin-top: 3.6rem;
-    }
-
-    .wrapperButton {
-      margin-top: 4.8rem;
-      margin-right: 3.6rem;
+    .rightSide {
+      margin-top: 1.8rem;
+      margin-right: 3.8rem;
     }
   }
 }
@@ -83,10 +60,16 @@
   color: theme('colors.darkBlue');
 
   @screen md {
-    padding: 5.8rem 12.4rem 5.8rem 11.4rem;
+    padding: 4.4rem 6.2rem;
+  }
+
+  @screen lg {
+    padding: 5.6rem 8rem 6.4rem 8rem;
   }
 
   @screen xl {
+    padding: 5.6rem 12.3rem 6.4rem 11.4rem;
+
     &.wrapper__centered {
       padding: 5.8rem 12.4rem 5.8rem 15.4rem;
     }
@@ -113,14 +96,8 @@
 
 .rightSide {
   width: 16.8rem;
-  margin-top: 3.2rem;
-
   > section {
     padding: 1.6rem;
-  }
-
-  @screen lg {
-    margin-top: 0;
   }
 }
 

@@ -35,6 +35,7 @@
   }
 
   @screen xl {
+    gap: unset;
     padding: 2.4rem 2.4rem 2.4rem 11.4rem;
     max-width: 131.2rem;
   }
@@ -107,6 +108,10 @@
 .secondCol {
   z-index: 1;
   width: 100%;
+
+  @screen md {
+    width: unset;
+  }
 }
 
 .headline {
@@ -129,6 +134,10 @@
 
   > section {
     padding: 1.6rem;
+  }
+
+  @screen md {
+    margin: 3.2rem 0 0;
   }
 
   @screen xl {

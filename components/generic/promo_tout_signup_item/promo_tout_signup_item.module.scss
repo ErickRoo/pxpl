@@ -18,6 +18,7 @@
   flex-direction: column;
   text-align: center;
   padding: 4rem 2.4rem;
+  row-gap: 3.2rem;
 
   @screen md {
     padding: 3.7rem 9.2rem;
@@ -25,6 +26,8 @@
   }
 
   @screen lg {
+    flex-direction: row;
+    text-align: left;
     column-gap: 5.7rem;
     padding: 4.8rem 4.8rem 5.4rem;
     max-width: 94.4rem;
@@ -36,12 +39,18 @@
   }
 }
 
+.wrapper__centered {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .leftSide {
   margin-top: 0.5rem;
   position: relative;
 
   @screen md {
-    max-width: 36.8rem;
+    max-width: 52rem;
   }
 
   @screen lg {
@@ -51,12 +60,10 @@
   @screen xl {
     max-width: 76.6rem;
   }
-
 }
 
 .rightSide {
   width: 32.7rem;
-  margin-top: 3.2rem;
 
   @screen md {
     width: 33.5rem;

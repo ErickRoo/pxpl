@@ -17,35 +17,85 @@
 
 .circleA {
   background-color: theme('colors.warmGray');
-  top: -11.6rem;
-  left: 57.6rem;
+  top: -10rem;
+  left: 24.5rem;
+
+  @screen md {
+    top: -12.2rem;
+    left: 20.4rem;
+  }
+
+  @screen lg {
+    top: -11.5rem;
+    left: 24.8rem;
+  }
+
+  @screen xl {
+    top: -11.7rem;
+    left: 57.8rem;
+  }
 }
 
 .circleB {
   background-color: theme('colors.paisley');
-  top: -3.2rem;
-  left: -7rem;
+  top: -20rem;
+
+  @screen md {
+    top: -5rem;
+    left: -11rem;
+  }
+
+  @screen lg {
+    top: -3.7rem;
+    left: -10.5rem;
+  }
+
+  @screen xl {
+    top: -4rem;
+    left: -6.8rem;
+  }
 }
 
 .circleC {
   border: 0.2rem dashed theme('colors.passionBlue');
-  bottom: -11.6rem;
-  left: 87.4rem;
+  bottom: -12.2rem;
+  left: 5rem;
+
+  @screen md {
+    bottom: -11.6rem;
+    left: 46.3rem;
+  }
+
+  @screen lg {
+    bottom: -9.8rem;
+    left: 54.4rem;
+  }
+
+  @screen xl {
+    bottom: -10.9rem;
+    left: 87.4rem;
+  }
 }
 
 .circles__centered {
   .circleA {
+    /*
     top: -10.8rem;
     left: 24.4rem;
+    */
   }
 
   .circleB {
+    /*
     top: -30rem;
+    */
   }
 
   .circleC {
+    /*
     bottom: -12.4rem;
     left: 5rem;
+    */
   }
 
   @screen md {
@@ -55,12 +105,46 @@
     }
 
     .circleB {
-      top: -1.7rem;
-      left: -5rem;
+      top: -2.7rem;
+      left: -12rem;
     }
 
     .circleC {
-      bottom: -7.6rem;
+      bottom: -9.2rem;
+      left: 59.2rem;
+    }
+  }
+
+  @screen lg {
+    .circleA {
+      top: -10.2rem;
+      left: 81.3rem;
+    }
+
+    .circleB {
+      top: -2.1rem;
+      left: -11.2rem;
+    }
+
+    .circleC {
+      bottom: -6.9rem;
+      left: 65.4rem;
+    }
+  }
+
+  @screen xl {
+    .circleA {
+      top: -9.6rem;
+      left: 107.1rem;
+    }
+
+    .circleB {
+      top: -2.1rem;
+      left: -5.2rem;
+    }
+
+    .circleC {
+      bottom: -7.4rem;
       left: 90.9rem;
     }
   }
@@ -83,18 +167,49 @@
 
   @screen md {
     .circleA {
-      top: -12.6rem;
-      left: 57.6rem;
+      top: -30rem;
     }
     
     .circleB {
-      top: -4.2rem;
-      left: -7rem;
+      top: -3.2rem;
+      left: -11.6rem;
     }
   
     .circleC {
-      bottom: -11rem;
-      left: 73.3rem;
+      bottom: -9.5rem;
+      left: 59.2rem;
+    }
+  }
+
+  @screen lg {
+    .circleA {
+      top: -11rem;
+    }
+    
+    .circleB {
+      top: -3.1rem;
+      left: -11.2rem;
+    }
+  
+    .circleC {
+      bottom: -8.4rem;
+      left: 65.4rem;
+    }
+  }
+
+  @screen xl {
+    .circleA {
+      left: 58rem;
+    }
+
+    .circleB {
+      top: -3.1rem;
+      left: -7.2rem;
+    }
+
+    .circleC {
+      bottom: -12.4rem;
+      left: 73.4rem;
     }
   }
 }
@@ -116,19 +231,52 @@
 
   @screen md {
     .circleA {
-      top: -11.8rem;
-      left: 57.4rem;
+      top: -30rem;
     }
     
     .circleB {
-      top: -4rem;
-      left: unset;
-      right: -9.5rem;
+      top: -3.8rem;
+      left: -11.8rem;
     }
   
     .circleC {
-      bottom: -11.2rem;
-      left: 86.5rem;
+      bottom: -9.4rem;
+      left: 58.9rem;
+    }
+  }
+
+  @screen lg {
+    .circleA {
+      top: -11rem;
+      left: 81.3rem;
+    }
+    
+    .circleB {
+      top: -3.1rem;
+      left: -11.2rem;
+    }
+  
+    .circleC {
+      bottom: -8.1rem;
+      left: 65.4rem;
+    }
+  }
+
+  @screen xl {
+    .circleA {
+      top: -12rem;
+      left: 58.3rem;
+    }
+
+    .circleB {
+      top: -40px;
+      right: -98px;
+      left: unset;
+    }
+
+    .circleC {
+      bottom: -11.1rem;
+      left: 86.4rem;
     }
   }
 }
