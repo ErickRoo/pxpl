@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react'
 
 import PromoToutItem from 'components/generic/promo_tout_item/promo_tout_item'
 import PromoToutImageItem from 'components/generic/promo_tout_image_item/promo_tout_image_item'
+import PromoToutSignUpItem from 'components/generic/promo_tout_signup_item/promo_tout_signup_item'
 import PromoToutInterface from './promo_tout.interface'
 import styles from './promo_tout.module.scss'
 
@@ -27,10 +28,20 @@ const PromoToutBlock:FunctionComponent<{ block: PromoToutInterface }> = ({ block
         )
       }
 
+      if (oneTextImageItem.variant === 'signup') {
+        return (
+          <PromoToutSignUpItem
+            key={key}
+            headline={oneTextImageItem.headline}
+            description={oneTextImageItem.description}
+            centered={oneTextImageItem.centered}
+          />
+        )
+      }
+
       return (
         <PromoToutItem
           key={key}
-          variant={oneTextImageItem.variant}
           headline={oneTextImageItem.headline}
           description={oneTextImageItem.description}
           centered={oneTextImageItem.centered}

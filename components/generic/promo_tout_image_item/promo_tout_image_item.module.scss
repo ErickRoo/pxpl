@@ -18,7 +18,7 @@
   flex-direction: column;
   text-align: center;
   gap: 3.2rem;
-  padding: 4rem 2.4rem;
+  padding: 7.5rem 2.4rem 2.4rem;
 
   @screen md {
     gap: 6.8rem;
@@ -41,6 +41,8 @@
 }
 
 .wrapper__left {
+  padding: 2.4rem 2.4rem 7.5rem;
+
   > div {
     order: 2;
   }

@@ -35,52 +35,100 @@
 
 .circles__centered {
   .circleA {
-    top: -9.8rem;
-    left: 107.4rem;
+    top: -10.8rem;
+    left: 24.4rem;
   }
 
   .circleB {
-    top: -1.7rem;
-    left: -5rem;
+    top: -30rem;
   }
 
   .circleC {
-    bottom: -7.6rem;
-    left: 90.9rem;
+    bottom: -12.4rem;
+    left: 5rem;
+  }
+
+  @screen md {
+    .circleA {
+      top: -9.8rem;
+      left: 107.4rem;
+    }
+
+    .circleB {
+      top: -1.7rem;
+      left: -5rem;
+    }
+
+    .circleC {
+      bottom: -7.6rem;
+      left: 90.9rem;
+    }
   }
 }
 
 .circles__right {
   .circleA {
-    top: -12.6rem;
-    left: 57.6rem;
+    top: -11rem;
+    left: unset;
+    right: -3rem;
   }
-  
+
   .circleB {
-    top: -4.2rem;
-    left: -7rem;
+    top: -30rem;
   }
 
   .circleC {
-    bottom: -11rem;
-    left: 73.3rem;
+    bottom: -30rem;
+  }
+
+  @screen md {
+    .circleA {
+      top: -12.6rem;
+      left: 57.6rem;
+    }
+    
+    .circleB {
+      top: -4.2rem;
+      left: -7rem;
+    }
+  
+    .circleC {
+      bottom: -11rem;
+      left: 73.3rem;
+    }
   }
 }
 
 .circles__left {
   .circleA {
-    top: -11.8rem;
-    left: 57.4rem;
+    top: unset;
+    left: -3.2rem;
+    bottom: -11rem;
   }
-  
+
   .circleB {
-    top: -4rem;
-    left: unset;
-    right: -9.5rem;
+    top: -30rem;
   }
 
   .circleC {
-    bottom: -11.2rem;
-    left: 86.5rem;
+    bottom: -30rem;
+  }
+
+  @screen md {
+    .circleA {
+      top: -11.8rem;
+      left: 57.4rem;
+    }
+    
+    .circleB {
+      top: -4rem;
+      left: unset;
+      right: -9.5rem;
+    }
+  
+    .circleC {
+      bottom: -11.2rem;
+      left: 86.5rem;
+    }
   }
 }

@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image'
 
-export default interface PromoToutItemInterface {
+export default interface PromoToutSignUpItemInterface {
   variant?: string;
   headline: string;
   description: string;
