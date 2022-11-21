@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import ContentStackItemBlock from '../../components/blocks/content_stack_item/content_stack_item'
 
 const ContentStack: FC = () => (

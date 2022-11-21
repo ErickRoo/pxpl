@@ -1,0 +1,168 @@
+@import '../../../styles/variables';
+
+.root {
+  // add your styles here
+}
+
+
+.description {
+  @screen lg {
+    max-width: 58rem;
+  }
+
+  @screen xl {
+    max-width: 74rem;
+  }
+}
+
+.descriptionCenter {
+  @apply text-center mx-auto;
+
+  @screen sm {
+    margin-bottom: 3.2rem;
+  }
+
+  @screen lg {}
+
+  @screen xl {
+    margin: 0 25rem;
+  }
+}
+
+.descriptionLeft {
+  @apply text-left;
+
+  @screen sm {
+    margin-bottom: 3.2rem;
+  }
+
+  @screen lg {}
+
+  @screen xl {
+    max-width: 58rem;
+  }
+}
+
+.extraPadding {
+  padding: 1rem 0;
+}
+
+.centerText {
+  @apply mx-auto text-center text-darkBlue;
+
+  @screen sm {
+
+    h2 {
+      margin: .8rem 0 1.6rem;
+    }
+  }
+
+  @screen lg {
+    h2 {
+      margin: 1.6rem 0;
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+    }
+  }
+
+  @screen xl {
+    max-width: 108.4rem;
+
+    h2 {
+      margin: 1.6rem 0;
+    }
+  }
+}
+
+.leftText {
+  @apply mx-auto text-left text-darkBlue;
+  padding: 1rem 0;
+
+  @screen sm {
+
+    h2 {
+      margin: .8rem 0 1.6rem;
+    }
+  }
+
+  @screen lg {
+    max-width: 78.2rem;
+
+    h2 {
+      margin: 1.6rem 0;
+      font-size: 4.8rem;
+      line-height: 4.8rem;
+    }
+  }
+
+  @screen xl {
+    max-width: 87.5rem;
+
+    h2 {
+      margin: 1.6rem 0;
+    }
+  }
+}
+
+
+.buttonsContainer {
+  @apply flex flex-wrap justify-center gap-x-[4rem] gap-y-[2.4rem];
+
+
+
+  @screen md {
+    padding: 0;
+  }
+
+  @screen xl {
+    margin-top: 4rem;
+  }
+
+  >div:last-child {
+    @apply max-w-fit;
+  }
+
+  &__stacks {
+    @apply flex-col max-w-fit;
+  }
+}
+
+.buttonsContainerCenter {
+  @apply flex flex-wrap justify-center gap-x-[4rem] gap-y-[2.4rem];
+
+  @screen sm {
+    padding: 0 9rem;
+    align-items: center;
+  }
+}
+
+.buttonsContainerLeft {
+  @apply flex flex-wrap justify-start gap-x-[4rem] gap-y-[2.4rem];
+
+  @screen sm {
+
+    align-items: start;
+  }
+}
+
+.bgImage {
+  background-size: cover;
+  background-position: center;
+
+  @screen sm {
+    padding: 12.3rem 0 14.6rem 0;
+  }
+
+  @screen md {
+    padding: 8.6rem 0 9.1rem 0;
+  }
+
+  @screen lg {
+    padding: 8.5rem 0 9.0rem 0;
+  }
+
+  @screen xl {
+    padding: 11.2rem 0 11.45rem 0;
+  }
+
+}

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import SideSideItemInterface from 'components/generic/side_side_item/side_side_item.interface'
 import SideSideBlock from 'components/blocks/side_side/side_side'
 import useWindowSize from 'styles/getBreakpointQuery'
