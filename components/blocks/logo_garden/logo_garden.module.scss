@@ -1,0 +1,104 @@
+@import '../../../styles/variables';
+
+.root {
+  background: theme('colors.passionBlue');
+}
+
+.headline {
+  color: theme('colors.white');
+  text-align: center;
+  padding: 7.1rem 0;
+}
+
+.logos {
+  @apply flex flex-wrap justify-evenly items-center mx-auto;
+  max-width: 102.4rem;
+
+  @screen sm {
+    @apply flex flex-wrap justify-evenly items-center mx-auto;
+  }
+
+  @screen md {
+    @apply flex flex-wrap justify-evenly items-center mx-auto;
+  }
+
+  @screen lg {
+    @apply flex flex-wrap justify-center items-center mx-auto;
+  }
+}
+
+.logo {
+  width: 23%;
+  @apply flex justify-center items-center;
+  margin-bottom: 7.1rem;
+
+  @screen sm {
+    margin-right: 2rem;
+  }
+
+  @screen md {
+    margin-right: 0;
+  }
+
+  @screen lg {
+    @apply flex justify-center items-center;
+  }
+}
+
+$animationSpeed: 40s;
+
+@keyframes translateinfinite {
+  100% {
+    transform: translateX(calc(-180px * 4));
+  }
+}
+
+.slider {
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 100px;
+    position: absolute;
+    width: 200px;
+    z-index: 2;
+  }
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+
+}
+
+.slideTrack {
+  animation-name: translateinfinite;
+  display: flex;
+
+}
+
+.slide {
+  margin-right: 2rem;
+
+  @screen sm {
+    height: 10rem;
+    width: 25rem;
+    margin-right: 2rem;
+  }
+
+  @screen md {
+    height: 10rem;
+    width: 18rem;
+    margin-right: 2rem;
+  }
+}

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import PreFooterImageBlock from 'components/blocks/pre_footer/pre_footer'
 import PreFooterInterface from 'components/blocks/pre_footer/pre_footer.interface'
 import PlaceholderImage from '../../assets/Prefooter/placeholder.png'
