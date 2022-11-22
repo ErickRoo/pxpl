@@ -8,7 +8,7 @@ const LogosStatic: FC<{ block: LogoGardenInterface }> = ({ block }) => (
       <div className={styles.headline}>
         <h2 className="typo-h5">{block?.headline}</h2>
       </div>
-      <div className={styles.logos}>
+      <div className={`${styles.logos} ${styles?.[`logos__variant${block?.logos?.length || 0}`]}`}>
         {block?.logos?.map((logo) => (
           <div key={logo?.alt} className={styles.logo}>
             <img src={logo?.src} alt={logo?.alt} />
