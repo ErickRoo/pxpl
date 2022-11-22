@@ -1,6 +1,5 @@
 import { FC } from 'react'
 
-// import PlaceholderImage from '../../assets/LargeQuote/placeholder_image.png'
 import StatsBlock from 'components/blocks/stats/stats'
 import { StatItemInterface } from 'components/blocks/stats/stats.interface'
 
