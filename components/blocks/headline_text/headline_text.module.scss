@@ -1,45 +1,56 @@
 @import '../../../styles/variables';
 
 .root {
-  // add your styles here
+  > div {
+    padding: 0 2.4rem;
+  }
+
+  @screen md {
+    > div {
+      padding: 0 3.2rem;
+    }
+  }
 }
 
 
 .description {
-  @screen lg {
+  white-space: pre-line;
+  margin-bottom: 3.2rem;
+
+  @screen md {
     max-width: 58rem;
+  }
+
+  @screen lg {
+    max-width: 63rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    letter-spacing: normal;
   }
 
   @screen xl {
     max-width: 74rem;
+    line-height: 135%;
   }
 }
 
 .descriptionCenter {
   @apply text-center mx-auto;
 
-  @screen sm {
-    margin-bottom: 3.2rem;
-  }
-
   @screen lg {}
 
   @screen xl {
-    margin: 0 25rem;
+    margin: 0 22rem;
   }
 }
 
 .descriptionLeft {
   @apply text-left;
 
-  @screen sm {
-    margin-bottom: 3.2rem;
-  }
-
   @screen lg {}
 
   @screen xl {
-    max-width: 58rem;
+    max-width: 63rem;
   }
 }
 
@@ -49,23 +60,24 @@
 
 .centerText {
   @apply mx-auto text-center text-darkBlue;
+  padding: 0 0 2.1rem;
 
-  @screen sm {
+  h2 {
+    margin: .8rem auto 1.6rem;
+  }
 
-    h2 {
-      margin: .8rem 0 1.6rem;
-    }
+  @screen md {
+    padding: 0 0 0.6rem;
   }
 
   @screen lg {
     h2 {
       margin: 1.6rem 0;
-      font-size: 4.8rem;
-      line-height: 4.8rem;
     }
   }
 
   @screen xl {
+    padding: 0.95rem 0;
     max-width: 108.4rem;
 
     h2 {
@@ -74,33 +86,62 @@
   }
 }
 
-.leftText {
-  @apply mx-auto text-left text-darkBlue;
-  padding: 1rem 0;
+.headline {
+  h2 {
+    max-width: 30rem;
+  }
 
-  @screen sm {
-
+  @screen md {
     h2 {
-      margin: .8rem 0 1.6rem;
+      max-width: unset;
+    }
+  }
+
+  @screen md {    
+    span {
+      line-height: 2.2rem;
     }
   }
 
   @screen lg {
-    max-width: 78.2rem;
-
     h2 {
-      margin: 1.6rem 0;
+      margin: 0.8rem 0 1.6rem;
       font-size: 4.8rem;
-      line-height: 4.8rem;
+      line-height: 100%;
     }
   }
 
   @screen xl {
-    max-width: 87.5rem;
-
     h2 {
       margin: 1.6rem 0;
+      font-size: 7.2rem;
     }
+
+    span {
+      line-height: 120%;
+    }
+  }
+}
+
+.leftText {
+  @apply mx-auto text-left text-darkBlue;
+  padding: 0 0 2.1rem;
+
+  h2 {
+    margin: .8rem 0 1.6rem;
+  }
+
+  @screen md {
+    padding: 0 0 0.6rem;
+  }
+
+  @screen lg {
+    max-width: 78.2rem;
+  }
+
+  @screen xl {
+    padding: 0.95rem 0;
+    max-width: 85.7rem;
   }
 }
 
@@ -116,6 +157,16 @@
 
   @screen xl {
     margin-top: 4rem;
+
+    >div:last-child {
+      p {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  >section {
+    padding: 1.6rem;
   }
 
   >div:last-child {
@@ -128,41 +179,31 @@
 }
 
 .buttonsContainerCenter {
-  @apply flex flex-wrap justify-center gap-x-[4rem] gap-y-[2.4rem];
-
-  @screen sm {
-    padding: 0 9rem;
-    align-items: center;
-  }
+  @apply flex flex-wrap justify-center items-center gap-x-[4rem] gap-y-[2.4rem];
 }
 
 .buttonsContainerLeft {
-  @apply flex flex-wrap justify-start gap-x-[4rem] gap-y-[2.4rem];
-
-  @screen sm {
-
-    align-items: start;
-  }
+  @apply flex flex-wrap justify-start items-start md:items-center gap-x-[4rem] gap-y-[2.4rem] xl:gap-x-[3.9rem];
 }
 
 .bgImage {
   background-size: cover;
   background-position: center;
-
-  @screen sm {
-    padding: 12.3rem 0 14.6rem 0;
-  }
+  padding: 12.3rem 0 12.5rem 0;
 
   @screen md {
-    padding: 8.6rem 0 9.1rem 0;
+    padding: 8.5rem 0 6.5rem 0;
+    background-position: -26.2rem;
   }
 
   @screen lg {
-    padding: 8.5rem 0 9.0rem 0;
+    padding: 8.5rem 0 7.4rem 0;
+    background-position: -8.8rem 0;
   }
 
   @screen xl {
-    padding: 11.2rem 0 11.45rem 0;
+    padding: 10.25rem 0 10.5rem 0;
+    background-position: -1.3rem 0;
   }
 
 }
