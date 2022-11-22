@@ -103,16 +103,13 @@
 }
 
 .rightSide {
-  padding-top: 3.2rem;
-  padding-bottom: 3.8rem;
+  padding-bottom: 4rem;
 
   @screen md {
-    padding-top: 2.2rem;
     font-size: 14.4rem;
   }
 
   @screen xl {
-    padding-top: 0;
     font-size: 24rem;
   }
 }
