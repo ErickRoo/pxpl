@@ -275,3 +275,38 @@
   font-size: 14px;
   line-height: 140%;
 }
+
+@mixin typo-stats {
+  font-family: 'AeonikPro-Regular';
+  font-weight: 400;
+  font-size: 9.6rem;
+  line-height: 100%;
+
+  @screen md {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 9.6rem;
+    line-height: 100%;
+  }
+
+  @screen lg {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 100%;
+  }
+
+  @screen xl {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 100%;
+  }
+
+  @screen xxl {
+    font-family: 'AeonikPro-Regular';
+    font-weight: 400;
+    font-size: 24rem;
+    line-height: 100%;
+  }
+}

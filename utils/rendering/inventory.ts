@@ -9,6 +9,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as PreFooterBlockTypename } from '../../components/blocks/pre_footer/pre_footer'
 // import PreFooterBlockQuery from '../../components/blocks/pre_footer/pre_footer.graphql'
 
+// import { typename as Feature5050BlockTypename } from '../../components/blocks/feature_50_50/feature_50_50'
+// import Feature5050BlockQuery from '../../components/blocks/feature_50_50/feature_50_50.graphql'
+
 // import { typename as LargeQuoteBlockTypename } from '../../components/blocks/large_quote/large_quote'
 // import LargeQuoteBlockQuery from '../../components/blocks/large_quote/large_quote.graphql'
 
