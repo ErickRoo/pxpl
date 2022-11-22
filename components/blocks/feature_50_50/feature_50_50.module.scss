@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   padding: 0 2.4rem;
-  gap: 2.4rem;
+  gap: 3rem;
 
   @screen md {
     flex-direction: row;
@@ -34,16 +34,32 @@
 
 .leftSide {
   width: 100%;
-  border-radius: 1.2rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  border-radius: 1.2rem 1.2rem 0 0;
+  margin-bottom: 0.575rem;
 
   @screen md {
     width: 50%;
+    margin-bottom: 0;
+  }
+
+  .wrapperImage {
+    border-radius: 0 0 1.2rem 1.2rem;
   }
 
   .oneColumnBody {
+    @screen md {
+      > p {
+        margin-bottom: 3.5rem;
+  
+        &:first-child {
+          margin-bottom: 0.8rem;
+        }
+      }
+    }
+
     @screen lg {
       > p {
         margin-bottom: 8rem;
@@ -68,18 +84,25 @@
 
 .rightSide {
   width: 100%;
-  border-radius: 1.2rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.575rem;
 
   @screen md {
+    margin-bottom: 0;
     width: 50%;
   }
 }
 
 .wrapperImage {
   order: 1;
+  overflow: hidden;
+  border-radius: 1.2rem 1.2rem 0 0;
+
+  img {
+    width: 100%;
+  }
 
   @screen md {
     &__bottom {
@@ -90,6 +113,8 @@
 
 .oneColumnBody {
   order: 2;
+  border-radius: 0 0 1.2rem 1.2rem;
+  overflow: hidden;
   background-color: theme('colors.white');
   white-space: break-spaces;
   padding: 3.2rem 3.9rem;
@@ -101,13 +126,13 @@
     letter-spacing: normal;
 
     &:first-child {
-      margin-bottom: 1.3rem;
+      margin-bottom: 1.325rem;
     }
   }
 
   h4 {
     font-size: 2.4rem;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.4rem;
   }
 
   > section > div > div {
@@ -152,6 +177,8 @@
       &:first-child {
         text-transform: capitalize;
         line-height: 120%;
+        margin-bottom: 1.3rem;
+        letter-spacing: normal;
       }
     }
 
