@@ -12,6 +12,15 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as Feature5050BlockTypename } from '../../components/blocks/feature_50_50/feature_50_50'
 // import Feature5050BlockQuery from '../../components/blocks/feature_50_50/feature_50_50.graphql'
 
+// import { typename as LargeQuoteBlockTypename } from '../../components/blocks/large_quote/large_quote'
+// import LargeQuoteBlockQuery from '../../components/blocks/large_quote/large_quote.graphql'
+
+// import { typename as SideSideBlockTypename } from '../../components/blocks/side_side/side_side'
+// import SideSideBlockQuery from '../../components/blocks/side_side/side_side.graphql'
+
+// import { typename as TtacBlockTypename } from '../../components/blocks/ttac/ttac'
+// import TtacBlockQuery from '../../components/blocks/ttac/ttac.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -44,9 +53,16 @@ const blocks:Block[] = [
   // },
 
   // {
-  //   component: dynamic(() => import('../../components/blocks/feature_50_50/feature_50_50')),
-  //   query: Feature5050BlockQuery,
-  //   typename: Feature5050BlockTypename,
+  //   component: dynamic(() => import('../../components/blocks/side_side/side_side')),
+  //   query: SideSideBlockQuery,
+  //   typename: SideSideBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/ttac/ttac')),
+  //   query: TtacBlockQuery,
+  //   typename: TtacBlockTypename,
   //   extraQueries: undefined,
   // },
 
