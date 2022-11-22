@@ -18,6 +18,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as TtacBlockTypename } from '../../components/blocks/ttac/ttac'
 // import TtacBlockQuery from '../../components/blocks/ttac/ttac.graphql'
 
+// import { typename as ContentCardBlockTypename } from '../../components/blocks/content_card/content_card'
+// import ContentCardBlockQuery from '../../components/blocks/content_card/content_card.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -60,6 +63,13 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/ttac/ttac')),
   //   query: TtacBlockQuery,
   //   typename: TtacBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/content_card/content_card')),
+  //   query: ContentCardBlockQuery,
+  //   typename: ContentCardBlockTypename,
   //   extraQueries: undefined,
   // },
 
