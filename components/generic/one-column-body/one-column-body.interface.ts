@@ -5,6 +5,7 @@ export interface OneColumnBodyInterface {
   headlineLevel?: number;
   description?: string;
   showTertiaryButton?: boolean;
+  hideTextPrimaryButton?: boolean;
   stackCtas?: boolean;
   primaryCta?: {
     ctaText: string;
