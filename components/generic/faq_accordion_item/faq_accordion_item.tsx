@@ -7,7 +7,7 @@ import styles from './faq_accordion_item.module.scss'
 
 const convertText = (content: string): string => {
   let contentSplitted = content.split(/__(.*?)__/g)
-  let textContent = `${contentSplitted[0]} <u>${contentSplitted[1]}</u> ${contentSplitted[2]}`
+  let textContent = `${contentSplitted[0]} <span>${contentSplitted[1]}</span> ${contentSplitted[2]}`
   contentSplitted = textContent.split(/\*\*(.*?)\*\*/g)
   textContent = `${contentSplitted[0]} <b>${contentSplitted[1]}</b> ${contentSplitted[2]}`
   contentSplitted = textContent.split(/~~(.*?)~~/g)
