@@ -24,6 +24,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/LargeQuote">
         <p style={{ fontSize: 20, marginBottom: 20 }}>LargeQuote</p>
       </Link>
+      <Link href="/components/Stats">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Stats</p>
+      </Link>
     </div>
   </div>
 )
