@@ -84,6 +84,7 @@ const getRows = (rowList: string[]) => rowList.map((oneRow) => {
 })
 
 const placeholder = {
+  normal: getRows(['a-2', 'a-1', 'g-1', 'c-1', 'd-1', 'e-1', 'f-1']),
   sm: getRows(['a-2', 'a-1', 'g-1', 'c-1', 'd-1', 'e-1', 'f-1']),
   md: getRows(['a-2', 'a-3', 'a-4', 'a-2', 'g-2', 'c-2', 'd-2', 'e-2', 'f-2']),
   lg: getRows(['a-2', 'a-3', 'a-4', 'a-3', 'g-3', 'c-3', 'd-3', 'e-3', 'f-3']),

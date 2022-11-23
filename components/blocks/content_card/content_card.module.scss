@@ -17,6 +17,12 @@
   display: flex;
   justify-content: center;
   margin-bottom: 5.6rem;
+  gap: 3rem;
+  padding: 0 2.4rem;
+
+  @screen md {
+    row-gap: 2.4rem;
+  }
 
   @screen lg {
     gap: 3.2rem;
@@ -28,13 +34,29 @@
 }
 
 .row__variant2 {
+  flex-wrap: wrap;
+
+  @screen md {
+    flex-wrap: unset;
+    padding: 0 3.2rem;
+  }
+
   @screen lg {
     padding: 0 4rem;
   }
 }
 
 .row__variant3 {
+  flex-wrap: wrap;
+
+  @screen md {
+    justify-content: flex-start;
+    padding: 0 3.2rem;
+  }
+
   @screen lg {
+    flex-wrap: unset;
+    justify-content: center;
     padding: 0 4rem;
   }
 
@@ -44,12 +66,10 @@
 }
 
 .row__variant4 {
-  @screen lg {
-    flex-wrap: wrap;
-  }
+  flex-wrap: wrap;
 
   @screen xl {
+    padding: 0;
     flex-wrap: unset;
   }
 }
-

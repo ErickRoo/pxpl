@@ -2,11 +2,13 @@ import React, { FunctionComponent } from 'react'
 
 import ArrowButton from '../arrow-button/arrow-button'
 import CardOutlineItemInterface from './card_outline_item.interface'
+import stylesVariant1 from './card_outline_item_variant1.module.scss'
 import stylesVariant2 from './card_outline_item_variant2.module.scss'
 import stylesVariant3 from './card_outline_item_variant3.module.scss'
 import stylesVariant4 from './card_outline_item_variant4.module.scss'
 
 const enumStyles = {
+  variant1: stylesVariant1,
   variant2: stylesVariant2,
   variant3: stylesVariant3,
   variant4: stylesVariant4,
