@@ -3,3 +3,53 @@
 .root {
   position: relative;
 }
+
+.wrapper {
+  @apply container;
+  padding: 0;
+
+  @screen xl {
+    max-width: 133.4rem;
+  }
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5.6rem;
+
+  @screen lg {
+    gap: 3.2rem;
+  }
+  
+  @screen xl {
+    gap: 5.6rem;
+  }
+}
+
+.row__variant2 {
+  @screen lg {
+    padding: 0 4rem;
+  }
+}
+
+.row__variant3 {
+  @screen lg {
+    padding: 0 4rem;
+  }
+
+  @screen xl {
+    padding: 0 1rem;
+  }
+}
+
+.row__variant4 {
+  @screen lg {
+    flex-wrap: wrap;
+  }
+
+  @screen xl {
+    flex-wrap: unset;
+  }
+}
+
