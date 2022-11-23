@@ -9,6 +9,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as PreFooterBlockTypename } from '../../components/blocks/pre_footer/pre_footer'
 // import PreFooterBlockQuery from '../../components/blocks/pre_footer/pre_footer.graphql'
 
+// import { typename as Feature5050BlockTypename } from '../../components/blocks/feature_50_50/feature_50_50'
+// import Feature5050BlockQuery from '../../components/blocks/feature_50_50/feature_50_50.graphql'
+
 // import { typename as LargeQuoteBlockTypename } from '../../components/blocks/large_quote/large_quote'
 // import LargeQuoteBlockQuery from '../../components/blocks/large_quote/large_quote.graphql'
 
@@ -20,6 +23,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 
 // import { typename as PromoToutBlockTypename } from '../../components/blocks/promo_tout/promo_tout'
 // import PromoToutBlockQuery from '../../components/blocks/promo_tout/promo_tout.graphql'
+
+// import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
+// import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
@@ -70,6 +76,12 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/promo_tout/promo_tout')),
   //   query: PromoToutBlockQuery,
   //   typename: PromoToutBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  //   component: dynamic(() => import('../../components/blocks/faq/faq')),
+  //   query: FaqBlockQuery,
+  //   typename: FaqBlockTypename,
   //   extraQueries: undefined,
   // },
 
