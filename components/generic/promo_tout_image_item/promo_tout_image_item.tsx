@@ -18,7 +18,7 @@ const PromoToutImageItem:FunctionComponent<PromoToutImageItemInterface> = ({
 
   const wrapperStyles = `${styles.wrapper} ${imageAlignment === 'left' ? styles.wrapper__left : ''}`
   return (
-    <div className={styles.root}>
+    <div className={`${styles.root} ${bgImageCircles ? styles.circles : ''}`}>
       <section className={`${wrapperStyles} ${bgImageCircles ? styles.wrapper__circles : ''}`}>
         <PromoToutBgCircles bgImageCircles={bgImageCircles} alignment={imageAlignment} />
         <div className={styles.firstCol}>

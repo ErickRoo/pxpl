@@ -10,7 +10,7 @@ export const typename = 'Set_Replicator_BlockPromoTout'
 const PromoToutItem:FunctionComponent<PromoToutItemInterface> = ({
   centered, headline, description, ctaLink, bgImageCircles,
 }) => (
-  <div className={styles.root}>
+  <div className={`${styles.root} ${bgImageCircles ? styles.circles : ''}`}>
     <section className={`${styles.wrapper} ${centered ? styles.wrapper__centered : ''} ${bgImageCircles ? styles.wrapper__circles : ''}`}>
       <PromoToutBgCircles bgImageCircles={bgImageCircles} alignment={centered ? 'centered' : ''} />
       <div className={styles.leftSide}>

@@ -26,8 +26,8 @@
   }
 
   @screen lg {
-    top: -11.5rem;
-    left: 24.8rem;
+    top: -12rem;
+    left: 25rem;
   }
 
   @screen xl {
@@ -46,8 +46,8 @@
   }
 
   @screen lg {
-    top: -3.7rem;
-    left: -10.5rem;
+    top: -4.4rem;
+    left: -10.4rem;
   }
 
   @screen xl {
@@ -67,7 +67,7 @@
   }
 
   @screen lg {
-    bottom: -9.8rem;
+    bottom: -11rem;
     left: 54.4rem;
   }
 
@@ -78,26 +78,6 @@
 }
 
 .circles__centered {
-  .circleA {
-    /*
-    top: -10.8rem;
-    left: 24.4rem;
-    */
-  }
-
-  .circleB {
-    /*
-    top: -30rem;
-    */
-  }
-
-  .circleC {
-    /*
-    bottom: -12.4rem;
-    left: 5rem;
-    */
-  }
-
   @screen md {
     .circleA {
       top: -9.8rem;
@@ -134,17 +114,17 @@
 
   @screen xl {
     .circleA {
-      top: -9.6rem;
+      top: -10.6rem;
       left: 107.1rem;
     }
 
     .circleB {
-      top: -2.1rem;
+      top: -2.4rem;
       left: -5.2rem;
     }
 
     .circleC {
-      bottom: -7.4rem;
+      bottom: -8.2rem;
       left: 90.9rem;
     }
   }
@@ -200,15 +180,16 @@
   @screen xl {
     .circleA {
       left: 58rem;
+      top: -12.2rem;
     }
 
     .circleB {
-      top: -3.1rem;
-      left: -7.2rem;
+      top: -4.3rem;
+      left: -6.8rem;
     }
 
     .circleC {
-      bottom: -12.4rem;
+      bottom: -10.7rem;
       left: 73.4rem;
     }
   }
@@ -264,18 +245,18 @@
 
   @screen xl {
     .circleA {
-      top: -12rem;
-      left: 58.3rem;
+      top: -12.4rem;
+      left: 57.8rem;
     }
 
     .circleB {
-      top: -40px;
-      right: -98px;
+      top: -4.4rem;
+      right: -9.5rem;
       left: unset;
     }
 
     .circleC {
-      bottom: -11.1rem;
+      bottom: -10.8rem;
       left: 86.4rem;
     }
   }
