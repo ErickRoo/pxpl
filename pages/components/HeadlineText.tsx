@@ -6,11 +6,15 @@ import HeadlineTextInterface from 'components/blocks/headline_text/headline_text
 import HeadlineTextBlock from 'components/blocks/headline_text/headline_text'
 
 const getHeadlinePlaceHolder = ({
-  centered = false, bgLink = false, alternativeA = false, alternativeB = false,
+  centered = false, bgLinkA = false, bgLinkB = false, alternativeA = false, alternativeB = false,
 }) => {
   let headline = 'One platform to rule them all.'
   if (alternativeA) headline = 'H3 headline multi line'
   else if (alternativeB) headline = 'H2 headline single line'
+
+  let background_image = ''
+  if (bgLinkA) background_image = '/images/headline-text-bg-default.png'
+  else if (bgLinkB) background_image = '/images/headline-text-bg-mobile.png'
 
   return {
     type: 'Set_Replicator_BlockHeadlineText',
@@ -27,7 +31,7 @@ const getHeadlinePlaceHolder = ({
       ctaText: 'Explore pricing',
       ctaLink: '#',
     },
-    background_image: bgLink ? '/images/headline-text-bg-default.png' : '',
+    background_image,
   } as HeadlineTextInterface
 }
 
@@ -41,12 +45,12 @@ const placeholderCenterText = {
 }
 
 const placeholderCenterTextBgImage = {
-  normal: getHeadlinePlaceHolder({ centered: true, alternativeA: true, bgLink: true }),
-  sm: getHeadlinePlaceHolder({ centered: true, alternativeB: true, bgLink: true }),
-  md: getHeadlinePlaceHolder({ centered: true, bgLink: true }),
-  lg: getHeadlinePlaceHolder({ centered: true, bgLink: true }),
-  xl: getHeadlinePlaceHolder({ centered: true, alternativeB: true, bgLink: true }),
-  xxl: getHeadlinePlaceHolder({ centered: true, alternativeB: true, bgLink: true }),
+  normal: getHeadlinePlaceHolder({ centered: true, alternativeA: true, bgLinkB: true }),
+  sm: getHeadlinePlaceHolder({ centered: true, alternativeB: true, bgLinkB: true }),
+  md: getHeadlinePlaceHolder({ centered: true, bgLinkA: true }),
+  lg: getHeadlinePlaceHolder({ centered: true, bgLinkA: true }),
+  xl: getHeadlinePlaceHolder({ centered: true, alternativeB: true, bgLinkA: true }),
+  xxl: getHeadlinePlaceHolder({ centered: true, alternativeB: true, bgLinkA: true }),
 }
 
 const placeholderLeftText = {
@@ -59,12 +63,12 @@ const placeholderLeftText = {
 }
 
 const placeholderLeftTextBgImage = {
-  normal: getHeadlinePlaceHolder({ alternativeA: true, bgLink: true }),
-  sm: getHeadlinePlaceHolder({ alternativeB: true, bgLink: true }),
-  md: getHeadlinePlaceHolder({ bgLink: true }),
-  lg: getHeadlinePlaceHolder({ bgLink: true }),
-  xl: getHeadlinePlaceHolder({ alternativeB: true, bgLink: true }),
-  xxl: getHeadlinePlaceHolder({ alternativeB: true, bgLink: true }),
+  normal: getHeadlinePlaceHolder({ alternativeA: true, bgLinkB: true }),
+  sm: getHeadlinePlaceHolder({ alternativeB: true, bgLinkB: true }),
+  md: getHeadlinePlaceHolder({ bgLinkA: true }),
+  lg: getHeadlinePlaceHolder({ bgLinkA: true }),
+  xl: getHeadlinePlaceHolder({ alternativeB: true, bgLinkA: true }),
+  xxl: getHeadlinePlaceHolder({ alternativeB: true, bgLinkA: true }),
 }
 
 const HeadlineText: FC = () => {

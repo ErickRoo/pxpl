@@ -12,7 +12,6 @@
   }
 }
 
-
 .description {
   white-space: pre-line;
   margin-bottom: 3.2rem;
@@ -142,6 +141,10 @@
   @screen xl {
     padding: 0.95rem 0;
     max-width: 85.7rem;
+
+    h2 {
+      margin: 1.6rem 0;
+    }
   }
 }
 
@@ -202,8 +205,7 @@
   }
 
   @screen xl {
-    padding: 10.25rem 0 10.5rem 0;
+    padding: 10.44rem 0;
     background-position: -1.3rem 0;
   }
-
 }
