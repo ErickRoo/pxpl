@@ -5,14 +5,14 @@ import { TertiaryButtonInterface } from './tertiary-button.interface'
 import ArrowRight from '../../../assets/ArrowRight.svg'
 
 const TertiaryButton: FC<TertiaryButtonInterface> = ({
-  type, className = '', href, text,
+  type, className = '', href, text, variant = '',
 }) => {
   if (!type) {
     return null
   }
 
   const renderBody = () => (
-    <section className={styles.inner}>
+    <section className={`${styles.inner} ${styles?.[`inner__${variant}`] || ''}`}>
       <div className={styles.label}>
         <p className="eyebrow">{text}</p>
       </div>
