@@ -1,0 +1,186 @@
+@import '../../../styles/variables';
+
+.root {
+  position: relative;
+  color: theme('colors.darkBlue');
+
+  @screen md {
+    max-width: 33.7rem;
+  }
+
+  @screen lg {
+    max-width: 45.6rem;
+  }
+
+  @screen xl {
+    max-width: 51.4rem;
+  }
+}
+
+.wrapper {
+  border: 0.15rem solid theme('colors.darkBlue');
+  border-radius: 1.2rem;
+}
+
+.category {
+  border-bottom: 0.15rem solid theme('colors.darkBlue');
+
+  @screen md {
+    padding: 1.2rem 2.4rem;
+  }
+
+  @screen lg {
+    padding: 1.8rem 4rem;
+  }
+
+  @screen xl {
+    padding: 1.2rem 2.4rem;
+  }
+}
+
+.topSection {
+  @screen md {
+    img {
+      height: 13.6rem;
+      width: 100%;
+    }
+  }
+
+  @screen lg {
+    img {
+      height: 25.4rem;
+    }
+  }
+
+  @screen xl {
+    img {
+      height: 13.6rem;
+    }
+  }
+}
+
+.bottomSection {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @screen md {
+    padding: 1.959rem;
+  }
+
+  @screen lg {
+    padding: 4rem 4.8rem;
+  }
+
+  @screen xl {
+    padding: 1.959rem;
+  }
+}
+
+.icon {
+  @screen md {
+    margin-bottom: 1.6rem;
+  }
+
+  @screen lg {
+    margin-bottom: 2.4rem;
+  }
+  
+  @screen xl {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.topTags {
+  margin-bottom: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+
+  @screen md {
+    column-gap: 2.6rem;
+  }
+
+  @screen lg {
+    column-gap: 3.2rem;
+  }
+  
+  @screen xl {
+    column-gap: 2.6rem;
+  }
+}
+
+.headline {
+  @screen md {
+    max-width: 25rem;
+    font-size: 2.4rem;
+    line-height: 110%;
+    margin-bottom: 1.6rem;
+  }
+
+  @screen lg {
+    max-width: unset;
+    font-size: 4rem;
+    line-height: 100%;
+    margin-bottom: 2.4rem;
+  }
+
+  @screen xl {
+    font-size: 2.4rem;
+    line-height: 110%;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.description {
+  @screen md {
+    font-size: 1.4rem;
+    line-height: 140%;
+    letter-spacing: normal;
+    margin-bottom: 1.6rem;
+  }
+
+  @screen lg {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  @screen xl {
+    font-size: 1.4rem;
+    line-height: 140%;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.wrapperButton {
+  > div > div:first-child {
+    margin-right: 0;
+  }
+
+  @screen md {
+    margin-bottom: 1.6rem;
+  }
+
+  @screen lg {
+    margin-bottom: 2.4rem;
+  }
+
+  @screen xl {
+    margin-bottom: 1.6rem;
+  }
+}
+
+.bottomTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+
+  span {
+    color: theme('colors.passionBlue');
+    padding: 0.7rem;
+    border-radius: 0.4rem;
+    border: 0.1rem solid theme('colors.passionBlue');
+    font-size: 1.2rem;
+    line-height: 120%;
+  }
+}
