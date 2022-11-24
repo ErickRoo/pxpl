@@ -21,6 +21,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as TtacBlockTypename } from '../../components/blocks/ttac/ttac'
 // import TtacBlockQuery from '../../components/blocks/ttac/ttac.graphql'
 
+// import { typename as LogoGardenBlockTypename } from '../../components/blocks/logo_garden/logo_garden'
+// import LogoGardenBlockQuery from '../../components/blocks/logo_garden/logo_garden.graphql'
+
 // import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
 // import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
@@ -66,6 +69,13 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/ttac/ttac')),
   //   query: TtacBlockQuery,
   //   typename: TtacBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/logo_garden/logo_garden')),
+  //   query: LogoGardenBlockQuery,
+  //   typename: LogoGardenBlockTypename,
   //   extraQueries: undefined,
   // },
 
