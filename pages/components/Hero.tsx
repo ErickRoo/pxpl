@@ -82,7 +82,7 @@ const placeHolderHeroRightTextImageLeft = {
     ctaText: 'Learn more',
     ctaLink: '#',
   },
-  image: '/images/hero-image-right.png',
+  image: '/images/Rectangle-772.png',
   circle: true,
 } as HeroInterface
 
