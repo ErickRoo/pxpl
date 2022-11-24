@@ -39,6 +39,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/PromoTout">
         <p style={{ fontSize: 20, marginBottom: 20 }}>PromoTout</p>
       </Link>
+      <Link href="/components/RelatedArticle">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Related Article</p>
+      </Link>
     </div>
   </div>
 )
