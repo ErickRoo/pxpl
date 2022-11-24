@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 
 import LargeQuoteBlock from 'components/blocks/large_quote/large_quote'
 import LargeQuoteItemInterface from 'components/generic/large_quote_item/large_quote_item.interface'

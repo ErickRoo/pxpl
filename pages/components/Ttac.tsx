@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import Ttac from 'components/blocks/ttac/ttac'
 import TtacItemInterface from 'components/generic/ttac_item/ttac_item.interface'
 import useWindowSize from 'styles/getBreakpointQuery'

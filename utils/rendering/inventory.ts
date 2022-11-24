@@ -24,6 +24,10 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as PromoToutBlockTypename } from '../../components/blocks/promo_tout/promo_tout'
 // import PromoToutBlockQuery from '../../components/blocks/promo_tout/promo_tout.graphql'
 
+// import { typename as LogoGardenBlockTypename } from '../../components/blocks/logo_garden/logo_garden'
+// import LogoGardenBlockQuery from '../../components/blocks/logo_garden/logo_garden.graphql'
+
+
 // import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
 // import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
@@ -71,20 +75,23 @@ const blocks:Block[] = [
   //   typename: TtacBlockTypename,
   //   extraQueries: undefined,
   // },
-
   // {
   //   component: dynamic(() => import('../../components/blocks/promo_tout/promo_tout')),
   //   query: PromoToutBlockQuery,
   //   typename: PromoToutBlockTypename,
   //   extraQueries: undefined,
   // },
-
+  //   component: dynamic(() => import('../../components/blocks/logo_garden/logo_garden')),
+  //   query: LogoGardenBlockQuery,
+  //   typename: LogoGardenBlockTypename,
+  //   extraQueries: undefined,
+  // },
+  // {
   //   component: dynamic(() => import('../../components/blocks/faq/faq')),
   //   query: FaqBlockQuery,
   //   typename: FaqBlockTypename,
   //   extraQueries: undefined,
   // },
-
   // ##HYGEN_START##
   // do not modify the above line since its used by hygen to generate the block list
 ]
