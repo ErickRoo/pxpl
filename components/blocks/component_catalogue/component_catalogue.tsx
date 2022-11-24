@@ -33,6 +33,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/LogoGarden">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Logo Garden</p>
       </Link>
+      <Link href="/components/HorizontalCard">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Horizontal Card</p>
+      </Link>
       <Link href="/components/Faq">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Faq</p>
       </Link>
