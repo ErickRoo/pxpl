@@ -3,8 +3,8 @@ import { FC } from 'react'
 import useWindowSize from 'styles/getBreakpointQuery'
 import getCurrentBreakpoint from 'utils/breakpoints/getCurrentBreakpoint'
 import HorizontalCardBlock from 'components/blocks/horizontal_card/horizontal_card'
-import PlaceholderLargeImage from '../../assets/HorizontalCard/placeholder-large.png'
 import PlaceholderIconImage from '../../assets/HorizontalCard/placeholder-icon.png'
+import PlaceholderImage from '../../assets/HorizontalCard/placeholder.png'
 
 const getPlaceholder = ({
   large = false, medium = false, right = false, tagsA = false, tagsB = false, tagsC = false, textPrimaryCta = false, secondaryCta = false,
@@ -35,7 +35,7 @@ const getPlaceholder = ({
     bottomEyebrow: tags.length > 0 && 'Services provided',
     tags,
     imageAlignment: right ? 'right' : 'left',
-    image: PlaceholderLargeImage,
+    image: PlaceholderImage,
   }
 }
 
