@@ -17,7 +17,7 @@ const ContentStackItemBlock: FunctionComponent<{ block: ContentStackItemInterfac
   const { width } = useWindowSize()
 
   return (
-    <div>
+    <div className={`${styles.wrapper}`}>
       {block.TextAndImageBlocks.map((el, i) => {
         if (width <= 768) {
           return (
@@ -37,11 +37,11 @@ const ContentStackItemBlock: FunctionComponent<{ block: ContentStackItemInterfac
 
         if (i % 2 === 0) {
           return (
-            <div className={`grid grid-cols-10 ${styles.stackContainer}`}>
-              <div className="image-container col-span-4 flex justify-center items-center sm:mb-10">
+            <div className={`grid grid-cols-12 ${styles.stackContainer}`}>
+              <div className={`${styles.imageContainer} col-span-5 flex justify-center items-start`}>
                 <Image src={Checker} alt="Checker" />
               </div>
-              <div className="text-container col-span-6 flex flex-col content-center justify-center items-center">
+              <div className={`col-span-7 flex flex-col content-center justify-center ${styles.rightContent}`}>
                 <h4 className="typo-h4 text-darkBlue">{el.headline}</h4>
                 <p className={`typo-body text-darkBlue ${styles.bodyText}`}>
                   {el.text}
@@ -51,14 +51,14 @@ const ContentStackItemBlock: FunctionComponent<{ block: ContentStackItemInterfac
           )
         }
         return (
-          <div className={`grid grid-cols-10 ${styles.stackContainer}`}>
-            <div className="text-container col-span-6 flex flex-col content-center justify-center items-center">
+          <div className={`grid grid-cols-12 ${styles.stackContainer}`}>
+            <div className={`col-span-7 flex flex-col content-center justify-center ${styles.leftContent}`}>
               <h4 className="typo-h4 text-darkBlue">{el.headline}</h4>
               <p className={`typo-body text-darkBlue ${styles.bodyText}`}>
                 {el.text}
               </p>
             </div>
-            <div className="image-container flex col-span-4 justify-center items-center">
+            <div className={`${styles.imageContainer} flex lg:col-start-8 col-span-5 justify-center items-start ${styles.imgRight}`}>
               <Image src={Checker} alt="Checker" />
             </div>
           </div>
@@ -66,9 +66,9 @@ const ContentStackItemBlock: FunctionComponent<{ block: ContentStackItemInterfac
       })}
 
       <div className={`${styles.buttonsContainer} flex justify-center`}>
-        <ArrowButton text="Learn More" href="/" />
+        <ArrowButton text="Learn more" href="/" />
         <div className={`${styles.spacer}`} />
-        <UnderlinedButton href="/" text="Learn More" underlineColor="passionBlue" />
+        <UnderlinedButton href="/" text="Learn more" underlineColor="passionBlue" />
       </div>
     </div>
   )
