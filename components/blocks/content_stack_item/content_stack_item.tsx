@@ -1,12 +1,12 @@
 import React, { FunctionComponent } from 'react'
 import Image from 'next/image'
+import TertiaryButton from 'components/generic/tertiary-button/tertiary-button'
 import styles from './content_stack_item.module.scss'
 import ContentStackItemInterface from './content_stack_item.interface'
 import Checker from '../../../assets/checker.png'
 import useWindowSize from '../../../styles/getBreakpointQuery'
 import ArrowButton from '../../generic/arrow-button/arrow-button'
 import UnderlinedButton from '../../generic/underlined-button/underlined-button'
-import TertiaryButton from 'components/generic/tertiary-button/tertiary-button'
 
 export const typename = 'Set_Replicator_BlockContentStackItem'
 
