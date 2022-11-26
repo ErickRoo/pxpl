@@ -69,13 +69,13 @@ const ContentStackItemBlock: FunctionComponent<{ block: ContentStackItemInterfac
       <div className={`${width <= 767 ? styles.buttonsContainer : ''} flex sm:flex-col md:flex-row justify-center`}>
         {
           width <= 767 ? (
-            <TertiaryButton type="link" text="Learn more" href="/" />
+            <TertiaryButton type="link" text="Learn more" href="#" />
           ) : (
-            <ArrowButton text="Learn more" href="/" />
+            <ArrowButton text="Learn more" href="#" />
           )
         }
         <div className={`${styles.spacer}`} />
-        <UnderlinedButton href="/" text="Learn more" underlineColor="passionBlue" />
+        <UnderlinedButton href="#" text="Learn more" underlineColor="passionBlue" />
       </div>
     </div>
   )
