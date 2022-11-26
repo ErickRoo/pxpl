@@ -6,6 +6,7 @@ import Checker from '../../../assets/checker.png'
 import useWindowSize from '../../../styles/getBreakpointQuery'
 import ArrowButton from '../../generic/arrow-button/arrow-button'
 import UnderlinedButton from '../../generic/underlined-button/underlined-button'
+import TertiaryButton from 'components/generic/tertiary-button/tertiary-button'
 
 export const typename = 'Set_Replicator_BlockContentStackItem'
 
@@ -19,10 +20,10 @@ const ContentStackItemBlock: FunctionComponent<{ block: ContentStackItemInterfac
   return (
     <div className={`${styles.wrapper}`}>
       {block.TextAndImageBlocks.map((el, i) => {
-        if (width <= 768) {
+        if (width <= 767) {
           return (
-            <div className="grid grid-cols-1">
-              <div className="image-container flex justify-center items-center sm:mb-10">
+            <div className={`grid grid-cols-1 ${styles.stackContainer}`}>
+              <div className={`${styles.imageContainer} image-container flex justify-center items-center sm:mb-10`}>
                 <Image src={Checker} alt="Checker" />
               </div>
               <div className="text-container flex flex-col content-center justify-center items-center">
@@ -65,8 +66,14 @@ const ContentStackItemBlock: FunctionComponent<{ block: ContentStackItemInterfac
         )
       })}
 
-      <div className={`${styles.buttonsContainer} flex justify-center`}>
-        <ArrowButton text="Learn more" href="/" />
+      <div className={`${width <= 767 ? styles.buttonsContainer : ''} flex sm:flex-col md:flex-row justify-center`}>
+        {
+          width <= 767 ? (
+            <TertiaryButton type="link" text="Learn more" href="/" />
+          ) : (
+            <ArrowButton text="Learn more" href="/" />
+          )
+        }
         <div className={`${styles.spacer}`} />
         <UnderlinedButton href="/" text="Learn more" underlineColor="passionBlue" />
       </div>

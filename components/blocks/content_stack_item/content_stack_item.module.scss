@@ -63,8 +63,16 @@
 }
 
 .imageContainer {
+  margin-bottom: 3.2rem;
+
+  @screen sm {
+    min-height: 24.4rem;
+  }
+
   @screen md {
     max-width: 24.4rem;
+    min-height: 0;
+    margin-bottom: 0;
   }
 
   @screen lg {
@@ -83,5 +91,18 @@
 
   @screen xl {
     padding-right: 0;
+  }
+}
+
+.buttonsContainer {
+  width: fit-content;
+  > section {
+    padding: 1.6rem;
+    gap: 3.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  div:last-child {
+    max-width: 8rem;
   }
 }
