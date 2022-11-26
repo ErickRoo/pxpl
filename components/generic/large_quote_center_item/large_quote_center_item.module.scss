@@ -1,0 +1,253 @@
+@import '../../../styles/variables';
+
+.root {
+  background-color: theme('colors.butterCream');
+  color: theme('colors.darkBlue');
+  padding: 2.4rem;
+  overflow: hidden;
+
+  @screen lg {
+    padding: 3.1rem;
+  }
+
+  @screen xl {
+    padding: 3.2rem 3.1rem 3.6rem;
+  }
+}
+
+.wrapper {
+  @apply container;
+
+  position: relative;
+  margin: auto;
+  padding: 2rem 0 3rem;
+  text-align: center;
+
+  @screen md {
+    padding: 7rem 0;
+    max-width: 52rem;
+  }
+
+  @screen lg {
+    max-width: 78.2rem;
+  }
+
+  @screen xl {
+    padding: 13.2rem 0 16.8rem;
+    max-width: 85.6rem;
+  }
+}
+
+.leftSide {
+  width: 100%;
+
+  @screen md {
+    width: 70%;
+  }
+
+  @screen lg {
+    width: 50%;
+  }
+}
+
+.testimony {
+  position: relative;
+  margin-bottom: 6.2rem;
+  font-size: 3.2rem;
+  text-align: center;
+
+  &::before {
+    content: '“';
+  }
+
+  &::after {
+    content: '”';
+  }
+
+  @screen md {
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+  }
+
+  @screen lg {
+    font-size: 3.2rem;
+    margin-bottom: 3rem;
+    line-height: 110%;
+  }
+
+  @screen xl {
+    font-size: 4rem;
+    margin-bottom: 4.5rem;
+    line-height: 100%;
+  }
+}
+
+.leftBottonSide {
+  text-align: center;
+
+  hr {
+    margin: 3.2rem auto;
+    max-width: 40rem;
+  }
+
+  > div {
+    justify-content: center;
+  }
+
+  @screen md {
+    max-width: unset;
+
+    hr {
+      margin: 3.2rem auto;
+      max-width: 40rem;
+    }
+  }
+
+  @screen lg {
+    max-width: unset;
+    > p {
+      font-size: 1.6rem
+    }
+  }
+
+  @screen xl {
+    hr {
+      margin: 3.2rem auto;
+    }
+  }
+}
+
+.jobTitle {
+  text-align: center;
+
+  @screen lg {
+    font-size: 1.6rem;
+  }
+}
+
+.author {
+  font-size: 3.2rem;
+  margin-bottom: 0.8rem;
+  line-height: 110%;
+  text-align: center;
+
+  @screen md {
+    font-size: 2.4rem;
+  }
+
+  @screen lg {
+    font-size: 3.2rem;
+  }
+
+  @screen xl {
+    font-size: 4rem;
+    line-height: 100%;
+  }
+}
+
+.profileImage {
+  margin: 2rem auto 5.3rem;
+  width: 10rem;
+  height: auto;
+
+  @screen md {
+    margin: 0;
+  }
+
+  @screen lg {
+    width: 12rem;
+  }
+
+  @screen xl {
+    width: 13rem;
+  }
+}
+
+.rightSide {
+  width: 100%;
+  position: relative;
+
+  > div:last-child {
+    justify-content: center;
+  }
+
+  @screen md {
+    width: 30%;
+
+    > div:last-child {
+      position: absolute;
+      right: -54px;
+      width: max-content;
+      bottom: -3px;
+    }
+  }
+
+  @screen lg {
+    width: 50%;
+
+    > div:last-child {
+      position: relative;
+      right: unset;
+      width: unset;
+      bottom: unset;
+    }
+  }
+}
+
+.wrapperImage {
+  margin: 0 auto;
+  margin-bottom: 6.8rem;
+  width: 15.5rem;
+  aspect-ratio: 1 / 0.94;
+  display: flex;
+  align-items: center;
+
+  img {
+    border-radius: 1.2rem;
+  }
+
+  @screen md {
+    width: 15.2rem;
+    margin-bottom: 2.8rem;
+  }
+
+  @screen lg {
+    width: 17.3rem;
+  }
+
+  @screen xl {
+    margin-bottom: 4.8rem;
+  }
+}
+
+.bgImage {
+  border-radius: 1.2rem;
+  width: 15.5rem;
+  height: 15.7rem;
+  margin: 0 auto 5.5rem;
+  background-size: 20.4rem;
+  background-position: 7.4rem 0rem;
+
+  @screen md {
+    margin: unset;
+    width: 15.1rem;
+    height: 15.3rem;
+    background-position: 7.5rem -0.2rem;
+  }
+
+  @screen lg {
+    width: 29.3rem;
+    height: 30.1rem;
+    background-size: 38.6rem;
+    background-position: 14.6rem -0.2rem;
+    margin-bottom: 2.2rem;
+  }
+
+  @screen xl {
+    width: 51.4rem;
+    height: 48.3rem;
+    background-size: auto;
+    background-position: center;
+    margin-bottom: 4.5rem;
+  }
+}
