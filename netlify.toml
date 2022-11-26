@@ -1,5 +1,5 @@
 [[plugins]]
-package = "@netlify/plugin-nextjs"
+package = "@netlify/plugin-nextjs@4.29.2"
 
 [build]
   base = "."
