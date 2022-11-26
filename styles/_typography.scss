@@ -20,6 +20,14 @@
   @include typo-h5;
 }
 
+.typo-h6 {
+  @include typo-h6;
+}
+
+.typo-h7 {
+  @include typo-h7;
+}
+
 .typo-body {
   @include body-text;
 }

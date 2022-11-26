@@ -1,10 +1,11 @@
 export interface OneColumnBodyInterface {
   className?: string;
   topTag?: string;
-  headline: string;
-  headlineLevel: number;
+  headline?: string;
+  headlineLevel?: number;
   description?: string;
   showTertiaryButton?: boolean;
+  hideTextPrimaryButton?: boolean;
   stackCtas?: boolean;
   primaryCta?: {
     ctaText: string;

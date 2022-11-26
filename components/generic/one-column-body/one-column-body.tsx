@@ -7,7 +7,16 @@ import { OneColumnBodyInterface } from './one-column-body.interface'
 import styles from './one-column-body.module.scss'
 
 const OneColumnBody: FC<OneColumnBodyInterface> = ({
-  className = '', topTag, headline, headlineLevel, description, primaryCta, secondaryCta, showTertiaryButton, stackCtas,
+  className = '',
+  topTag,
+  headline,
+  headlineLevel,
+  description,
+  primaryCta,
+  secondaryCta,
+  showTertiaryButton,
+  stackCtas,
+  hideTextPrimaryButton,
 }) => (
   <div className={`${styles.root} ${className}`}>
     {topTag && (
@@ -23,7 +32,7 @@ const OneColumnBody: FC<OneColumnBodyInterface> = ({
       {primaryCta && (
         showTertiaryButton
           ? <TertiaryButton type="link" text={primaryCta.ctaText} href={primaryCta.ctaLink} />
-          : <ArrowButton text={primaryCta.ctaText} href={primaryCta.ctaLink} />
+          : <ArrowButton text={!hideTextPrimaryButton && primaryCta.ctaText} href={primaryCta.ctaLink} />
       )}
       {secondaryCta && (
         <UnderlinedButton text={secondaryCta.ctaText} href={secondaryCta.ctaLink} underlineColor="passionBlue" />
