@@ -72,6 +72,7 @@
 
     @screen lg {
       margin-bottom: 3.4rem;
+      font-size: 7.2rem;
     }
 
     @screen xl {
@@ -109,6 +110,7 @@
     height: 72rem;
     width: 62.8rem;
     margin-left: 5.4rem;
+    margin-right: 6.5rem;
   }
 
   h1 {
@@ -125,6 +127,7 @@
 
     @screen lg {
       margin-bottom: 3.2rem;
+      font-size: 7.2rem;
     }
 
     @screen xl {
@@ -180,6 +183,7 @@
 
     @screen lg {
       margin-bottom: 3.2rem;
+      font-size: 7.2rem;
     }
 
     @screen xl {
@@ -235,6 +239,7 @@
 
     @screen lg {
       margin-bottom: 3.2rem;
+      font-size: 7.2rem;
     }
 
     @screen xl {
@@ -290,6 +295,7 @@
 
     @screen lg {
       margin-bottom: 3.2rem;
+      font-size: 7.2rem;
     }
 
     @screen xl {
@@ -345,6 +351,7 @@
 
     @screen lg {
       margin-bottom: 3.4rem;
+      font-size: 7.2rem;
     }
 
     @screen xl {
@@ -416,10 +423,14 @@
     top: 0;
     left: 0;
 
+    @screen sm {
+      background-position: left;
+    }
+
     @screen md {
+      background-position: center;
       height: 38.569rem;
       width: 100%;
-
     }
 
     @screen lg {
@@ -449,10 +460,14 @@
     top: 0;
     right: 0;
 
+    @screen sm {
+      background-position: right;
+    }
+
     @screen md {
+      background-position: center;
       height: 38.569rem;
       width: 100%;
-
     }
 
     @screen lg {
@@ -553,6 +568,7 @@
   border-radius: 12px;
 
   @screen sm {
+    width: 35.1rem;
     padding: 0 0;
     margin-left: 2.3rem;
   }
@@ -582,6 +598,7 @@
     width: 33.1rem;
     border-radius: 12px;
 
+   
     @screen md {
       height: 38.569rem;
       width: 33.587rem;
@@ -606,8 +623,8 @@
   border-radius: 12px;
 
   @screen sm {
+    width: 35.1rem;
     padding: 0 0;
-    margin-left: 2.3rem;
     order: 1;
   }
 
@@ -635,6 +652,10 @@
     height: 40rem;
     width: 33.1rem;
     border-radius: 12px;
+
+    @screen sm {
+      margin-left: 2.3rem;
+    }
 
     @screen md {
       height: 38.569rem;

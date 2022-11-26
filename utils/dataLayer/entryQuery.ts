@@ -66,8 +66,6 @@ export const getStaticPropsWrapper = (
     const alias = Object.keys(res.data).length ? Object.keys(res.data)[0] : ''
     const splittedAlias = alias.split('__')
     if (!alias || splittedAlias.length !== 2) {
-      // eslint-disable-next-line no-console
-      console.error('unknwon alias in extra query')
       return
     }
     const moduleName = splittedAlias[0]
