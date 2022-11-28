@@ -21,7 +21,6 @@
     @screen xl {
       padding-top: 13.2rem;
       padding-bottom: 7.4rem;
-
       max-width: theme('screens.xl');
     }
   }
@@ -141,6 +140,10 @@
 .leftTextFull {
 
   order: 0;
+  height: auto;
+  width: 32.7rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
 
   @screen sm {
     height: auto;
@@ -196,8 +199,11 @@
 }
 
 .rightTextFull {
-
   order: 0;
+  height: auto;
+  width: 32.7rem;
+  margin-left: 2.4rem;
+  margin-right: 2.4rem;
 
   @screen sm {
     height: auto;
@@ -312,9 +318,9 @@
 .leftTextFullBleed {
   padding: 4.8rem 2.4rem;
 
+  order: 1;
   @screen sm {
     padding: 4.8rem 2.4rem 4.4rem 2.4rem;
-    order: 1;
   }
 
   @screen md {
@@ -494,16 +500,17 @@
     content: '';
     display: block;
     height: 40rem;
-    width: 58.1rem;
+    width: 100%;
     background-image: url('/images/circle-img-right.svg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: cover;
     position: absolute;
     top: 0;
     left: 0;
 
     @screen md {
+      background-position: center;
       height: 38.569rem;
       width: 58.1rem;
     }
@@ -525,16 +532,17 @@
     content: '';
     display: block;
     height: 40rem;
-    width: 58.1rem;
+    width: 100%;
     background-image: url('/images/circle-left.svg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-size: cover;
     position: absolute;
     top: 0;
     right: 0;
 
     @screen md {
+      background-position: center;
       height: 38.569rem;
       width: 58.1rem;
     }
@@ -566,7 +574,7 @@
 }
 
 .imageRight {
-  padding: 0 2.4rem;
+  margin: 0 2.4rem;
   height: 40rem;
   width: 35.1rem;
   border-radius: 12px;
@@ -656,9 +664,12 @@
     height: 40rem;
     width: 33.1rem;
     border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
 
     @screen sm {
-      margin-left: 2.3rem;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     @screen md {
@@ -682,15 +693,18 @@
 }
 
 .imageLeftFullBleed {
-  width: 100%;
   padding: 0 2.4rem;
   height: 40rem;
+  width: 100%;
   display: flex;
   justify-content: flex-end;
 
 
   @screen sm {
     padding: 0 0;
+    height: 40rem;
+    width: 36.8rem;
+
   }
 
   @screen md {
@@ -736,9 +750,9 @@
 }
 
 .imageRightFullBleed {
-  width: 100%;
   padding: 0 2.4rem;
   height: 40rem;
+  width: 100%;
 
   display: flex;
   justify-content: flex-end;
@@ -746,6 +760,8 @@
 
   @screen sm {
     padding: 0 0;
+    height: 40rem;
+    width: 35.1rem;
   }
 
   @screen md {
@@ -794,9 +810,10 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
+  
   @screen sm {
     background: content-box;
+    background-size: cover;
     border-radius: 6.96833px;
   }
 
@@ -864,7 +881,7 @@
 }
 
 .wrapperFullBleed {
-  // padding-top: 4.8rem;
+  padding-top: 4.8rem;
   padding-bottom: 4.8rem;
 
   @screen md {
@@ -909,7 +926,8 @@
 }
 
 .wrapperFull {
-  padding-bottom: 4.8rem;
+  padding-top: 14.3rem;
+  padding-bottom: 16.1rem;
 
   @screen sm {
     padding-top: 14.3rem;
