@@ -21,6 +21,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as TtacBlockTypename } from '../../components/blocks/ttac/ttac'
 // import TtacBlockQuery from '../../components/blocks/ttac/ttac.graphql'
 
+// import { typename as HeadlineTextBlockTypename } from '../../components/blocks/headline_text/headline_text'
+// import HeadlineTextBlockQuery from '../../components/blocks/headline_text/headline_text.graphql'
+
 // import { typename as PromoToutBlockTypename } from '../../components/blocks/promo_tout/promo_tout'
 // import PromoToutBlockQuery from '../../components/blocks/promo_tout/promo_tout.graphql'
 
@@ -88,6 +91,13 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/logo_garden/logo_garden')),
   //   query: LogoGardenBlockQuery,
   //   typename: LogoGardenBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/headline_text/headline_text')),
+  //   query: HeadlineTextBlockQuery,
+  //   typename: HeadlineTextBlockTypename,
   //   extraQueries: undefined,
   // },
 
