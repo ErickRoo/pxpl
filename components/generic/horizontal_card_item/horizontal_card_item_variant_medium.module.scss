@@ -15,7 +15,6 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  background-color: theme('colors.white');
   border-radius: 1.2rem;
   overflow: hidden;
   margin: auto;
@@ -95,6 +94,7 @@
 }
 
 .wrapperText {
+  background-color: theme('colors.white');
   padding: 3.2rem 2.4rem;
 
   @screen md {
@@ -108,6 +108,7 @@
   }
 
   @screen xl {
+    margin-bottom: 1.4rem;
     width: 31.7rem;
   }
 }
@@ -197,13 +198,9 @@
     color: theme('colors.passionBlue');
     border: 0.1rem solid theme('colors.passionBlue');
 
-    padding: 1.1rem 1.6rem;
+    padding: 1rem 1.5rem;
     border-radius: 0.4rem;
     font-size: 1.4rem;
     line-height: 120%;
-  }
-
-  @screen xl {
-    gap: 0.5rem;
   }
 }
