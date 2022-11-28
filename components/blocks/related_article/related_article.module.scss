@@ -2,13 +2,13 @@
 
 .root {
   overflow: hidden;
+  background-color: theme('colors.butterCream');
 }
 
 .wrapper {
   @apply container;
 
   padding: 0;
-  border-top: 0.15rem solid theme('colors.darkBlue');
 
   @screen md {
     max-width: 70.4rem;
@@ -20,6 +20,16 @@
 
   @screen xl {
     max-width: 131.5rem;
+  }
+}
+
+.line {
+  border-top: 0.15rem solid theme('colors.darkBlue');
+  width: calc(100% - 4.8rem);
+  margin: 0 auto;
+
+  @screen md {
+    width: 100%;
   }
 }
 
@@ -61,6 +71,10 @@
 
   @screen xl {
     gap: 5.9rem;
+
+    h6 ~ p {
+      letter-spacing: 0.01em;
+    }
   }
 }
 

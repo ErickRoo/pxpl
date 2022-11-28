@@ -11,6 +11,7 @@ export const typename = 'Set_Replicator_BlockRelatedArticle'
 const RelatedArticleBlock:FunctionComponent<{ block: RelatedArticleInterface }> = ({ block }) => (
   <div className={styles.root}>
     <section className={styles.wrapper}>
+      <hr className={styles.line} />
       <div className={styles.topSection}>
         <h3 className="typo-h3">{block.headline}</h3>
         {block.cta && <ArrowButton text={block.cta.ctaText} href={block.cta.ctaLink} />}
