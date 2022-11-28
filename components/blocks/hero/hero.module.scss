@@ -4,15 +4,18 @@
   background-color: theme('colors.butterCream');
 
   .wrapper {
-   
+
+    padding-top: 4.8rem;
+    padding-bottom: 4.8rem;
+
     @screen md {
       padding-top: 8rem;
+      padding-bottom: 8.31rem;
     }
-
+    
     @screen lg {
       padding-top: 9.6rem;
       padding-bottom: 9.645rem;
-
     }
 
     @screen xl {
@@ -365,6 +368,7 @@
 
 .description {
   font-size: 1.6rem;
+  margin-bottom: 3.5rem;
 
   @screen sm {
     margin-bottom: 3.5rem;
@@ -389,6 +393,7 @@
 
 .buttonsContainer {
   @apply flex flex-wrap gap-x-[4rem] gap-y-[2.4rem];
+  width: 17.059rem;
 
   @screen sm {
     width: 17.059rem;
@@ -417,16 +422,18 @@
     content: '';
     height: 40rem;
     width: 58.1rem;
+
     background-image: url('/images/circle-img-right.svg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left;
     background-size: cover;
     position: absolute;
     top: 0;
-    left: 0;
-
+    
     @screen sm {
-      background-position: left;
+      left: 0;
+
+
     }
 
     @screen md {
@@ -454,7 +461,7 @@
     width: 58.1rem;
     background-image: url('/images/circle-left.svg');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: right;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -559,9 +566,9 @@
 }
 
 .imageRight {
-  width: 100%;
   padding: 0 2.4rem;
   height: 40rem;
+  width: 35.1rem;
   border-radius: 12px;
 
   @screen sm {
@@ -614,22 +621,22 @@
 }
 
 .imageLeft {
-  width: 100%;
-  padding: 0 2.4rem;
+  width: 35.1rem;
+  margin: 0 2.4rem;
   height: 40rem;
   border-radius: 12px;
+  order: 1;
 
   @screen sm {
     width: 35.1rem;
-    padding: 0 0;
-    order: 1;
+    margin: 0 2.4rem;
   }
 
   @screen md {
     height: 38.569rem;
     width: 36.6787rem;
     padding: 0 0;
-    margin-left: 0;
+    margin: 0 0;
     order: 0;
   }
 
@@ -678,7 +685,6 @@
   width: 100%;
   padding: 0 2.4rem;
   height: 40rem;
-
   display: flex;
   justify-content: flex-end;
 
