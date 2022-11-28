@@ -1,9 +1,300 @@
 @import '../../../styles/variables';
 
+.main {
+  overflow: hidden;
+}
+
 .root {
-  position: relative;
+  background-color: theme('colors.butterCream');
+  margin-bottom: 2rem;
 }
 
 .wrapper {
+  @apply container;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  @screen md {
+    gap: 3.1rem;
+    padding: 0 3.2rem 0.6rem;
+  }
+
+  @screen lg {
+    gap: 11.3rem;
+    align-items: unset;
+    padding: 0 4rem 0.6rem;
+  }
+
+  @screen xl {
+    gap: 17rem;
+    padding: 9.8rem 0;
+    align-items: center;
+    max-width: 131.2rem;
+  }
+}
+
+.wrapper__reverse {
+  flex-direction: row-reverse;
+
+  @screen xl {
+    gap: 11.4rem;
+  }
+}
+
+.wrapper__center {
+  @screen md {
+    gap: 4rem;
+    padding: 0 3.2rem;
+    flex-direction: column-reverse;
+
+    .headline {
+      font-size: 4rem;
+    }
+
+    .subHeadline {
+      font-size: 2.4rem;
+    }
+
+    .wrapperContent {
+      width: 100%;
+    }
+
+    blockquote > div {
+      flex-direction: row;
+    }
+
+    .wrapperImage {
+      width: 100%;
+      height: 51rem;
+
+      > div {
+        background-size: 1100px 600px;
+        background-position: -60px -1px;
+      }
+    }
+
+  }
+}
+
+.wrapperImage {
+  > div {
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 100%;
+  }
+
+  @screen md {
+    width: 336px;
+    height: 60.2rem;
+  }
+
+  @screen lg {
+    width: 45.6rem;
+    margin-top: 112px;
+
+    > div {
+      background-size: 700px 608px;
+      background-position: -36px -2px;
+    }
+  }
+
+  @screen xl {
+    width: 62.8rem;
+    height: 82.8rem;
+    margin-top: 0;
+
+    > div {
+      background-size: 1050px 835px;
+      background-position: -55px -2px;
+    }
+  }
+}
+
+.wrapperImage__reverse {
+  @screen xl {
+    width: 68.4rem;
+    height: 82.8rem;
+  }
+}
+
+.wrapperBgImage {
+  > div {
+    border-radius: 0.8rem;
+    height: 100%;
+  }
+
+  @screen md {
+    width: 33.6rem;
+    height: 60.2rem;
+
+    > div {
+      margin-left: calc(33.6rem - 45.6rem);
+      width: 45.6rem;
+      background-position: top -1px right 140px;
+      background-size: 700px 610px;
+    }
+  }
+
+  @screen lg {
+    width: 49.6rem;
+    margin-top: 11.5rem;
+    margin-left: -4rem;
+
+    > div {
+      margin-left: calc(49.6rem - 74.5rem);
+      width: 74.5rem;
+      background-position: top -1px right -372px;
+      background-size: 1200px 606px;
+    }
+  }
+
+  @screen xl {
+    width: 62.8rem;
+    height: 82.8rem;
+    margin: 0;
+
+    > div {
+      margin-left: calc(62.8rem - 96.8rem);
+      width: 96.8rem;
+      background-position: top -2px right -464px;
+      background-size: 1520px 850px;
+    }
+  }
+}
+
+.wrapperBgImage__reverse {
+  > div {
+    height: 100%;
+  }
+
+  @screen md {
+    > div {
+      margin-left: 0;
+      margin-right: calc(33.6rem - 45.6rem);
+      background-position: top -1px left -35px;
+    }
+  }
+
+  @screen lg {
+    width: 49.6rem;
+    margin-left: 0;
+    margin-right: -4rem;
+
+    > div {
+      margin-left: 0;
+      margin-right: calc(49.6rem - 74.5rem);
+      background-position: top -1px left -75px;
+    }
+  }
+
+  @screen xl {
+    width: 68.2rem;
+    margin: 0;
+
+    > div {
+      margin-left: 0;
+      margin-right: calc(68.4rem - 96.8rem);
+      background-position: top -2px left -129px;
+    }
+
+    & ~ .wrapperContent .buttonsContainer {
+      padding: 5px 0 0 7px;
+    }
+  }
+}
+
+.wrapperContent {
+  flex: 1 1 0px;
+}
+
+.eyebrow {
+  margin-bottom: 0.8rem;
+}
+
+.headline {
+  margin-bottom: 2.4rem;
+
+  @screen md {
+    font-size: 3.2rem;
+    line-height: 110%;
+  }
+
+  @screen lg {
+    font-size: 4rem;
+    line-height: 100%;
+  }
+
+  @screen xl {
+    font-size: 4.8rem;
+  }
+}
+
+.subHeadline {
+  margin-bottom: 2.4rem;
+
+  @screen md {
+    font-size: 2rem;
+    line-height: 110%;
+  }
+
+  @screen lg {
+    font-size: 2.4rem;
+  }
+
+  @screen xl {
+    font-size: 3.2rem;
+  }
+}
+
+.bodyText {
+  margin-bottom: 2.4rem;
+
+  @screen md {
+    font-size: 1.4rem;
+    letter-spacing: normal;
+    line-height: 140%;
+  }
+
+  @screen xl {
+    font-size: 2rem;
+  }
+}
+
+.listText {
+  max-width: 50rem;
+}
+
+.oneText {
+  padding: 0 0 2.4rem 4.8rem;
   position: relative;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../../assets/LeftRightFeature/check.png');
+    width: 2.6rem;
+    height: 2.6rem;
+    left: 0.4rem;
+    top: 0.4rem;
+  }
+
+  @screen md {
+    font-size: 1.4rem;
+    line-height: 140%;
+    letter-spacing: normal;
+  }
+
+  @screen lg {
+    font-size: 1.6rem;
+    line-height: 130%;
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 5.3rem;
+  margin-bottom: 4rem;
 }
