@@ -9,6 +9,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as PreFooterBlockTypename } from '../../components/blocks/pre_footer/pre_footer'
 // import PreFooterBlockQuery from '../../components/blocks/pre_footer/pre_footer.graphql'
 
+// import { typename as Feature5050BlockTypename } from '../../components/blocks/feature_50_50/feature_50_50'
+// import Feature5050BlockQuery from '../../components/blocks/feature_50_50/feature_50_50.graphql'
+
 // import { typename as LargeQuoteBlockTypename } from '../../components/blocks/large_quote/large_quote'
 // import LargeQuoteBlockQuery from '../../components/blocks/large_quote/large_quote.graphql'
 
@@ -20,6 +23,18 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 
 // import { typename as ContentCardBlockTypename } from '../../components/blocks/content_card/content_card'
 // import ContentCardBlockQuery from '../../components/blocks/content_card/content_card.graphql'
+
+// import { typename as HeadlineTextBlockTypename } from '../../components/blocks/headline_text/headline_text'
+// import HeadlineTextBlockQuery from '../../components/blocks/headline_text/headline_text.graphql'
+
+// import { typename as PromoToutBlockTypename } from '../../components/blocks/promo_tout/promo_tout'
+// import PromoToutBlockQuery from '../../components/blocks/promo_tout/promo_tout.graphql'
+
+// import { typename as LogoGardenBlockTypename } from '../../components/blocks/logo_garden/logo_garden'
+// import LogoGardenBlockQuery from '../../components/blocks/logo_garden/logo_garden.graphql'
+
+// import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
+// import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
@@ -65,6 +80,23 @@ const blocks:Block[] = [
   //   typename: TtacBlockTypename,
   //   extraQueries: undefined,
   // },
+  // {
+  //   component: dynamic(() => import('../../components/blocks/promo_tout/promo_tout')),
+  //   query: PromoToutBlockQuery,
+  //   typename: PromoToutBlockTypename,
+  //   extraQueries: undefined,
+  // },
+  //   component: dynamic(() => import('../../components/blocks/logo_garden/logo_garden')),
+  //   query: LogoGardenBlockQuery,
+  //   typename: LogoGardenBlockTypename,
+  //   extraQueries: undefined,
+  // },
+  // {
+  //   component: dynamic(() => import('../../components/blocks/headline_text/headline_text')),
+  //   query: HeadlineTextBlockQuery,
+  //   typename: HeadlineTextBlockTypename,
+  //   extraQueries: undefined,
+  // },
 
   // {
   //   component: dynamic(() => import('../../components/blocks/content_card/content_card')),
@@ -73,6 +105,11 @@ const blocks:Block[] = [
   //   extraQueries: undefined,
   // },
 
+  //   component: dynamic(() => import('../../components/blocks/faq/faq')),
+  //   query: FaqBlockQuery,
+  //   typename: FaqBlockTypename,
+  //   extraQueries: undefined,
+  // },
   // ##HYGEN_START##
   // do not modify the above line since its used by hygen to generate the block list
 ]
