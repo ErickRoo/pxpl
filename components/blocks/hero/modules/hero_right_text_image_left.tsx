@@ -14,8 +14,8 @@ const HeroModuleRightTextImageLeft: FC<{ block: HeroInterface }> = ({ block }) =
   const currentBreakpoint = getCurrentBreakpoint(width)
   const noMobile = ['md', 'lg', 'xl', 'xxl'].includes(currentBreakpoint?.position)
   return (
-    <section className={`${styles.root} ${block?.variant}`}>
-      <div className={`${styles.wrapper} w-full flex flex-wrap items-center justify-between mx-auto`}>
+    <section className={`${styles.root} ${block?.variant} overflow-hidden`}>
+      <div className={`${styles.wrapper} w-full flex flex-wrap items-center justify-center mx-auto`}>
         <div className={`${styles.imageLeft} ${block?.circle ? styles.circleLeft : ''} relative`}>
           <img className={`${styles.image} relative`} src={block.image} alt="placeholderimage" />
         </div>

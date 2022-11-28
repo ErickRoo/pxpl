@@ -14,8 +14,8 @@ const HeroModuleLeftTextImageRight: FC<{ block: HeroInterface }> = ({ block }) =
   const currentBreakpoint = getCurrentBreakpoint(width)
   const noMobile = ['md', 'lg', 'xl', 'xxl'].includes(currentBreakpoint?.position)
   return (
-    <section className={`${styles.root} ${block?.variant}`}>
-      <div className={`${styles.wrapper} w-full flex flex-wrap items-center mx-auto`}>
+    <section className={`${styles.root} ${block?.variant} overflow-hidden`}>
+      <div className={`${styles.wrapper} w-full flex flex-wrap items-center justify-center mx-auto`}>
         <div className={`${styles.leftText}`}>
           <h1 className="typo-h1">
             {block?.headline?.map(

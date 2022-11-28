@@ -89,10 +89,10 @@ const placeHolderHeroRightTextImageLeft = {
 const placeHolderHeroFullBleedImageDarkenRightText = {
   variant: 'fullBleedImageDarkenRightText',
   headline: [
-    { text: 'H1 headline ', color: 'text-white' },
-    { text: 'with two or ', color: 'text-white' },
-    { text: 'more lines up ', color: 'text-white' },
-    { text: 'to four.', color: 'text-white' },
+    { text: 'H1 headline ', color: 'text-butterCream' },
+    { text: 'with two or ', color: 'text-butterCream' },
+    { text: 'more lines up ', color: 'text-butterCream' },
+    { text: 'to four.', color: 'text-butterCream' },
   ],
   description: 'Companies using Outreach are more efficient. They have consistently higher achievement and customer satisfaction.',
   primaryCta: {
@@ -111,10 +111,10 @@ const placeHolderHeroFullBleedImageDarkenRightText = {
 const placeHolderHeroFullBleedImageDarkenLeftText = {
   variant: 'fullBleedImageDarkenLeftText',
   headline: [
-    { text: 'H1 headline ', color: 'text-white' },
-    { text: 'with two or ', color: 'text-white' },
-    { text: 'more lines up ', color: 'text-white' },
-    { text: 'to four.', color: 'text-white' },
+    { text: 'H1 headline ', color: 'text-butterCream' },
+    { text: 'with two or ', color: 'text-butterCream' },
+    { text: 'more lines up ', color: 'text-butterCream' },
+    { text: 'to four.', color: 'text-butterCream' },
   ],
   description: 'Companies using Outreach are more efficient. They have consistently higher achievement and customer satisfaction.',
   primaryCta: {

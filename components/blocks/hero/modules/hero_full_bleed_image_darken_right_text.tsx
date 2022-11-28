@@ -17,7 +17,7 @@ const HeroModuleFullBleedImageDarkenRightText: FC<{ block: HeroInterface }> = ({
   const circle = `${styles.circleLeftFullBleed} ${styles.circleFullBleedMobile}`
 
   return (
-    <section className={`${block?.variant} ${styles.imageDarkenRight} mx-auto`} style={sectionStyles}>
+    <section className={`${block?.variant} ${styles.imageDarkenRight} mx-auto overflow-hidden`} style={sectionStyles}>
       <div className={`${styles.wrapperFullBleed} w-full flex flex-wrap items-center justify-between mx-auto`}>
         <div className={`${styles.imageLeftFullBleed} ${block?.circle ? circle : ''} relative`} />
         <div className={`${styles.rightTextFullBleed} relative`}>

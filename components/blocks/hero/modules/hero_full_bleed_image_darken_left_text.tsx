@@ -17,10 +17,10 @@ const HeroModuleFullBleedImageDarkenLeftText: FC<{ block: HeroInterface }> = ({ 
   const circle = `${styles.circleFullBleed} ${styles.circleFullBleedMobile}`
 
   return (
-    <section className={`${block?.variant} ${styles.imageDarkenRight}`} style={sectionStyles}>
+    <section className={`${block?.variant} ${styles.imageDarkenRight} overflow-hidden`} style={sectionStyles}>
       <div className={`${styles.wrapperFullBleed} w-full flex flex-wrap items-center justify-between mx-auto`}>
         <div className={`${styles.leftTextFullBleed} relative`}>
-          <h1 className="typo-h1">
+          <h1 className="typo-h1 text-butterCream">
             {block?.headline?.map(
               (headline) => (
                 <span key={headline?.text} className={headline?.color}>

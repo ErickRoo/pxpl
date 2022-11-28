@@ -4,25 +4,22 @@
   background-color: theme('colors.butterCream');
 
   .wrapper {
-    // padding-top: 4.8rem;
-    padding-bottom: 4.8rem;
-
-    @screen xl {
-      padding-top: 13.2rem;
-      // padding-bottom: 7.4rem;
-      max-width: theme('screens.xl');
+   
+    @screen md {
+      padding-top: 8rem;
     }
 
     @screen lg {
       padding-top: 9.6rem;
-      // padding-bottom: 8.4rem;
+      padding-bottom: 9.645rem;
 
     }
 
-    @screen md {
-      padding-top: 8rem;
-      // padding-bottom: 8rem;
+    @screen xl {
+      padding-top: 13.2rem;
+      padding-bottom: 7.4rem;
 
+      max-width: theme('screens.xl');
     }
   }
 }
@@ -77,6 +74,7 @@
 
     @screen xl {
       margin-bottom: 3.2rem;
+      font-size: 9.6rem;
     }
   }
 }
@@ -132,6 +130,7 @@
 
     @screen xl {
       margin-bottom: 3.2rem;
+      font-size: 9.6rem;
     }
   }
 }
@@ -188,6 +187,7 @@
 
     @screen xl {
       margin-bottom: 3.2rem;
+      font-size: 9.6rem;
     }
   }
 }
@@ -199,14 +199,14 @@
   @screen sm {
     height: auto;
     width: 32.7rem;
-    margin-left: 2.4rem;
+    margin-left: auto;
     margin-right: 2.4rem;
   }
 
   @screen md {
     height: auto;
     width: 33.6rem;
-    margin-left: 40rem;
+    margin-left: auto;
     margin-right: 3.2rem;
     order: 1;
   }
@@ -215,13 +215,13 @@
     height: auto;
     width: 45.6rem;
     margin-right: 4rem;
-    margin-left: 52.8rem;
+    margin-left: auto;
   }
 
   @screen xl {
     height: auto;
     width: 62.8rem;
-    margin-left: 75rem;
+    margin-left: auto;
     margin-right: 6.2rem;
   }
 
@@ -244,6 +244,7 @@
 
     @screen xl {
       margin-bottom: 3.2rem;
+      font-size: 9.6rem;
     }
   }
 }
@@ -300,6 +301,7 @@
 
     @screen xl {
       margin-bottom: 3.2rem;
+      font-size: 9.6rem;
     }
   }
 }
@@ -356,6 +358,7 @@
 
     @screen xl {
       margin-bottom: 3.2rem;
+      font-size: 9.6rem;
     }
   }
 }
@@ -397,7 +400,7 @@
 
   @screen xl {
     margin-top: 6.4rem;
-    margin-bottom: 4rem;
+    margin-bottom: 0;
   }
 
   >div:last-child {
@@ -412,9 +415,8 @@
 .circle {
   &::after {
     content: '';
-    display: block;
     height: 40rem;
-    width: 100%;
+    width: 58.1rem;
     background-image: url('/images/circle-img-right.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -430,18 +432,17 @@
     @screen md {
       background-position: center;
       height: 38.569rem;
-      width: 100%;
+      width: 58.1rem;
     }
 
     @screen lg {
       height: 52.355rem;
-      width: 100%;
+      width: 78.868rem;
     }
 
     @screen xl {
       height: 72rem;
-      width: 100%;
-
+      width: 108.462rem;
     }
   }
 }
@@ -449,9 +450,8 @@
 .circleLeft {
   &::after {
     content: '';
-    display: block;
     height: 40rem;
-    width: 100%;
+    width: 58.1rem;
     background-image: url('/images/circle-left.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -467,17 +467,17 @@
     @screen md {
       background-position: center;
       height: 38.569rem;
-      width: 100%;
+      width: 58.1rem;
     }
 
     @screen lg {
       height: 52.355rem;
-      width: 100%;
+      width: 78.868rem;
     }
 
     @screen xl {
       height: 71.9rem;
-      width: 100%;
+      width: 108.462rem;
     }
   }
 }
@@ -487,7 +487,7 @@
     content: '';
     display: block;
     height: 40rem;
-    width: 100%;
+    width: 58.1rem;
     background-image: url('/images/circle-img-right.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -498,19 +498,17 @@
 
     @screen md {
       height: 38.569rem;
-      width: 100%;
-
+      width: 58.1rem;
     }
 
     @screen lg {
       height: 52.355rem;
-      width: 100%;
+      width: 78.868rem;
     }
 
     @screen xl {
       height: 72rem;
-      width: 100%;
-
+      width: 108.462rem;
     }
   }
 }
@@ -520,7 +518,7 @@
     content: '';
     display: block;
     height: 40rem;
-    width: 100%;
+    width: 58.1rem;
     background-image: url('/images/circle-left.svg');
     background-repeat: no-repeat;
     background-position: center;
@@ -531,18 +529,17 @@
 
     @screen md {
       height: 38.569rem;
-      width: 100%;
-
+      width: 58.1rem;
     }
 
     @screen lg {
       height: 52.355rem;
-      width: 100%;
+      width: 78.868rem;
     }
 
     @screen xl {
       height: 71.9rem;
-      width: 100%;
+      width: 108.462rem;
       background-position: left;
       background-size: contain;
     }
@@ -824,7 +821,7 @@
   }
 
   p {
-    color: #ffffff;
+    color: theme('colors.butterCream');
   }
 }
 
@@ -833,8 +830,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-
-
 
   .wrapper {
     padding: 0;
@@ -858,7 +853,7 @@
   }
 
   p {
-    color: #ffffff;
+    color: theme('colors.butterCream');
   }
 }
 
@@ -938,6 +933,19 @@
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+
+  @screen sm {
+    max-width: theme('screens.sm');
+  }
+  @screen md {
+    max-width: theme('screens.md');
+  }
+  @screen lg {
+    max-width: theme('screens.lg');
+  }
+  @screen xl {
+    max-width: theme('screens.xl');
+  }
 }
 
 .heroJustRightText {

@@ -18,8 +18,8 @@ const HeroModuleRightText: FC<{ block: HeroInterface }> = ({ block }) => {
   }
   const sectionClassNames = `${styles.root} ${block?.variant} ${styles.heroJustText} ${styles.heroJustRightText} `
   return (
-    <section className={`${sectionClassNames} mx-auto`} style={sectionStyles}>
-      <div className={`${styles.wrapperFull} w-full flex flex-wrap items-center justify-between  mx-auto`}>
+    <section className={`${sectionClassNames} mx-auto `} style={sectionStyles}>
+      <div className={`${styles.wrapperFull} w-full flex flex-wrap items-center flex-end mx-auto`}>
         <div className={`${styles.rightTextFull}`}>
           <h1 className="typo-h1">
             {block?.headline?.map(
