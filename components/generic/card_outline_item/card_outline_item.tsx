@@ -28,7 +28,7 @@ const CardOutlineItem: FunctionComponent<CardOutlineItemInterface> = ({
               {category}
             </p>
           )}
-          {image && <img src={image.src} alt="placeholderImage" />}
+          {image && <div style={{ backgroundImage: `url(${image.src})` }} />}
         </div>
         <div className={styles.bottomSection}>
           {icon && (

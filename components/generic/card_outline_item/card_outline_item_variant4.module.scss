@@ -3,6 +3,7 @@
 .root {
   position: relative;
   color: theme('colors.darkBlue');
+  max-width: 32.7rem;
 
   @screen md {
     max-width: 33.7rem;
@@ -39,33 +40,44 @@
 }
 
 .topSection {
+  > div {
+    border: 0.15rem solid theme('colors.darkBlue');
+    height: 13.5rem;
+    width: 100%;
+    background-size: 31.2rem 16rem;
+    background-position: 0.4rem -1.4rem;
+  }
+
   @screen md {
-    img {
+    > div {
       height: 13.6rem;
-      width: 100%;
+      background-size: 32.4rem 15.8rem;
+      background-position: 0.3rem -1.1rem;
     }
   }
 
   @screen lg {
-    img {
-      height: 25.4rem;
+    > div {
+      height: 25.6rem;
+      background-size: 50.7rem 25.2rem;
+      background-position: -1rem 0rem;
     }
   }
 
   @screen xl {
-    img {
+    > div {
       height: 13.6rem;
+      background-size: 282px 140px;
+      background-position: 2px -4px;
     }
   }
 }
 
 .bottomSection {
+  padding: 1.959rem 1.959rem 1.5rem;
+
   > *:last-child {
     margin-bottom: 0;
-  }
-
-  @screen md {
-    padding: 1.959rem;
   }
 
   @screen lg {
@@ -73,7 +85,7 @@
   }
 
   @screen xl {
-    padding: 1.959rem;
+    padding: 1.959rem 1.959rem 1.5rem;
   }
 }
 
@@ -96,16 +108,29 @@
   display: flex;
   flex-wrap: wrap;
 
-  @screen md {
-    column-gap: 2.6rem;
+  > span {
+    padding: 0 1.306rem;
+    border-right: 0.12rem solid theme('colors.coolGray');
+
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
   }
 
   @screen lg {
-    column-gap: 3.2rem;
+    > span {
+      padding: 0 1.6rem;
+    }
   }
-  
+
   @screen xl {
-    column-gap: 2.6rem;
+    > span {
+      padding: 0 1.306rem;
+    }
   }
 }
 
@@ -132,6 +157,8 @@
 }
 
 .description {
+  margin-bottom: 1.959rem;
+
   @screen md {
     font-size: 1.4rem;
     line-height: 140%;
@@ -153,6 +180,8 @@
 }
 
 .wrapperButton {
+  margin-bottom: 1.959rem;
+
   > div > div:first-child {
     margin-right: 0;
   }

@@ -1,24 +1,21 @@
 @import '../../../styles/variables';
 
 .root {
-  position: relative;
+  @apply container;
+  padding: 0;
 }
 
 .wrapper {
-  @apply container;
-  padding: 0;
-
-  @screen xl {
-    max-width: 133.4rem;
-  }
+  background-color: theme('colors.butterCream');
+  margin-bottom: 5.6rem;
 }
 
 .row {
   display: flex;
   justify-content: center;
-  margin-bottom: 5.6rem;
   gap: 3rem;
   padding: 0 2.4rem;
+  margin: 0 auto;
 
   @screen md {
     row-gap: 2.4rem;
@@ -30,7 +27,12 @@
   
   @screen xl {
     gap: 5.6rem;
+    max-width: 133.4rem;
   }
+}
+
+.row__variant1 {
+  position: relative;
 }
 
 .row__variant2 {

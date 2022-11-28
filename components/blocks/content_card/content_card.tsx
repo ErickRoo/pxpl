@@ -8,11 +8,11 @@ export const typename = 'Set_Replicator_BlockContentCard'
 
 const ContentCardBlock:FunctionComponent<{ block: ContentCardInterface }> = ({ block }) => (
   <div className={styles.root}>
-    <section className={styles.wrapper}>
-      {block?.rows?.map((oneRow, idx) => {
-        const key = `one-row-${idx}`
+    {block?.rows?.map((oneRow, idx) => {
+      const key = `one-row-${idx}`
 
-        return (
+      return (
+        <section className={styles.wrapper}>
           <div key={key} className={`${styles.row} ${styles?.[`row__variant${oneRow.quantity}`]}`}>
             {oneRow.items.map((oneItem, index) => {
               const subkey = `one-item-${index}`
@@ -34,9 +34,9 @@ const ContentCardBlock:FunctionComponent<{ block: ContentCardInterface }> = ({ b
               )
             })}
           </div>
-        )
-      })}
-    </section>
+        </section>
+      )
+    })}
   </div>
 )
 
