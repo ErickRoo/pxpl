@@ -33,6 +33,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
 // import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
+// import { typename as LeftRightFeatureBlockTypename } from '../../components/blocks/left_right_feature/left_right_feature'
+// import LeftRightFeatureBlockQuery from '../../components/blocks/left_right_feature/left_right_feature.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -101,6 +104,14 @@ const blocks:Block[] = [
   //   typename: FaqBlockTypename,
   //   extraQueries: undefined,
   // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/left_right_feature/left_right_feature')),
+  //   query: LeftRightFeatureBlockQuery,
+  //   typename: LeftRightFeatureBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
   // ##HYGEN_START##
   // do not modify the above line since its used by hygen to generate the block list
 ]
