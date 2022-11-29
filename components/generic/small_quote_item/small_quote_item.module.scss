@@ -1,0 +1,64 @@
+@import '../../../styles/variables';
+
+.root {
+  background: theme('colors.white');
+  border-radius: 0.6rem;
+  max-width: 52rem;
+  padding: 2.2rem 2.3rem 4.5rem 2.5rem;
+
+  @screen md {
+    padding: 2.2rem 2.5rem;
+  }
+
+  @screen lg {
+    padding: 2.2rem 2.8rem;
+  }
+
+  @screen xl {
+    padding: 2rem 5.8rem 2.5rem 2.5rem;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+
+  @screen xl {
+    flex-direction: row;
+  }
+}
+
+.imageWrapper {
+  height: 8.8rem;
+  width: 8.8rem;
+}
+
+.image {
+  position: relative;
+}
+
+.rightSide {
+  flex: 1 1 0;
+}
+
+.quoteText {
+  font-size: 1.4rem;
+  line-height: 140%;
+  margin-bottom: 1.9rem;
+  letter-spacing: normal;
+
+  @screen md {
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+  }
+}
+
+.authorName {
+  position: relative;
+}
+
+.eyebrow {
+  letter-spacing: normal;
+}

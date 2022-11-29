@@ -1,0 +1,309 @@
+@import '../../../styles/variables';
+
+.main {
+  overflow: hidden;
+}
+
+.root {
+  background-color: theme('colors.butterCream');
+  margin-bottom: 2rem;
+}
+
+.wrapper {
+  @apply container;
+
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 5.1rem;
+  padding: 0 2.4rem;
+
+  @screen md {
+    flex-direction: row;
+    gap: 3.1rem;
+    padding: 0 3.2rem 0.6rem;
+  }
+
+  @screen lg {
+    gap: 11.3rem;
+    align-items: unset;
+    padding: 0 4rem 0.6rem;
+  }
+
+  @screen xl {
+    gap: 17rem;
+    padding: 9.8rem 0;
+    align-items: center;
+    max-width: 131.2rem;
+  }
+}
+
+.wrapper__reverse {
+  flex-direction: row-reverse;
+
+  @screen xl {
+    gap: 11.4rem;
+  }
+}
+
+.wrapper__center {
+  @screen md {
+    gap: 4rem;
+    padding: 0 3.2rem;
+    flex-direction: column-reverse;
+
+    .headline {
+      font-size: 4rem;
+    }
+
+    .subHeadline {
+      font-size: 2.4rem;
+    }
+
+    .wrapperContent {
+      width: 100%;
+    }
+
+    blockquote > div {
+      flex-direction: row;
+    }
+
+    .wrapperImage {
+      width: 100%;
+      height: 51rem;
+
+      > div {
+        background-size: 110rem 60rem;
+        background-position: -6rem -0.1rem;
+      }
+    }
+  }
+}
+
+.wrapperImage {
+  width: 32.7rem;
+  height: 23.8rem;
+
+  > div {
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 100%;
+    background-size: 52.5rem 27.5rem;
+    background-position: -3.3rem -0.4rem;
+  }
+
+  @screen md {
+    width: 33.6rem;
+    height: 60.2rem;
+  }
+
+  @screen lg {
+    width: 45.6rem;
+    margin-top: 11.2rem;
+
+    > div {
+      background-size: 70rem 60.8rem;
+      background-position: -3.6rem -0.2rem;
+    }
+  }
+
+  @screen xl {
+    width: 62.8rem;
+    height: 82.8rem;
+    margin-top: 0;
+
+    > div {
+      background-size: 105rem 83.5rem;
+      background-position: -5.5rem -0.2rem;
+    }
+  }
+}
+
+.wrapperImage__reverse {
+  @screen xl {
+    width: 68.4rem;
+    height: 82.8rem;
+  }
+}
+
+.wrapperBgImage {
+  width: 32.7rem;
+  height: 23.8rem;
+
+  > div {
+    border-radius: 0.8rem;
+    height: 100%;
+  }
+
+  @screen md {
+    width: 33.6rem;
+    height: 60.2rem;
+
+    > div {
+      margin-left: calc(33.6rem - 45.6rem);
+      width: 45.6rem;
+      background-position: top -0.1rem right 14rem;
+      background-size: 70rem 61rem;
+    }
+  }
+
+  @screen lg {
+    width: 49.6rem;
+    margin-top: 11.5rem;
+    margin-left: -4rem;
+
+    > div {
+      margin-left: calc(49.6rem - 74.5rem);
+      width: 74.5rem;
+      background-position: top -0.1rem right -37.2rem;
+      background-size: 120rem 60.6rem;
+    }
+  }
+
+  @screen xl {
+    width: 62.8rem;
+    height: 82.8rem;
+    margin: 0;
+
+    > div {
+      margin-left: calc(62.8rem - 96.8rem);
+      width: 96.8rem;
+      background-position: top -0.2rem right -46.4rem;
+      background-size: 152rem 85rem;
+    }
+  }
+}
+
+.wrapperBgImage__reverse {
+  > div {
+    height: 100%;
+  }
+
+  @screen md {
+    > div {
+      margin-left: 0;
+      margin-right: calc(33.6rem - 45.6rem);
+      background-position: top -0.1rem left -3.5rem;
+    }
+  }
+
+  @screen lg {
+    width: 49.6rem;
+    margin-left: 0;
+    margin-right: -4rem;
+
+    > div {
+      margin-left: 0;
+      margin-right: calc(49.6rem - 74.5rem);
+      background-position: top -0.1rem left -7.5rem;
+    }
+  }
+
+  @screen xl {
+    width: 68.2rem;
+    margin: 0;
+
+    > div {
+      margin-left: 0;
+      margin-right: calc(68.4rem - 96.8rem);
+      background-position: top -0.2rem left -12.9rem;
+    }
+
+    & ~ .wrapperContent .buttonsContainer {
+      padding: 0.5rem 0 0 0.7rem;
+    }
+  }
+}
+
+.wrapperContent {
+  flex: 1 1 0;
+}
+
+.eyebrow {
+  margin-bottom: 0.8rem;
+}
+
+.headline {
+  margin-bottom: 2.4rem;
+
+  @screen md {
+    font-size: 3.2rem;
+    line-height: 110%;
+  }
+
+  @screen lg {
+    font-size: 4rem;
+    line-height: 100%;
+  }
+
+  @screen xl {
+    font-size: 4.8rem;
+  }
+}
+
+.subHeadline {
+  font-size: 2rem;
+  line-height: 110%;
+  margin-bottom: 2.4rem;
+
+  @screen lg {
+    font-size: 2.4rem;
+  }
+
+  @screen xl {
+    font-size: 3.2rem;
+  }
+}
+
+.bodyText {
+  font-size: 1.4rem;
+  letter-spacing: normal;
+  line-height: 140%;
+  margin-bottom: 2.4rem;
+
+  @screen lg {
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+  }
+
+  @screen xl {
+    font-size: 2rem;
+    letter-spacing: normal;
+  }
+}
+
+.listText {
+  max-width: 50rem;
+}
+
+.oneText {
+  padding: 0 0 2.4rem 4.8rem;
+  position: relative;
+  font-size: 1.4rem;
+  line-height: 140%;
+  letter-spacing: normal;
+
+  &::before {
+    position: absolute;
+    content: '';
+    background-image: url('../../../assets/LeftRightFeature/check.png');
+    width: 2.6rem;
+    height: 2.6rem;
+    left: 0.4rem;
+    top: 0.4rem;
+  }
+
+  @screen lg {
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+  }
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 5.3rem;
+  margin-bottom: 4rem;
+}
