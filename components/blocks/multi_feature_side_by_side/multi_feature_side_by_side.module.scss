@@ -1,0 +1,71 @@
+@import '../../../styles/variables';
+
+.root {
+  // add your styles here
+}
+
+.wrapper {
+  @apply container;
+
+  padding: 0 2.4rem;
+  overflow: hidden;
+
+  .blockDescription {
+    font-size: 2rem;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
+
+  @screen md {
+    padding: 0 3.2rem;
+
+    .blockDescription {
+      max-width: 52rem;
+      font-size: 1.6rem;
+      line-height: 130%;
+      letter-spacing: 0.01em;
+    }
+  }
+
+  @screen lg {
+    padding: 0 4rem;
+
+    .blockHeadline {
+      font-size: 4.8rem;
+    }
+
+    .blockDescription {
+      max-width: 70rem;
+      font-size: 2.4rem;
+      line-height: 140%;
+      letter-spacing: 0em;
+    }
+  }
+
+  @screen xl {
+    padding: 0 17.8rem;
+
+    .blockHeadline {
+      font-size: 7.2rem;
+    }
+
+    .blockDescription {
+      max-width: 85.7rem;
+    }
+  }
+}
+
+.itemsContainer {
+  section:first-child {
+    box-sizing: border-box;
+    border-top-width: 0.1rem;
+    border-color: theme('colors.darkBlue');
+  }
+
+  @screen md {
+    section:first-child {
+      border-top-width: 0;
+    }
+  }
+}
+
