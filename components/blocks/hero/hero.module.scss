@@ -587,7 +587,7 @@
 
   @screen md {
     height: 38.569rem;
-    width: 36.8rem;
+    width: 33.8rem;
     padding: 0 0;
     margin-left: 0;
 
@@ -595,7 +595,7 @@
 
   @screen lg {
     height: 52.355rem;
-    width: 49.6rem;
+    width: 46.6rem;
     padding: 0 0 0 0;
   }
 
@@ -703,8 +703,7 @@
   @screen sm {
     padding: 0 0;
     height: 40rem;
-    width: 36.8rem;
-
+    width: 100%;
   }
 
   @screen md {
@@ -761,7 +760,7 @@
   @screen sm {
     padding: 0 0;
     height: 40rem;
-    width: 35.1rem;
+    width: 100%;
   }
 
   @screen md {
@@ -955,30 +954,6 @@
 .heroJustText {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top;
   position: relative;
-
-  @screen sm {
-    max-width: theme('screens.sm');
-  }
-  @screen md {
-    max-width: theme('screens.md');
-  }
-  @screen lg {
-    max-width: theme('screens.lg');
-  }
-  @screen xl {
-    max-width: theme('screens.xl');
-  }
-}
-
-.heroJustRightText {
-  @screen md {
-    background-position: center right;
-  }
-}
-.heroJustLeftText {
-  @screen md {
-    background-position: center left;
-  }
 }

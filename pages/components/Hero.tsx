@@ -19,7 +19,7 @@ const placeHolderHeroLeftText = {
     ctaText: 'Learn more',
     ctaLink: '#',
   },
-  image: '/images/bg-circle-right.png',
+  image: '/images/full-circles.svg',
   circle: true,
 } as HeroInterface
 
@@ -40,7 +40,7 @@ const placeHolderHeroRightText = {
     ctaText: 'Learn more',
     ctaLink: '#',
   },
-  image: '/images/bg-circle-left.png',
+  image: '/images/full-circles-r.svg',
   circle: true,
 } as HeroInterface
 
