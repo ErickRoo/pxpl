@@ -4,6 +4,7 @@
   background: theme('colors.white');
   border-radius: 0.6rem;
   max-width: 52rem;
+  padding: 2.2rem 2.3rem 4.5rem 2.5rem;
 
   @screen md {
     padding: 2.2rem 2.5rem;
@@ -42,7 +43,16 @@
 }
 
 .quoteText {
+  font-size: 1.4rem;
+  line-height: 140%;
   margin-bottom: 1.9rem;
+  letter-spacing: normal;
+
+  @screen md {
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+  }
 }
 
 .authorName {
@@ -50,5 +60,5 @@
 }
 
 .eyebrow {
-  position: relative;
+  letter-spacing: normal;
 }

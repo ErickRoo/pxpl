@@ -15,9 +15,12 @@
   padding: 0;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column-reverse;
+  gap: 5.1rem;
+  padding: 0 2.4rem;
 
   @screen md {
+    flex-direction: row;
     gap: 3.1rem;
     padding: 0 3.2rem 0.6rem;
   }
@@ -71,33 +74,37 @@
       height: 51rem;
 
       > div {
-        background-size: 1100px 600px;
-        background-position: -60px -1px;
+        background-size: 110rem 60rem;
+        background-position: -6rem -0.1rem;
       }
     }
-
   }
 }
 
 .wrapperImage {
+  width: 32.7rem;
+  height: 23.8rem;
+
   > div {
     border-radius: 0.8rem;
     width: 100%;
     height: 100%;
+    background-size: 52.5rem 27.5rem;
+    background-position: -3.3rem -0.4rem;
   }
 
   @screen md {
-    width: 336px;
+    width: 33.6rem;
     height: 60.2rem;
   }
 
   @screen lg {
     width: 45.6rem;
-    margin-top: 112px;
+    margin-top: 11.2rem;
 
     > div {
-      background-size: 700px 608px;
-      background-position: -36px -2px;
+      background-size: 70rem 60.8rem;
+      background-position: -3.6rem -0.2rem;
     }
   }
 
@@ -107,8 +114,8 @@
     margin-top: 0;
 
     > div {
-      background-size: 1050px 835px;
-      background-position: -55px -2px;
+      background-size: 105rem 83.5rem;
+      background-position: -5.5rem -0.2rem;
     }
   }
 }
@@ -121,6 +128,9 @@
 }
 
 .wrapperBgImage {
+  width: 32.7rem;
+  height: 23.8rem;
+
   > div {
     border-radius: 0.8rem;
     height: 100%;
@@ -133,8 +143,8 @@
     > div {
       margin-left: calc(33.6rem - 45.6rem);
       width: 45.6rem;
-      background-position: top -1px right 140px;
-      background-size: 700px 610px;
+      background-position: top -0.1rem right 14rem;
+      background-size: 70rem 61rem;
     }
   }
 
@@ -146,8 +156,8 @@
     > div {
       margin-left: calc(49.6rem - 74.5rem);
       width: 74.5rem;
-      background-position: top -1px right -372px;
-      background-size: 1200px 606px;
+      background-position: top -0.1rem right -37.2rem;
+      background-size: 120rem 60.6rem;
     }
   }
 
@@ -159,8 +169,8 @@
     > div {
       margin-left: calc(62.8rem - 96.8rem);
       width: 96.8rem;
-      background-position: top -2px right -464px;
-      background-size: 1520px 850px;
+      background-position: top -0.2rem right -46.4rem;
+      background-size: 152rem 85rem;
     }
   }
 }
@@ -174,7 +184,7 @@
     > div {
       margin-left: 0;
       margin-right: calc(33.6rem - 45.6rem);
-      background-position: top -1px left -35px;
+      background-position: top -0.1rem left -3.5rem;
     }
   }
 
@@ -186,7 +196,7 @@
     > div {
       margin-left: 0;
       margin-right: calc(49.6rem - 74.5rem);
-      background-position: top -1px left -75px;
+      background-position: top -0.1rem left -7.5rem;
     }
   }
 
@@ -197,17 +207,17 @@
     > div {
       margin-left: 0;
       margin-right: calc(68.4rem - 96.8rem);
-      background-position: top -2px left -129px;
+      background-position: top -0.2rem left -12.9rem;
     }
 
     & ~ .wrapperContent .buttonsContainer {
-      padding: 5px 0 0 7px;
+      padding: 0.5rem 0 0 0.7rem;
     }
   }
 }
 
 .wrapperContent {
-  flex: 1 1 0px;
+  flex: 1 1 0;
 }
 
 .eyebrow {
@@ -233,12 +243,9 @@
 }
 
 .subHeadline {
+  font-size: 2rem;
+  line-height: 110%;
   margin-bottom: 2.4rem;
-
-  @screen md {
-    font-size: 2rem;
-    line-height: 110%;
-  }
 
   @screen lg {
     font-size: 2.4rem;
@@ -250,16 +257,20 @@
 }
 
 .bodyText {
+  font-size: 1.4rem;
+  letter-spacing: normal;
+  line-height: 140%;
   margin-bottom: 2.4rem;
 
-  @screen md {
-    font-size: 1.4rem;
-    letter-spacing: normal;
-    line-height: 140%;
+  @screen lg {
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: 0.01em;
   }
 
   @screen xl {
     font-size: 2rem;
+    letter-spacing: normal;
   }
 }
 
@@ -270,6 +281,9 @@
 .oneText {
   padding: 0 0 2.4rem 4.8rem;
   position: relative;
+  font-size: 1.4rem;
+  line-height: 140%;
+  letter-spacing: normal;
 
   &::before {
     position: absolute;
@@ -281,15 +295,10 @@
     top: 0.4rem;
   }
 
-  @screen md {
-    font-size: 1.4rem;
-    line-height: 140%;
-    letter-spacing: normal;
-  }
-
   @screen lg {
     font-size: 1.6rem;
     line-height: 130%;
+    letter-spacing: 0.01em;
   }
 }
 
