@@ -110,6 +110,7 @@ const blocks:Block[] = [
   //   typename: FaqBlockTypename,
   //   extraQueries: undefined,
   // },
+
   // ##HYGEN_START##
   // do not modify the above line since its used by hygen to generate the block list
 ]
