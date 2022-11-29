@@ -20,13 +20,13 @@
 }
 
 .wrapper {
-  border: 0.15rem solid theme('colors.darkBlue');
-  border-radius: 1.2rem;
+  position: relative;
 }
 
 .category {
   padding: 1.8rem 4rem;
-  border-bottom: 0.15rem solid theme('colors.darkBlue');
+  border-radius: 1.2rem 1.2rem 0 0;
+  border: 0.15rem solid theme('colors.darkBlue');
 
   @screen md {
     padding: 1.2rem 2.4rem;
@@ -39,7 +39,8 @@
 
 .topSection {
   > div {
-    border: 0.15rem solid theme('colors.darkBlue');
+    border: 0.15rem theme('colors.darkBlue');
+    border-style: none solid;
     height: 13.5rem;
     width: 100%;
     background-size: 31.2rem 16rem;
@@ -56,22 +57,24 @@
 
   @screen lg {
     > div {
-      background-size: 28.2rem 13.8rem;
-      background-position: 0.3rem -0.4rem;
+      background-size: 28rem 13.8rem;
+      background-position: 0.5rem -0.1rem;
     }
   }
 
   @screen xl {
     > div {
       height: 19rem;
-      background-size: 38.6rem 19.5rem;
-      background-position: 0.4rem -0.4rem;
+      background-size: 38.1rem 19.3rem;
+      background-position: 0.7rem -0.2rem;
     }
   }
 }
 
 .bottomSection {
   padding: 1.959rem 1.959rem 1.5rem;
+  border-radius: 0 0 1.2rem 1.2rem;
+  border: 0.15rem solid theme('colors.darkBlue');
 
   > *:last-child {
     margin-bottom: 0;
