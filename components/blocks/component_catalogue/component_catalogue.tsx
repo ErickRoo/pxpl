@@ -42,6 +42,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/Faq">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Faq</p>
       </Link>
+      <Link href="/components/ContentCard">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>ContentCard</p>
+      </Link>
     </div>
   </div>
 )

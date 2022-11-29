@@ -23,6 +23,7 @@ module.exports = {
       grayCoal: '#545159',
       warmGray: '#EDEADD',
       steel: '#575757',
+      coolGray: '#D7D7D7',
       paisley: '#CDCBFF',
     },
     screens: {

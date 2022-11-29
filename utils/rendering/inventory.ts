@@ -21,6 +21,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as TtacBlockTypename } from '../../components/blocks/ttac/ttac'
 // import TtacBlockQuery from '../../components/blocks/ttac/ttac.graphql'
 
+// import { typename as ContentCardBlockTypename } from '../../components/blocks/content_card/content_card'
+// import ContentCardBlockQuery from '../../components/blocks/content_card/content_card.graphql'
+
 // import { typename as HeadlineTextBlockTypename } from '../../components/blocks/headline_text/headline_text'
 // import HeadlineTextBlockQuery from '../../components/blocks/headline_text/headline_text.graphql'
 
@@ -96,6 +99,12 @@ const blocks:Block[] = [
   // },
 
   // {
+  //   component: dynamic(() => import('../../components/blocks/content_card/content_card')),
+  //   query: ContentCardBlockQuery,
+  //   typename: ContentCardBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
   //   component: dynamic(() => import('../../components/blocks/faq/faq')),
   //   query: FaqBlockQuery,
   //   typename: FaqBlockTypename,
