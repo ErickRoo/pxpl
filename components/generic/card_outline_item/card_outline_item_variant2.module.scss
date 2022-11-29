@@ -21,7 +21,9 @@
 }
 
 .wrapper {
-  position: relative;
+  .bottomSection:first-child {
+    border-radius: 1.2rem;
+  }
 }
 
 .category {
