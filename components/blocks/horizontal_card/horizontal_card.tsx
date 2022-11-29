@@ -8,12 +8,19 @@ export const typename = 'Set_Replicator_BlockHorizontalCard'
 
 const HorizontalCardBlock:FunctionComponent<{ block: HorizontalCardInterface }> = ({ block }) => (
   <div className={styles.root}>
-    <section className={styles.wrapper}>
-      {block?.TextAndImageBlocks?.map((oneTextImageItem, idx) => {
-        const key = `horizontal-card-item-${idx}`
-        return <HorizontalCardItem key={key} oneItem={oneTextImageItem} odd={idx % 2 === 0} />
-      })}
-    </section>
+    {block?.rows?.map((oneRow, idx) => {
+      const key = `one-row-${idx}`
+
+      return (
+        <section key={key} className={styles.row}>
+          {oneRow?.items?.map((oneItem, index) => {
+            const subkey = `one-card-item-${index}`
+
+            return <HorizontalCardItem key={subkey} oneItem={oneItem} />
+          })}
+        </section>
+      )
+    })}
   </div>
 )
 

@@ -1,20 +1,16 @@
 @import '../../../styles/variables';
 
 .root {
-  width: 100%;
-  background-color: theme('colors.butterCream');
+  position: relative;
 }
 
 .wrapper {
-  @apply container;
-
   padding: 0;
   display: flex;
   flex-direction: column;
   border-radius: 1.2rem;
   overflow: hidden;
   max-width: 32.7rem;
-  margin: auto;
 
   @screen md {
     flex-direction: row;
@@ -28,10 +24,6 @@
   @screen xl {
     max-width: 108.4rem;
   }
-}
-
-.wrapper__odd {
-  position: relative;
 }
 
 .wrapper__right {

@@ -2,5 +2,8 @@ import HorizontalCardItemInterface from 'components/generic/horizontal_card_item
 
 export default interface HorizontalCardInterface {
     type: string;
-    TextAndImageBlocks: HorizontalCardItemInterface[]
+    rows: Array<{
+        quantity: number;
+        items: HorizontalCardItemInterface[]
+    }>
 }

@@ -4,8 +4,10 @@
   position: relative;
 }
 
-.wrapper {
+.row {
+  background-color: theme('colors.butterCream');
   display: flex;
-  flex-wrap: wrap;
-  row-gap: 5.6rem;
+  column-gap: 5.6rem;
+  justify-content: center;
+  margin-bottom: 5.6rem;
 }

@@ -7,7 +7,15 @@ import PlaceholderIconImage from '../../assets/HorizontalCard/placeholder-icon.p
 import PlaceholderImage from '../../assets/HorizontalCard/placeholder.png'
 
 const getPlaceholder = ({
-  large = false, medium = false, right = false, tagsA = false, tagsB = false, tagsC = false, textPrimaryCta = false, secondaryCta = false,
+  large = false,
+  medium = false,
+  right = false,
+  tagsA = false,
+  tagsB = false,
+  tagsC = false,
+  textPrimaryCta = false,
+  secondaryCta = false,
+  quantity = 1,
 }) => {
   let tags = []
   if (tagsA) tags = ['Lorem ipsum', 'Lorem ipsum longer', 'Lorem ipsum']
@@ -18,7 +26,7 @@ const getPlaceholder = ({
   if (medium) variant = 'medium'
   else if (large) variant = 'large'
 
-  return {
+  const onePlaceholder = {
     variant,
     topEyebrow: 'Use Cases',
     icon: PlaceholderIconImage,
@@ -37,102 +45,81 @@ const getPlaceholder = ({
     imageAlignment: right ? 'right' : 'left',
     image: PlaceholderImage,
   }
+
+  return {
+    quantity,
+    items: Array(quantity).fill(onePlaceholder),
+  }
 }
 
+const cardAConfig = { large: true, secondaryCta: true, textPrimaryCta: true }
 const placeholderHorizontalCardABlock = {
-  normal: getPlaceholder({
-    large: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  sm: getPlaceholder({
-    large: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  md: getPlaceholder({
-    large: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  lg: getPlaceholder({
-    large: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  xl: getPlaceholder({
-    large: true, tagsA: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  xxl: getPlaceholder({
-    large: true, tagsA: true, secondaryCta: true, textPrimaryCta: true,
-  }),
+  normal: getPlaceholder({ ...cardAConfig, tagsB: true }),
+  sm: getPlaceholder({ ...cardAConfig, tagsB: true }),
+  md: getPlaceholder({ ...cardAConfig, tagsB: true }),
+  lg: getPlaceholder({ ...cardAConfig, tagsB: true }),
+  xl: getPlaceholder({ ...cardAConfig, tagsA: true }),
+  xxl: getPlaceholder({ ...cardAConfig, tagsA: true }),
 }
 
+const cardBConfig = {
+  large: true, right: true, secondaryCta: true, textPrimaryCta: true,
+}
 const placeholderHorizontalCardBBlock = {
-  normal: getPlaceholder({
-    large: true, right: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  sm: getPlaceholder({
-    large: true, right: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  md: getPlaceholder({
-    large: true, right: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  lg: getPlaceholder({
-    large: true, right: true, tagsB: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  xl: getPlaceholder({
-    large: true, right: true, tagsA: true, secondaryCta: true, textPrimaryCta: true,
-  }),
-  xxl: getPlaceholder({
-    large: true, right: true, tagsA: true, secondaryCta: true, textPrimaryCta: true,
-  }),
+  normal: getPlaceholder({ ...cardBConfig, tagsB: true }),
+  sm: getPlaceholder({ ...cardBConfig, tagsB: true }),
+  md: getPlaceholder({ ...cardBConfig, tagsB: true }),
+  lg: getPlaceholder({ ...cardBConfig, tagsB: true }),
+  xl: getPlaceholder({ ...cardBConfig, tagsA: true }),
+  xxl: getPlaceholder({ ...cardBConfig, tagsA: true }),
 }
 
+const cardCConfig = { medium: true, tagsC: true }
 const placeholderHorizontalCardCBlock = {
-  normal: getPlaceholder({ medium: true, tagsC: true }),
-  sm: getPlaceholder({ medium: true, tagsC: true }),
-  md: getPlaceholder({ medium: true, tagsC: true }),
-  lg: getPlaceholder({ medium: true, tagsC: true }),
-  xl: getPlaceholder({ medium: true, right: true, tagsC: true }),
-  xxl: getPlaceholder({ medium: true, right: true, tagsC: true }),
+  normal: getPlaceholder(cardCConfig),
+  sm: getPlaceholder(cardCConfig),
+  md: getPlaceholder(cardCConfig),
+  lg: getPlaceholder(cardCConfig),
+  xl: getPlaceholder({ ...cardCConfig, right: true, quantity: 2 }),
+  xxl: getPlaceholder({ ...cardCConfig, right: true, quantity: 2 }),
 }
 
+const cardDConfig = { medium: true, right: true, tagsC: true }
 const placeholderHorizontalCardDBlock = {
-  normal: getPlaceholder({ medium: true, right: true, tagsC: true }),
-  sm: getPlaceholder({ medium: true, right: true, tagsC: true }),
-  md: getPlaceholder({ medium: true, right: true, tagsC: true }),
-  lg: getPlaceholder({ medium: true, right: true, tagsC: true }),
-  xl: getPlaceholder({ medium: true, right: true, tagsC: true }),
-  xxl: getPlaceholder({ medium: true, right: true, tagsC: true }),
+  normal: getPlaceholder(cardDConfig),
+  sm: getPlaceholder(cardDConfig),
+  md: getPlaceholder(cardDConfig),
+  lg: getPlaceholder(cardDConfig),
+  xl: getPlaceholder({ ...cardDConfig, right: false, quantity: 2 }),
+  xxl: getPlaceholder({ ...cardDConfig, right: false, quantity: 2 }),
 }
 
 const placeholderHorizontalCardEBlock = {
-  xl: getPlaceholder({ medium: true, tagsC: true }),
-  xxl: getPlaceholder({ medium: true, tagsC: true }),
+  normal: getPlaceholder({}),
+  sm: getPlaceholder({}),
+  md: getPlaceholder({ right: true }),
+  lg: getPlaceholder({ right: true }),
+  xl: getPlaceholder({ right: true, quantity: 2 }),
+  xxl: getPlaceholder({ right: true, quantity: 2 }),
 }
 
 const placeholderHorizontalCardFBlock = {
-  xl: getPlaceholder({ medium: true, tagsC: true }),
-  xxl: getPlaceholder({ medium: true, tagsC: true }),
-}
-
-const placeholderHorizontalCardGBlock = {
-  normal: getPlaceholder({}),
-  sm: getPlaceholder({ right: true }),
-  md: getPlaceholder({ right: true }),
-  lg: getPlaceholder({ right: true }),
-  xl: getPlaceholder({ right: true }),
-  xxl: getPlaceholder({ right: true }),
-}
-
-const placeholderHorizontalCardHBlock = {
   normal: getPlaceholder({ right: true }),
-  sm: getPlaceholder({}),
+  sm: getPlaceholder({ right: true }),
   md: getPlaceholder({}),
   lg: getPlaceholder({}),
-  xl: getPlaceholder({ right: true }),
-  xxl: getPlaceholder({ right: true }),
+  xl: getPlaceholder({ quantity: 2 }),
+  xxl: getPlaceholder({ quantity: 2 }),
 }
 
-const placeholderHorizontalCardIBlock = {
-  xl: getPlaceholder({}),
-  xxl: getPlaceholder({}),
+const additionalPlaceholderHorizontalCardGBlock = {
+  lg: getPlaceholder(cardCConfig),
+  xl: getPlaceholder(cardCConfig),
+  xxl: getPlaceholder(cardCConfig),
 }
 
-const placeholderHorizontalCardJBlock = {
+const additionalPlaceholderHorizontalCardHBlock = {
+  lg: getPlaceholder({}),
   xl: getPlaceholder({}),
   xxl: getPlaceholder({}),
 }
@@ -144,17 +131,15 @@ const HorizontalCard: FC = () => {
   return (
     <HorizontalCardBlock block={{
       type: 'block',
-      TextAndImageBlocks: [
+      rows: [
         placeholderHorizontalCardABlock[position],
         placeholderHorizontalCardBBlock[position],
         placeholderHorizontalCardCBlock[position],
         placeholderHorizontalCardDBlock[position],
         placeholderHorizontalCardEBlock[position],
         placeholderHorizontalCardFBlock[position],
-        placeholderHorizontalCardGBlock[position],
-        placeholderHorizontalCardHBlock[position],
-        placeholderHorizontalCardIBlock[position],
-        placeholderHorizontalCardJBlock[position],
+        additionalPlaceholderHorizontalCardGBlock[position],
+        additionalPlaceholderHorizontalCardHBlock[position],
       ],
     }}
     />
