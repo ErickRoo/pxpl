@@ -18,6 +18,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/SideSide">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Side Side</p>
       </Link>
+      <Link href="/components/Hero">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Hero</p>
+      </Link>
       <Link href="/components/HeadlineText">
         <p style={{ fontSize: 20, marginBottom: 20 }}>HeadlineText</p>
       </Link>
@@ -44,6 +47,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       </Link>
       <Link href="/components/Faq">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Faq</p>
+      </Link>
+      <Link href="/components/ContentCard">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>ContentCard</p>
       </Link>
     </div>
   </div>

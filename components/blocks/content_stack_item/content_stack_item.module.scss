@@ -1,5 +1,25 @@
 @import '../../../styles/variables';
 
+.wrapper {
+  @apply container;
+
+  @screen sm {
+    padding: 0 2.4rem;
+  }
+
+  @screen md {
+    padding: 0 3.2rem;
+  }
+
+  @screen lg {
+    padding: 0 4rem;
+  }
+
+  @screen xl {
+    padding: 0 10.8rem;
+    max-width: 130rem;
+  }
+}
 .bodyText {
   margin-top: 1.6rem;
 }
@@ -8,7 +28,82 @@
   margin-bottom: 5.6rem;
 }
 
+.rightContent {
+  @screen md {
+    margin-left: -1.7rem;
+  }
+
+  @screen lg {
+    padding-left: 8rem;
+  }
+
+  @screen xl {
+    padding-left: 2.2rem;
+  }
+}
+
+.imgRight {
+  @screen md {
+    margin-left: 4.9rem;
+  }
+
+  @screen lg {
+    padding-left: 0;
+    margin-left: -0.7rem;
+  }
+
+  @screen xl {
+    margin-left: 5.2rem;
+  }
+}
+
 .spacer {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.imageContainer {
+  margin-bottom: 3.2rem;
+  border-radius: 0.8rem;
+
+  @screen sm {
+    min-height: 24.4rem;
+  }
+
+  @screen md {
+    max-width: 24.4rem;
+    min-height: 0;
+    margin-bottom: 0;
+  }
+
+  @screen lg {
+    min-width: 40rem;
+  }
+}
+
+.leftContent {
+  @screen md {
+    margin-right: -1.6rem;
+  }
+
+  @screen lg {
+    padding-right: 8rem;
+  }
+
+  @screen xl {
+    padding-right: 0;
+  }
+}
+
+.buttonsContainer {
+  width: fit-content;
+  > section {
+    padding: 1.6rem;
+    gap: 3.4rem;
+    margin-bottom: 2.4rem;
+  }
+
+  div:last-child {
+    max-width: 8rem;
+  }
 }
