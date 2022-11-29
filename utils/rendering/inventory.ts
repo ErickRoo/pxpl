@@ -33,6 +33,7 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
 // import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
+// eslint-disable-next-line max-len
 // import { typename as MultiFeatureSideBySideBlockTypename } from '../../components/blocks/multi_feature_side_by_side/multi_feature_side_by_side'
 // import MultiFeatureSideBySideBlockQuery from '../../components/blocks/multi_feature_side_by_side/multi_feature_side_by_side.graphql'
 

@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import MultiFeatureSideBySideBlock from 'components/blocks/multi_feature_side_by_side/multi_feature_side_by_side'
-import placeholderImage from '../../assets/MultiFeatureSideBySide/placeholder.png' 
+import placeholderImage from '../../assets/MultiFeatureSideBySide/placeholder.png'
 
 const ctaButton = {
   text: 'Learn more',

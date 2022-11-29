@@ -2,12 +2,10 @@ import React, { FunctionComponent } from 'react'
 import DescriptionList from 'components/generic/description-list/description-list'
 import styles from './multi_feature_side_by_side.module.scss'
 import MultiFeatureSideBySideInterface from './multi_feature_side_by_side.interface'
-import useWindowSize from '../../../styles/getBreakpointQuery'
 
 const MultiFeatureSideBySideBlock: FunctionComponent<{
   block: MultiFeatureSideBySideInterface
 }> = ({ block }) => {
-  const { width } = useWindowSize()
   const orderItems = block.items.sort((a, b) => a.order - b.order)
 
   return (

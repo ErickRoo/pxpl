@@ -1,16 +1,21 @@
-import React, { useState, FunctionComponent } from 'react';
+import React, { useState, FunctionComponent } from 'react'
 import Image from 'next/image'
 import styles from './description-list.module.scss'
 import DescriptionListItemInterface from './description-list.interface'
-import UnderlinedButton from '../underlined-button/underlined-button';
-import NumberSquare from '../number-square/number-square';
+import UnderlinedButton from '../underlined-button/underlined-button'
+import NumberSquare from '../number-square/number-square'
 
 const DescriptionList: FunctionComponent<DescriptionListItemInterface> = ({
   order, headline, description, initializeOpen, ctaButton, image,
 }) => {
   const [collapse, setCollapse] = useState(!initializeOpen)
   return (
-    <section className={`${styles.root} box-border border-b border-darkBlue grid grid-cols-1 md:border-0 md:grid-cols-12 md:grid-rows-6`} data-collapse={collapse}>
+    <section
+      className={
+      `${styles.root} box-border border-b border-darkBlue grid grid-cols-1 md:border-0 md:grid-cols-12 md:grid-rows-6`
+      }
+      data-collapse={collapse}
+    >
       <div className={`${styles.itemLeft} col-span-1 md:col-span-5 md:row-span-1`} data-collapse={collapse}>
         <div className={`${styles.itemBar} box-border flex flex-row`} data-collapse={collapse}>
           <NumberSquare order={order} isActive={collapse} />
@@ -32,7 +37,10 @@ const DescriptionList: FunctionComponent<DescriptionListItemInterface> = ({
           <Image src={image} alt={headline} objectFit="contain" sizes="100vh" />
         </div>
       </div>
-      <div className={`${styles.itemImage} hidden md:block md:col-span-7 md:col-start-6 md:relative xl:col-start-7`} data-collapse={collapse}>
+      <div
+        className={`${styles.itemImage} hidden md:block md:col-span-7 md:col-start-6 md:relative xl:col-start-7`}
+        data-collapse={collapse}
+      >
         <Image src={image} alt={headline} objectFit="contain" sizes="100vh" />
       </div>
     </section>
