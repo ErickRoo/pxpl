@@ -36,6 +36,9 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
 // import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
+// import { typename as FormHeroBlockTypename } from '../../components/blocks/form_hero/form_hero'
+// import FormHeroBlockQuery from '../../components/blocks/form_hero/form_hero.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -108,6 +111,13 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/faq/faq')),
   //   query: FaqBlockQuery,
   //   typename: FaqBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/form_hero/form_hero')),
+  //   query: FormHeroBlockQuery,
+  //   typename: FormHeroBlockTypename,
   //   extraQueries: undefined,
   // },
 
