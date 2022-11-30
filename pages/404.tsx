@@ -1,14 +1,17 @@
 import React from 'react'
+/*
 import { getStaticPropsWrapper } from 'utils/dataLayer/entryQuery'
 import Translation from 'translation'
 import { GlobalSet } from 'interfaces/globals'
 import Header from '../components/generic/header/header'
 import PageQuery from '../queries/page'
 import { GlobalContextProvider } from './_app'
+*/
 
 // pages/404.js
 /* eslint react/jsx-props-no-spreading: "off", curly: "error" */
 /* eslint react/prop-types: "off", curly: "error" */
+/*
 const Custom404 = ({
   nav,
   globalSet,
@@ -30,4 +33,11 @@ const Custom404 = ({
 }
 
 export const getStaticProps = getStaticPropsWrapper(PageQuery, () => {})
+export default Custom404
+*/
+
+const Custom404 = () => (
+  <>404</>
+)
+
 export default Custom404

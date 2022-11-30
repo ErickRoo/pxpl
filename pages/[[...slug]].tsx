@@ -1,10 +1,12 @@
+import React from 'react'
+/*
 import { GetStaticPropsContext } from 'next'
 import Page from 'layouts/page'
 import { getStaticPathsWrapper, getStaticPropsWrapper } from 'utils/dataLayer/entryQuery'
 import PageQuery from 'queries/page'
 import { StatamicPreviewData } from './api/preview'
 
-const slugArrayToUri = (slugs: string[]): string => `${slugs.join('/')}`
+const slugArrayToUri = (slugs: string[]): string => `/${slugs.join('/')}`
 
 export default Page
 
@@ -17,4 +19,11 @@ export const getStaticProps = getStaticPropsWrapper(
     }
   },
 )
-export const getStaticPaths = getStaticPathsWrapper('pageBuilderPageEntries')
+export const getStaticPaths = getStaticPathsWrapper(['pages'])
+*/
+
+const Page = () => (
+  <>Page</>
+)
+
+export default Page
