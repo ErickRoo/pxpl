@@ -7,7 +7,7 @@ import HeroModuleFullBleedImageDarkenRightText from './modules/hero_full_bleed_i
 import HeroModuleFullBleedImageDarkenLeftText from './modules/hero_full_bleed_image_darken_left_text'
 import HeroModuleRightText from './modules/hero_right_text'
 
-export const typename = 'Set_Replicator_BlockHero'
+export const typename = 'blockBuilder_hero_BlockType'
 
 const HeroModuleSelector: FC<{ block: HeroInterface, variant: string }> = ({ block, variant }) => {
   switch (variant) {

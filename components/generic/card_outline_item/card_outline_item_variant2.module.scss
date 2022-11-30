@@ -21,13 +21,15 @@
 }
 
 .wrapper {
-  border: 0.15rem solid theme('colors.darkBlue');
-  border-radius: 1.2rem;
+  .bottomSection:first-child {
+    border-radius: 1.2rem;
+  }
 }
 
 .category {
-  border-bottom: 0.15rem solid theme('colors.darkBlue');
   padding: 1.2rem 2.4rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+  border: 0.15rem solid theme('colors.darkBlue');
 
   @screen lg {
     padding: 1.8rem 4rem;
@@ -36,11 +38,12 @@
 
 .topSection {
   > div {
-    border: 0.15rem solid theme('colors.darkBlue');
+    border: 0.15rem theme('colors.darkBlue');
+    border-style: none solid;
     height: 13.5rem;
     width: 100%;
-    background-size: 31.2rem 16rem;
-    background-position: 0.4rem -1.4rem;
+    background-size: 31.3rem 16rem;
+    background-position: 0.6rem -1.2rem;
   }
 
   @screen md {
@@ -69,7 +72,8 @@
 
 .bottomSection {
   padding: 1.959rem 1.959rem 1.7rem;
-  border-top: 0.15rem solid theme('colors.darkBlue');
+  border-radius: 0 0 1.2rem 1.2rem;
+  border: 0.15rem solid theme('colors.darkBlue');
 
   > *:last-child {
     margin-bottom: 0;

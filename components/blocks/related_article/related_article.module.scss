@@ -1,0 +1,105 @@
+@import '../../../styles/variables';
+
+.root {
+  overflow: hidden;
+  background-color: theme('colors.butterCream');
+}
+
+.wrapper {
+  @apply container;
+
+  padding: 0;
+
+  @screen md {
+    max-width: 70.4rem;
+  }
+
+  @screen lg {
+    max-width: 94.4rem;
+  }
+
+  @screen xl {
+    max-width: 131.5rem;
+  }
+}
+
+.line {
+  border-top: 0.15rem solid theme('colors.darkBlue');
+  width: calc(100% - 4.8rem);
+  margin: 0 auto;
+
+  @screen md {
+    width: 100%;
+  }
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.5rem;
+  padding: 0 2.4rem;
+  margin: 3.8rem 0 4.42rem;
+
+  h3 {
+    font-size: 4.8rem;
+    line-height: 100%;
+  }
+
+  @screen md {
+    padding: 0;
+    margin: 3.9rem 0;
+    flex-direction: row;
+  }
+}
+
+.middleSection {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2.4rem;
+  gap: 3.441rem;
+
+  @screen md {
+    flex-wrap: nowrap;
+    gap: 3.1rem;
+    padding: 0;
+  }
+
+  @screen lg {
+    gap: 3.5rem;
+  }
+
+  @screen xl {
+    gap: 5.9rem;
+
+    h6 ~ p {
+      letter-spacing: 0.01em;
+    }
+  }
+}
+
+.bottomSection {
+  position: relative;
+
+  > div {
+    margin-top: 3.32rem;
+  }
+
+  @screen md {
+    > div {
+      margin-top: 4.03rem;
+    }
+  }
+
+  @screen lg {
+    > div {
+      margin-top: 3.98rem;
+    }
+  }
+  
+  @screen xl {
+    > div {
+      margin-top: 5.54rem;
+    }
+  }
+}

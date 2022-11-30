@@ -9,20 +9,17 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
   <div className={`${styles.root}`}>
     <div>
       <h1 style={{ fontSize: 60, marginBottom: 20 }}>Components</h1>
-      <Link href="/components/ContentStack">
-        <p style={{ fontSize: 20, marginBottom: 20 }}>Content Stack</p>
-      </Link>
       <Link href="/components/PreFooter">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Pre Footer</p>
-      </Link>
-      <Link href="/components/SideSide">
-        <p style={{ fontSize: 20, marginBottom: 20 }}>Side Side</p>
       </Link>
       <Link href="/components/Hero">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Hero</p>
       </Link>
+      <Link href="/components/SideSide">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Side Side</p>
+      </Link>
       <Link href="/components/HeadlineText">
-        <p style={{ fontSize: 20, marginBottom: 20 }}>HeadlineText</p>
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Headline Text</p>
       </Link>
       <Link href="/components/Ttac">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Ttac</p>
@@ -39,17 +36,23 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/LogoGarden">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Logo Garden</p>
       </Link>
+      <Link href="/components/ContentCard">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Content Card</p>
+      </Link>
+      <Link href="/components/RelatedArticle">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Related Article</p>
+      </Link>
+      <Link href="/components/ContentStack">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Content Stack</p>
+      </Link>
+      <Link href="/components/PromoTout">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Promo Tout</p>
+      </Link>
       <Link href="/components/HorizontalCard">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Horizontal Card</p>
       </Link>
-      <Link href="/components/PromoTout">
-        <p style={{ fontSize: 20, marginBottom: 20 }}>PromoTout</p>
-      </Link>
       <Link href="/components/Faq">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Faq</p>
-      </Link>
-      <Link href="/components/ContentCard">
-        <p style={{ fontSize: 20, marginBottom: 20 }}>ContentCard</p>
       </Link>
     </div>
   </div>
