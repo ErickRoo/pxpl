@@ -26,7 +26,13 @@
   border-radius: 0.4rem;
   background-color: theme('colors.butterCream');
   color: theme('colors.darkBlue');
+  font-size: 1.6rem;
   line-height: 2.2rem;
+
+  &::placeholder {
+    color: theme('colors.darkBlue');
+    opacity: 0.5;
+  }
 }
 
 .button {

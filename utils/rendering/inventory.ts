@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from 'react'
 import dynamic from 'next/dynamic'
-import { typename as TextImageTypename } from '../../components/blocks/text_image/text_image'
-import TextImageQuery from '../../components/blocks/text_image/text_image.graphql'
+// import { typename as TextImageTypename } from '../../components/blocks/text_image/text_image'
+// import TextImageQuery from '../../components/blocks/text_image/text_image.graphql'
 
-import { typename as ContentStackItemBlockTypename } from '../../components/blocks/content_stack_item/content_stack_item'
-import ContentStackItemBlockQuery from '../../components/blocks/content_stack_item/content_stack_item.graphql'
+// import { typename as ContentStackItemBlockTypename } from '../../components/blocks/content_stack_item/content_stack_item'
+// import ContentStackItemBlockQuery from '../../components/blocks/content_stack_item/content_stack_item.graphql'
 
-// import { typename as PreFooterBlockTypename } from '../../components/blocks/pre_footer/pre_footer'
-// import PreFooterBlockQuery from '../../components/blocks/pre_footer/pre_footer.graphql'
+import { typename as HeroBlockTypename } from '../../components/blocks/hero/hero'
+import HeroBlockQuery from '../../components/blocks/hero/hero.graphql'
 
 // import { typename as Feature5050BlockTypename } from '../../components/blocks/feature_50_50/feature_50_50'
 // import Feature5050BlockQuery from '../../components/blocks/feature_50_50/feature_50_50.graphql'
@@ -39,6 +39,12 @@ import ContentStackItemBlockQuery from '../../components/blocks/content_stack_it
 // import { typename as FormHeroBlockTypename } from '../../components/blocks/form_hero/form_hero'
 // import FormHeroBlockQuery from '../../components/blocks/form_hero/form_hero.graphql'
 
+// import { typename as HorizontalCardBlockTypename } from '../../components/blocks/horizontal_card/horizontal_card'
+// import HorizontalCardBlockQuery from '../../components/blocks/horizontal_card/horizontal_card.graphql'
+
+// import { typename as RelatedArticleBlockTypename } from '../../components/blocks/related_article/related_article'
+// import RelatedArticleBlockQuery from '../../components/blocks/related_article/related_article.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -50,25 +56,25 @@ interface Block {
 }
 
 const blocks:Block[] = [
-  {
-    component: dynamic(() => import('../../components/blocks/text_image/text_image')),
-    query: TextImageQuery,
-    typename: TextImageTypename,
-    extraQueries: undefined,
-  },
-  {
-    component: dynamic(() => import('../../components/blocks/content_stack_item/content_stack_item')),
-    query: ContentStackItemBlockQuery,
-    typename: ContentStackItemBlockTypename,
-    extraQueries: undefined,
-  },
-
   // {
-  //   component: dynamic(() => import('../../components/blocks/pre_footer/pre_footer')),
-  //   query: PreFooterBlockQuery,
-  //   typename: PreFooterBlockTypename,
+  //   component: dynamic(() => import('../../components/blocks/text_image/text_image')),
+  //   query: TextImageQuery,
+  //   typename: TextImageTypename,
   //   extraQueries: undefined,
   // },
+  // {
+  //   component: dynamic(() => import('../../components/blocks/content_stack_item/content_stack_item')),
+  //   query: ContentStackItemBlockQuery,
+  //   typename: ContentStackItemBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  {
+    component: dynamic(() => import('../../components/blocks/hero/hero')),
+    query: HeroBlockQuery,
+    typename: HeroBlockTypename,
+    extraQueries: undefined,
+  },
 
   // {
   //   component: dynamic(() => import('../../components/blocks/side_side/side_side')),
@@ -83,17 +89,20 @@ const blocks:Block[] = [
   //   typename: TtacBlockTypename,
   //   extraQueries: undefined,
   // },
+
   // {
   //   component: dynamic(() => import('../../components/blocks/promo_tout/promo_tout')),
   //   query: PromoToutBlockQuery,
   //   typename: PromoToutBlockTypename,
   //   extraQueries: undefined,
   // },
+
   //   component: dynamic(() => import('../../components/blocks/logo_garden/logo_garden')),
   //   query: LogoGardenBlockQuery,
   //   typename: LogoGardenBlockTypename,
   //   extraQueries: undefined,
   // },
+
   // {
   //   component: dynamic(() => import('../../components/blocks/headline_text/headline_text')),
   //   query: HeadlineTextBlockQuery,
@@ -118,6 +127,20 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/form_hero/form_hero')),
   //   query: FormHeroBlockQuery,
   //   typename: FormHeroBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/horizontal_card/horizontal_card')),
+  //   query: FaqBlockQuery,
+  //   typename: HorizontalCardBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/related_article/related_article')),
+  //   query: FaqBlockQuery,
+  //   typename: RelatedArticleBlockTypename,
   //   extraQueries: undefined,
   // },
 

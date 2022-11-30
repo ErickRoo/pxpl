@@ -1,5 +1,12 @@
 export default `
-fragment BlockHero on Set_Replicator_BlockHero {
-    type
+fragment blockBuilder_hero_BlockType on blockBuilder_hero_BlockType {
+  hero_variant
+  hero_headline {
+    __typename
+    ... on hero_headline_line_BlockType {
+      id
+      text
+    }
+  }
 }
 `

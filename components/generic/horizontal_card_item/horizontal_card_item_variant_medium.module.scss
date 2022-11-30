@@ -1,0 +1,189 @@
+@import '../../../styles/variables';
+
+.root {
+  background-color: theme('colors.butterCream');
+}
+
+.wrapper {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  max-width: 32.7rem;
+
+  @screen md {
+    flex-direction: row;
+    max-width: 70.4rem;
+  }
+
+  @screen lg {
+    max-width: 94.4rem;
+  }
+
+  @screen xl {
+    max-width: 62.8rem;
+  }
+}
+
+.wrapper__right {
+  flex-direction: column-reverse;
+
+  @screen md {
+    flex-direction: row-reverse;
+  }
+}
+
+.wrapperImage {
+  width: 32.7rem;
+  height: 32.7rem;
+
+  > div {
+    width: 100%;
+    height: 100%;
+    background-size: 52.6rem;
+    background-position: -10rem 0;
+  }
+
+  @screen md {
+    width: 27.6rem;
+    height: 47.1rem;
+
+    > div {
+      background-size: 48rem;
+      background-position: -10rem -0.4rem;
+    }
+  }
+
+  @screen lg {
+    width: 37.5rem;
+    height: 48.5rem;
+
+    > div {
+      background-size: 49rem;
+      background-position: -5.5rem -0.4rem;
+    }
+  }
+
+  @screen xl {
+    width: 31.1rem;
+    height: 53.1rem;
+
+    > div {
+      background-size: 51rem 54.2rem;
+      background-position: -6.4rem -0.3rem;
+    }
+  }
+}
+
+.wrapperText {
+  background-color: theme('colors.white');
+  padding: 3.2rem 2.4rem;
+
+  @screen md {
+    width: 42.8rem;
+    padding: 3.2rem;
+  }
+
+  @screen lg {
+    width: 56.9rem;
+    padding: 3.2rem;
+  }
+
+  @screen xl {
+    margin-bottom: 1.4rem;
+    width: 31.7rem;
+  }
+}
+
+.topEyebrow {
+  margin-bottom: 1.6rem;
+}
+
+.icon {
+  margin-bottom: 1.6rem;
+}
+
+.headline {
+  margin-bottom: 1.6rem;
+
+  @screen md {
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.8rem;
+  }
+
+  @screen lg {
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: normal;
+  }
+}
+
+.description {
+  margin-bottom: 3.2rem;
+  font-size: 1.4rem;
+  line-height: 140%;
+  letter-spacing: normal;
+
+  @screen lg {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    margin-bottom: 3.2rem;
+  }
+
+  @screen xl {
+    line-height: 130%;
+    letter-spacing: 0.01em;
+  }
+}
+
+.buttonsContainer {
+  margin-bottom: 3.2rem;
+
+  > div > div {
+    margin: 0;
+  }
+
+  @screen md {
+    margin-bottom: 4.81rem;
+  }
+}
+
+.buttonsContainer__right {
+  position: relative;
+}
+
+.line {
+  max-width: 25.3rem;
+  margin-bottom: 1.6rem;
+}
+
+.bottomEyebrow {
+  margin-bottom: 3.7rem;
+
+  @screen lg {
+    margin-bottom: 3.2rem;
+  }
+
+  @screen xl {
+    margin-bottom: 3.7rem;
+  }
+}
+
+.bottomTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+
+  span {
+    color: theme('colors.passionBlue');
+    border: 0.1rem solid theme('colors.passionBlue');
+
+    padding: 1rem 1.5rem;
+    border-radius: 0.4rem;
+    font-size: 1.4rem;
+    line-height: 120%;
+  }
+}

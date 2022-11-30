@@ -1,0 +1,156 @@
+@import '../../../styles/variables';
+
+.root {
+  position: relative;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  max-width: 32.7rem;
+
+  @screen md {
+    flex-direction: row;
+    max-width: 70.4rem;
+  }
+
+  @screen lg {
+    max-width: 94.4rem;
+  }
+
+  @screen xl {
+    max-width: 62.8rem;
+  }
+}
+
+.wrapper__right {
+  flex-direction: column-reverse;
+
+  @screen md {
+    flex-direction: row-reverse;
+  }
+}
+
+.wrapperImage {
+  width: 32.7rem;
+  height: 32.7rem;
+
+  > div {
+    width: 100%;
+    height: 100%;
+    background-size: 52.6rem;
+    background-position: -10rem 0;
+  }
+
+  @screen md {
+    width: 27.6rem;
+    height: 31.4rem;
+
+    > div {
+      background-size: 48rem;
+      background-position: -10rem -0.4rem;
+    }
+  }
+
+  @screen lg {
+    width: 29.4rem;
+    height: 29.9rem;
+
+    > div {
+      background-size: 106%;
+      background-position: unset;
+    } 
+  }
+
+  @screen xl {
+    width: 33.8rem;
+    height: 36.2rem;
+
+    > div {
+      background-size: unset;
+    } 
+  }
+}
+
+.wrapperText {
+  background-color: theme('colors.white');
+  padding: 3.2rem 2.4rem;
+
+  @screen md {
+    width: 42.8rem;
+    padding: 3.2rem;
+  }
+
+  @screen lg {
+    width: 65rem;
+    padding: 3.2rem 7.2rem;
+  }
+
+  @screen xl {
+    margin-bottom: 0.5rem;
+    width: 29rem;
+    padding: 3.2rem;
+  }
+}
+
+.topEyebrow {
+  margin-bottom: 1.6rem;
+}
+
+.icon {
+  margin-bottom: 1.6rem;
+}
+
+.headline {
+  margin-bottom: 1.6rem;
+
+  @screen md {
+    font-size: 1.6rem;
+    line-height: 130%;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.8rem;
+  }
+
+  @screen xl {
+    font-size: 2rem;
+    line-height: 110%;
+    letter-spacing: normal;
+  }
+}
+
+.description {
+  margin-bottom: 3.2rem;
+  font-size: 1.4rem;
+  line-height: 140%;
+  letter-spacing: normal;
+
+  @screen lg {
+    font-size: 1.4rem;
+    line-height: 140%;
+    margin-bottom: 3.2rem;
+  }
+}
+
+.buttonsContainer {
+  > div > div {
+    margin: 0;
+  }
+}
+
+.buttonsContainer__right {
+  position: relative;
+}
+
+.line {
+  position: relative;
+}
+
+.bottomEyebrow {
+  position: relative;
+}
+
+.bottomTags {
+  position: relative;
+}
