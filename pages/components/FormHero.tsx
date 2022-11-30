@@ -1,9 +1,11 @@
 import { FC } from 'react'
 
+import useWindowSize from 'styles/getBreakpointQuery'
+import getCurrentBreakpoint from 'utils/breakpoints/getCurrentBreakpoint'
 import { FormHeroItemInterface } from 'components/blocks/form_hero/form_hero.interface'
 import FormHeroBlock from 'components/blocks/form_hero/form_hero'
 
-const placeholderFormHeroABlock = {
+const placeholderFormHeroCommon = {
   variant: 'normal',
   eyebrow: 'Eyebrow',
   headline: 'How top-performing teams use sales tech differently',
@@ -25,14 +27,44 @@ const placeholderFormHeroABlock = {
   },
 } as FormHeroItemInterface
 
-const FormHero: FC = () => (
-  <FormHeroBlock block={{
-    type: 'block',
-    TextAndImageBlocks: [
-      placeholderFormHeroABlock,
-    ],
-  }}
-  />
-)
+const placeholderFormHeroABlock = {
+  normal: placeholderFormHeroCommon,
+  sm: placeholderFormHeroCommon,
+  md: placeholderFormHeroCommon,
+  lg: placeholderFormHeroCommon,
+  xl: placeholderFormHeroCommon,
+  xxl: placeholderFormHeroCommon,
+}
+
+const placeholderFormHeroBBlock = {
+  normal: {
+    ...placeholderFormHeroCommon,
+    variant: 'alternative',
+  },
+  sm: {
+    ...placeholderFormHeroCommon,
+    variant: 'alternative',
+  },
+  md: {
+    ...placeholderFormHeroCommon,
+    variant: 'alternative',
+  },
+}
+
+const FormHero: FC = () => {
+  const { width } = useWindowSize()
+  const { position = '' } = getCurrentBreakpoint(width) ?? {}
+
+  return (
+    <FormHeroBlock block={{
+      type: 'block',
+      TextAndImageBlocks: [
+        placeholderFormHeroABlock?.[position],
+        placeholderFormHeroBBlock?.[position],
+      ],
+    }}
+    />
+  )
+}
 
 export default FormHero
