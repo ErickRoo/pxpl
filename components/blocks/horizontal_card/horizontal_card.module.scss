@@ -1,0 +1,13 @@
+@import '../../../styles/variables';
+
+.root {
+  position: relative;
+}
+
+.row {
+  background-color: theme('colors.butterCream');
+  display: flex;
+  column-gap: 5.6rem;
+  justify-content: center;
+  margin-bottom: 5.6rem;
+}

@@ -36,6 +36,9 @@ import HeroBlockQuery from '../../components/blocks/hero/hero.graphql'
 // import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
 // import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
+// import { typename as HorizontalCardBlockTypename } from '../../components/blocks/horizontal_card/horizontal_card'
+// import HorizontalCardBlockQuery from '../../components/blocks/horizontal_card/horizontal_card.graphql'
+
 // import { typename as RelatedArticleBlockTypename } from '../../components/blocks/related_article/related_article'
 // import RelatedArticleBlockQuery from '../../components/blocks/related_article/related_article.graphql'
 
@@ -118,8 +121,15 @@ const blocks:Block[] = [
   // },
 
   // {
+  //   component: dynamic(() => import('../../components/blocks/horizontal_card/horizontal_card')),
+  //   query: FaqBlockQuery,
+  //   typename: HorizontalCardBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
   //   component: dynamic(() => import('../../components/blocks/related_article/related_article')),
-  //   query: RelatedArticleBlockQuery,
+  //   query: FaqBlockQuery,
   //   typename: RelatedArticleBlockTypename,
   //   extraQueries: undefined,
   // },
