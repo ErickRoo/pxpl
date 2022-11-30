@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react'
-import Image from 'next/image'
+// import Image from 'next/image'
 import TertiaryButton from 'components/generic/tertiary-button/tertiary-button'
 import styles from './content_stack_item.module.scss'
 import ContentStackItemInterface from './content_stack_item.interface'

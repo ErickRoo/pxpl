@@ -1,13 +1,13 @@
 import React, { FunctionComponent } from 'react'
 import dynamic from 'next/dynamic'
-import { typename as TextImageTypename } from '../../components/blocks/text_image/text_image'
-import TextImageQuery from '../../components/blocks/text_image/text_image.graphql'
+// import { typename as TextImageTypename } from '../../components/blocks/text_image/text_image'
+// import TextImageQuery from '../../components/blocks/text_image/text_image.graphql'
 
-import { typename as ContentStackItemBlockTypename } from '../../components/blocks/content_stack_item/content_stack_item'
-import ContentStackItemBlockQuery from '../../components/blocks/content_stack_item/content_stack_item.graphql'
+// import { typename as ContentStackItemBlockTypename } from '../../components/blocks/content_stack_item/content_stack_item'
+// import ContentStackItemBlockQuery from '../../components/blocks/content_stack_item/content_stack_item.graphql'
 
-// import { typename as PreFooterBlockTypename } from '../../components/blocks/pre_footer/pre_footer'
-// import PreFooterBlockQuery from '../../components/blocks/pre_footer/pre_footer.graphql'
+import { typename as HeroBlockTypename } from '../../components/blocks/hero/hero'
+import HeroBlockQuery from '../../components/blocks/hero/hero.graphql'
 
 // import { typename as Feature5050BlockTypename } from '../../components/blocks/feature_50_50/feature_50_50'
 // import Feature5050BlockQuery from '../../components/blocks/feature_50_50/feature_50_50.graphql'
@@ -47,25 +47,25 @@ interface Block {
 }
 
 const blocks:Block[] = [
-  {
-    component: dynamic(() => import('../../components/blocks/text_image/text_image')),
-    query: TextImageQuery,
-    typename: TextImageTypename,
-    extraQueries: undefined,
-  },
-  {
-    component: dynamic(() => import('../../components/blocks/content_stack_item/content_stack_item')),
-    query: ContentStackItemBlockQuery,
-    typename: ContentStackItemBlockTypename,
-    extraQueries: undefined,
-  },
-
   // {
-  //   component: dynamic(() => import('../../components/blocks/pre_footer/pre_footer')),
-  //   query: PreFooterBlockQuery,
-  //   typename: PreFooterBlockTypename,
+  //   component: dynamic(() => import('../../components/blocks/text_image/text_image')),
+  //   query: TextImageQuery,
+  //   typename: TextImageTypename,
   //   extraQueries: undefined,
   // },
+  // {
+  //   component: dynamic(() => import('../../components/blocks/content_stack_item/content_stack_item')),
+  //   query: ContentStackItemBlockQuery,
+  //   typename: ContentStackItemBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  {
+    component: dynamic(() => import('../../components/blocks/hero/hero')),
+    query: HeroBlockQuery,
+    typename: HeroBlockTypename,
+    extraQueries: undefined,
+  },
 
   // {
   //   component: dynamic(() => import('../../components/blocks/side_side/side_side')),

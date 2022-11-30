@@ -1,7 +1,7 @@
 import { DocumentNode } from 'graphql'
 import { GetStaticPropsContext, GetStaticPropsResult } from 'next'
 import { StatamicPreviewData } from 'pages/api/preview'
-import blockInventory from 'utils/rendering/inventory'
+// import blockInventory from 'utils/rendering/inventory'
 import convertGqlToString from './convertGqlToString'
 import gql from './gql'
 
@@ -29,7 +29,6 @@ export const getStaticPropsWrapper = (
     uri.searchParams.append('token', ctx.previewData?.previewToken)
   }
   const { data, errors } = await gql(query, variables(ctx))
-
   if (errors) {
     throw new Error(JSON.stringify(errors))
   }
@@ -41,89 +40,86 @@ export const getStaticPropsWrapper = (
   }
 
   // get extra queries of components
-  const extraQueries = []
-  data.entry.replicator?.forEach((module) => {
-    const blockItem = Object.values(blockInventory).find(
-      (b) => b.typename === module.__typename,
-    )
+  // const extraQueries = []
+  // data.entry.replicator?.forEach((module) => {
+  //   const blockItem = Object.values(blockInventory).find(
+  //     (b) => b.typename === module.__typename,
+  //   )
 
-    if (blockItem && blockItem.extraQueries) {
-      extraQueries.push(...blockItem.extraQueries)
-    }
-  })
+  //   if (blockItem && blockItem.extraQueries) {
+  //     extraQueries.push(...blockItem.extraQueries)
+  //   }
+  // })
 
-  const extraQueriesResult = await Promise.all(
-    extraQueries.map((extraQuery) => gql(
-      extraQuery,
-      // variables: {}, // TODO
-    )),
-  )
+  // const extraQueriesResult = await Promise.all(
+  //   extraQueries.map((extraQuery) => gql(
+  //     extraQuery,
+  //     // variables: {}, // TODO
+  //   )),
+  // )
 
-  // add extra query results to modules
-  const modifiedModules = [...(data.entry.replicator || [])]
-  extraQueriesResult.forEach((res) => {
-    // parse key
-    const alias = Object.keys(res.data).length ? Object.keys(res.data)[0] : ''
-    const splittedAlias = alias.split('__')
-    if (!alias || splittedAlias.length !== 2) {
-      return
-    }
-    const moduleName = splittedAlias[0]
-    const key = splittedAlias[1]
+  // // add extra query results to modules
+  // const modifiedModules = [...(data.entry.replicator || [])]
+  // extraQueriesResult.forEach((res) => {
+  //   // parse key
+  //   const alias = Object.keys(res.data).length ? Object.keys(res.data)[0] : ''
+  //   const splittedAlias = alias.split('__')
+  //   if (!alias || splittedAlias.length !== 2) {
+  //     return
+  //   }
+  //   const moduleName = splittedAlias[0]
+  //   const key = splittedAlias[1]
 
-    const index = modifiedModules.findIndex(
-      (m) => m.__typename === moduleName,
-    )
-    const moduleData = { ...modifiedModules[index], [key]: res.data[alias] }
-    modifiedModules.splice(index, 1, moduleData)
-  })
+  //   const index = modifiedModules.findIndex(
+  //     (m) => m.__typename === moduleName,
+  //   )
+  //   const moduleData = { ...modifiedModules[index], [key]: res.data[alias] }
+  //   modifiedModules.splice(index, 1, moduleData)
+  // })
 
-  // merge result objects except modules
-  const resultData = { ...data.entry, entry: { replicator: [] } }
-  Object.keys(data).forEach((key) => {
-    if (key !== 'entry') resultData[key] = data[key]
-    else {
-      Object.keys(data[key]).forEach((innerKey) => {
-        if (innerKey !== 'replicator') {
-          resultData[key][innerKey] = data[key][innerKey]
-        }
-      })
-    }
-  })
+  // // merge result objects except modules
+  // const resultData = { ...data.entry, entry: { replicator: [] } }
+  // Object.keys(data).forEach((key) => {
+  //   if (key !== 'entry') resultData[key] = data[key]
+  //   else {
+  //     Object.keys(data[key]).forEach((innerKey) => {
+  //       if (innerKey !== 'replicator') {
+  //         resultData[key][innerKey] = data[key][innerKey]
+  //       }
+  //     })
+  //   }
+  // })
 
-  // add modules to object
-  resultData.entry.replicator = modifiedModules
+  // // add modules to object
+  // resultData.entry.replicator = modifiedModules
 
   return {
     props: {
-      ...resultData,
+      // ...resultData,
       // globals: d.data,
+      ...data,
     },
   }
 }
 
-export const getStaticPathsWrapper = (collection: string[]) => async () => {
+export const getStaticPathsWrapper = (collection: string) => async () => {
   if (!process.env.NEXT_PUBLIC_GRAPHQL_URL) {
     throw new Error(
       'Failed to load the graphql endpoint. Please make sure it is defined in your .env.local file',
     )
   }
   const res = await gql(
-    `
-      query pages($collection: [String]) {
-        entries(collection: $collection) {
-          data {
-            id
-            title
-            slug
-            uri
-          }
+    `query paths{
+      ${collection} {
+        __typename
+        ... on pageBuilderPage_default_Entry {
+          id
+          slug
+          uri
         }
       }
+    }
     `,
-    {
-      collection,
-    },
   )
   if (!res) {
     return {
@@ -131,9 +127,16 @@ export const getStaticPathsWrapper = (collection: string[]) => async () => {
       fallback: true,
     }
   }
-  const paths = res.data.entries.data.map((e) => {
+  const paths = res.data[collection].map((e) => {
+    if (e.uri === 'home') {
+      return {
+        params: {
+          slug: [],
+        },
+      }
+    }
     return {
-      params: { slug: e.uri?.substring(1).split('/') || e.slug },
+      params: { slug: [e.slug] },
     }
   })
 
