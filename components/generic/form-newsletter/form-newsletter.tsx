@@ -18,7 +18,7 @@ const FormNewsletter: FC<FormNewsLetterInterface> = ({
           <span className="eyebrow">Newsletter Sign-up</span>
           <span className="eyebrow">Required*</span>
         </div>
-        <input id="firstField" type="text" className={`${styles.formInput} typo-body`} placeholder="you@email.com" />
+        <input id="firstField" type="text" className={`${styles.formInput} eyebrow`} placeholder="you@email.com" />
       </label>
       <button className={styles.button} type="submit" aria-label="submit">
         <ArrowCorner className={styles.icon} />

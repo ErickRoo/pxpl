@@ -22,14 +22,16 @@ const CardOutlineItem: FunctionComponent<CardOutlineItemInterface> = ({
   return (
     <div className={styles.root}>
       <section className={styles.wrapper}>
-        <div className={styles.topSection}>
-          {category && (
-            <p className={`eyebrow ${styles.category}`}>
-              {category}
-            </p>
-          )}
-          {image && <div style={{ backgroundImage: `url(${image.src})` }} />}
-        </div>
+        {(category || image) && (
+          <div className={styles.topSection}>
+            {category && (
+              <p className={`eyebrow ${styles.category}`}>
+                {category}
+              </p>
+            )}
+            {image && <div style={{ backgroundImage: `url(${image.src})` }} />}
+          </div>
+        )}
         <div className={styles.bottomSection}>
           {icon && (
             <img className={styles.icon} src={icon.src} alt="placeholderIcon" />

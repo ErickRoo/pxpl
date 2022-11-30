@@ -19,16 +19,15 @@
 }
 
 .wrapper {
-  border: 0.15rem solid theme('colors.darkBlue');
-  border-radius: 1.2rem;
+  .bottomSection:first-child {
+    border-radius: 1.2rem;
+  }
 }
 
 .category {
-  border-bottom: 0.15rem solid theme('colors.darkBlue');
-
-  @screen md {
-    padding: 1.2rem 2.4rem;
-  }
+  padding: 1.2rem 2.4rem;
+  border-radius: 1.2rem 1.2rem 0 0;
+  border: 0.15rem solid theme('colors.darkBlue');
 
   @screen lg {
     padding: 1.8rem 4rem;
@@ -75,6 +74,8 @@
 
 .bottomSection {
   padding: 1.959rem 1.959rem 1.5rem;
+  border-radius: 0 0 1.2rem 1.2rem;
+  border: 0.15rem solid theme('colors.darkBlue');
 
   > *:last-child {
     margin-bottom: 0;

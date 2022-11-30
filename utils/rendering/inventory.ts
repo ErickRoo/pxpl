@@ -36,6 +36,9 @@ import HeroBlockQuery from '../../components/blocks/hero/hero.graphql'
 // import { typename as FaqBlockTypename } from '../../components/blocks/faq/faq'
 // import FaqBlockQuery from '../../components/blocks/faq/faq.graphql'
 
+// import { typename as RelatedArticleBlockTypename } from '../../components/blocks/related_article/related_article'
+// import RelatedArticleBlockQuery from '../../components/blocks/related_article/related_article.graphql'
+
 // ##HYGEN_IMPORT##
 // do not modify the above line since its used by hygen to generate the block list
 
@@ -80,17 +83,20 @@ const blocks:Block[] = [
   //   typename: TtacBlockTypename,
   //   extraQueries: undefined,
   // },
+
   // {
   //   component: dynamic(() => import('../../components/blocks/promo_tout/promo_tout')),
   //   query: PromoToutBlockQuery,
   //   typename: PromoToutBlockTypename,
   //   extraQueries: undefined,
   // },
+
   //   component: dynamic(() => import('../../components/blocks/logo_garden/logo_garden')),
   //   query: LogoGardenBlockQuery,
   //   typename: LogoGardenBlockTypename,
   //   extraQueries: undefined,
   // },
+
   // {
   //   component: dynamic(() => import('../../components/blocks/headline_text/headline_text')),
   //   query: HeadlineTextBlockQuery,
@@ -108,6 +114,13 @@ const blocks:Block[] = [
   //   component: dynamic(() => import('../../components/blocks/faq/faq')),
   //   query: FaqBlockQuery,
   //   typename: FaqBlockTypename,
+  //   extraQueries: undefined,
+  // },
+
+  // {
+  //   component: dynamic(() => import('../../components/blocks/related_article/related_article')),
+  //   query: RelatedArticleBlockQuery,
+  //   typename: RelatedArticleBlockTypename,
   //   extraQueries: undefined,
   // },
 
