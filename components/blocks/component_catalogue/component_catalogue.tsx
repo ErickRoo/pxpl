@@ -45,6 +45,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/ContentStack">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Content Stack</p>
       </Link>
+      <Link href="/components/FormHero">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>Form Hero</p>
+      </Link>
       <Link href="/components/PromoTout">
         <p style={{ fontSize: 20, marginBottom: 20 }}>Promo Tout</p>
       </Link>
