@@ -4,7 +4,7 @@ import { getStaticPathsWrapper, getStaticPropsWrapper } from 'utils/dataLayer/en
 import PageQuery from 'queries/page'
 import { StatamicPreviewData } from './api/preview'
 
-const slugArrayToUri = (slugs: string[]): string => `/${slugs.join('/')}`
+const slugArrayToUri = (slugs: string[]): string => `${slugs.join('/')}`
 
 export default Page
 
@@ -17,4 +17,4 @@ export const getStaticProps = getStaticPropsWrapper(
     }
   },
 )
-export const getStaticPaths = getStaticPathsWrapper(['pages'])
+export const getStaticPaths = getStaticPathsWrapper('pageBuilderPageEntries')

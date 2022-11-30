@@ -26,8 +26,8 @@ const Page = ({
   >
     <div>
       <Head>
-        <title>{seo.title}</title>
-        <meta name="description" content={seo.description} />
+        <title>{entry.title}</title>
+        {/* <meta name="description" content={seo.description} /> */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
@@ -46,8 +46,7 @@ const Page = ({
           </div>
         )}
         <Header nav={nav} />
-        {entry.title}
-        <Repeater blocks={entry.replicator} />
+        <Repeater blocks={entry.blockBuilder} />
       </main>
 
       <Footer />
