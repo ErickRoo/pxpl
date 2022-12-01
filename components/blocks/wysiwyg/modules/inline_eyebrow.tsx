@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import styles from '../wysiwyg.module.scss'
+
 interface Content {
   eyebrow?: string
 }

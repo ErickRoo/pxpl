@@ -1035,3 +1035,192 @@ h2.inlineTextHeading, h3.inlineTextHeading, h4.inlineTextHeading, h5.inlineTextH
     }
   }
 }
+
+.quoteContainerBT {
+  background: theme('colors.white');
+  border-radius: 12px;
+  padding: 1.6rem 1.6rem;
+
+  @screen md {
+    padding: 3.2rem 9.18rem 3.9rem 9.18rem;
+  }
+  @screen lg {
+    padding: 3.8rem 5.87rem 3.9rem 5.87rem;
+  }
+  @screen xl {
+    padding: 3.8rem 9.57rem 3.9rem 9.57rem;
+  }
+}
+
+.quoteContainer {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  @screen md {
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+  }
+  @screen lg {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+  }
+}
+
+.quoteBoxBT {
+  margin: 0 auto;
+
+  @screen lg {
+    max-width: 66.45rem;
+  }
+}
+
+.quoteBox {
+  margin: 0 auto;
+
+  @screen md {
+    width: 52.02rem;
+  }
+  @screen lg {
+    width: 62.8rem;
+  }
+}
+
+.quoteText {
+  color: theme('colors.passionBlue');
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2.4rem;
+  line-height: 110%;
+  font-family: 'AeonikPro-Regular';
+  margin-bottom: 3.2rem;
+
+
+  @screen md {
+    font-size: 3.2rem;
+    line-height: 110%;
+  }
+
+  @screen lg {
+    font-size: 4rem;
+    line-height: 100%;
+    margin-bottom: 4rem;
+    letter-spacing: 0.00em;
+  }
+}
+
+.quoteAuthor {
+  font-style: normal;
+  font-weight: 400;
+  color: theme('colors.darkBlue');
+  text-align: center;
+  font-size: 2rem;
+  line-height: 140%;
+  margin-bottom: .8rem;
+
+  @screen lg {
+    font-size: 2.4rem;
+  }
+}
+
+.quoteAbout {
+  color: theme('colors.darkBlue');
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+}
+
+.inlineMediaContainerBT {
+  background: theme('colors.white');
+  border-radius: 12px;
+  padding: 1.6rem 1.6rem;
+
+  @screen md {
+    padding: 3.2rem 3.2rem;
+  }
+  @screen lg {
+    padding: 5rem 5rem;
+  }
+  @screen xl {
+    padding: 5.8rem 5.8rem;
+  }
+}
+
+.inlineMediaContainer {
+  margin: 0 auto;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  figcaption {
+    font-family: 'AeonikFono-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 2.4rem;
+  }
+
+  @screen md {
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+    figcaption {
+      margin-top: 3.2rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  @screen lg {
+    padding-top: 6.4rem;
+    padding-bottom: 6.4rem;
+    figcaption {
+      margin-top: 2.4rem;
+    }
+  }
+
+  @screen xl {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    figcaption {
+      margin-top: 3.2rem;
+    }
+  }
+}
+
+.sliderNav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.2rem;
+
+  @screen md {
+    margin-top: 4rem;
+  }
+
+  @screen lg {
+    margin-top: 5.6rem;
+  }
+
+  @screen xl {
+    margin-top: 6.4rem;
+  }
+}
+
+.arrowLeft {
+  margin-right: 1.5rem;
+}
+
+.arrowRight {
+  margin-left: 1.5rem;
+}
+
+.navText {
+  font-family: 'AeonikFono-Medium';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-align: center;
+}

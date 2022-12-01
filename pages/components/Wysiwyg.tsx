@@ -1003,6 +1003,129 @@ const placeHolderSpotlight768TB = {
   },
 } as WysiwygInterface
 
+const placeHolderQuote = {
+  type: 'quote',
+  backgroundToggle: false,
+  modules: {
+    quote: {
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Nulla vitae volutpat nulla, a ipsum.`,
+      author: 'First Lastname',
+      about: 'Associate Content Editor',
+    },
+  },
+} as WysiwygInterface
+
+const placeHolderQuoteBT = {
+  type: 'quote',
+  backgroundToggle: true,
+  modules: {
+    quote: {
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Nulla vitae volutpat nulla, a tristique ipsum.`,
+      author: 'First Lastname',
+      about: 'Associate Content Editor',
+    },
+  },
+} as WysiwygInterface
+
+const placeHolderQuoteBT2 = {
+  type: 'quote',
+  backgroundToggle: true,
+  modules: {
+    quote: {
+      text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Nulla vitae volutpat nulla, a ipsum.`,
+      author: 'First Lastname',
+      about: 'Associate Content Editor',
+    },
+  },
+} as WysiwygInterface
+
+const placeHolderInlineMediaImage = {
+  type: 'inlineMedia',
+  backgroundToggle: false,
+  modules: {
+    inlineMedia: [
+      {
+        image: '/images/inline-media.png',
+        caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+    ],
+  },
+} as WysiwygInterface
+
+const placeHolderInlineMediaImageBT = {
+  type: 'inlineMedia',
+  backgroundToggle: true,
+  modules: {
+    inlineMedia: [
+      {
+        image: '/images/inline-media.png',
+        caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+    ],
+  },
+} as WysiwygInterface
+
+const placeHolderInlineMediaImageSlider = {
+  type: 'inlineMedia',
+  backgroundToggle: false,
+  modules: {
+    inlineMedia: [
+      {
+        image: '/images/inline-media.png',
+        caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+    ],
+  },
+} as WysiwygInterface
+
+const placeHolderInlineMediaImageSliderBT = {
+  type: 'inlineMedia',
+  backgroundToggle: true,
+  modules: {
+    inlineMedia: [
+      {
+        image: '/images/inline-media.png',
+        caption: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '2 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '3 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+      {
+        image: '/images/inline-media.png',
+        caption: '5 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae volutpat nulla.',
+      },
+    ],
+  },
+} as WysiwygInterface
+
 const Wysiwyg: FC = () => (
   <div className="bg-butterCream">
     {/* 1440 xl */}
@@ -1019,6 +1142,18 @@ const Wysiwyg: FC = () => (
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
       <WysiwygBlock block={placeHolderSpotlight14401024TB} />
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuote} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuoteBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImage} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSlider} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSliderBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
     </div>
     {/* 1024 LG */}
     <div className="hidden xl:hidden lg:block">
@@ -1033,6 +1168,18 @@ const Wysiwyg: FC = () => (
       <WysiwygBlock block={placeHolderSpotlight14401024} />
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
       <WysiwygBlock block={placeHolderSpotlight14401024TB} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuote} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuoteBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImage} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSlider} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSliderBT} />
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
     </div>
     {/* 768 MD */}
@@ -1049,6 +1196,18 @@ const Wysiwyg: FC = () => (
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
       <WysiwygBlock block={placeHolderSpotlight768TB} />
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuote} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuoteBT2} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImage} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSlider} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSliderBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
     </div>
     {/* 375 SM */}
     <div className="xl:hidden lg:hidden md:hidden sm:block">
@@ -1063,6 +1222,18 @@ const Wysiwyg: FC = () => (
       <WysiwygBlock block={placeHolderSpotlight768} />
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
       <WysiwygBlock block={placeHolderSpotlight768TB} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuote} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderQuoteBT2} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImage} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageBT} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSlider} />
+      <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
+      <WysiwygBlock block={placeHolderInlineMediaImageSliderBT} />
       <div style={{ padding: '2rem', backgroundColor: '#ffffff' }} />
     </div>
   </div>

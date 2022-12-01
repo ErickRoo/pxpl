@@ -48,6 +48,9 @@ const ComponentCatalogueBlock: FunctionComponent<{ block: ComponentCatalogueInte
       <Link href="/components/ContentCard">
         <p style={{ fontSize: 20, marginBottom: 20 }}>ContentCard</p>
       </Link>
+      <Link href="/components/Wysiwyg">
+        <p style={{ fontSize: 20, marginBottom: 20 }}>WYSIWYG</p>
+      </Link>
     </div>
   </div>
 )
