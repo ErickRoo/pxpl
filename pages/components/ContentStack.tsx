@@ -1,8 +1,8 @@
-import { FC } from 'react'
+import React, { FC } from 'react'
 import ContentStackItemBlock from '../../components/blocks/content_stack_item/content_stack_item'
 
 const ContentStack: FC = () => (
-  <div className="container mx-auto max-w-screen-xl">
+  <div className="mx-auto md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl bg-butterCream">
     <ContentStackItemBlock block={{
       type: 'Block',
       TextAndImageBlocks: [
