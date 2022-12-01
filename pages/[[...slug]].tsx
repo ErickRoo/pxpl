@@ -1,3 +1,5 @@
+import React from 'react'
+/*
 import { GetStaticPropsContext } from 'next'
 import Page from 'layouts/page'
 import { getStaticPathsWrapper, getStaticPropsWrapper } from 'utils/dataLayer/entryQuery'
@@ -18,3 +20,10 @@ export const getStaticProps = getStaticPropsWrapper(
   },
 )
 export const getStaticPaths = getStaticPathsWrapper(['pages'])
+*/
+
+const Page = () => (
+  <>Page</>
+)
+
+export default Page
